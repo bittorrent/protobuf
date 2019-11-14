@@ -2833,6 +2833,7 @@ func (g *Generator) generateMessage(message *Descriptor) {
 
 		typename, wiretype := g.GoType(message, field)
 		jsonName := *field.Name
+		// json tag
 		jsonTag := jsonName + ",omitempty"
 		repeatedNativeType := (!field.IsMessage() && !gogoproto.IsCustomType(field) && field.IsRepeated())
 		if !gogoproto.IsNullable(field) && !repeatedNativeType {
@@ -2842,12 +2843,23 @@ func (g *Generator) generateMessage(message *Descriptor) {
 		if gogoJsonTag != nil {
 			jsonTag = *gogoJsonTag
 		}
+		// pg tag
+		pgTag := jsonName
+		repeatedNativeType := (!field.IsMessage() && !gogoproto.IsCustomType(field) && field.IsRepeated())
+		if !gogoproto.IsNullable(field) && !repeatedNativeType {
+			pgTag = jsonName
+		}
+		gogoJsonTag := gogoproto.GetJsonTag(field)
+		if gogoJsonTag != nil {
+			pgTag = *gogoJsonTag
+		}
+		// more tags
 		gogoMoreTags := gogoproto.GetMoreTags(field)
 		moreTags := ""
 		if gogoMoreTags != nil {
 			moreTags = " " + *gogoMoreTags
 		}
-		tag := fmt.Sprintf("protobuf:%s json:%q%s", g.goTag(message, field, wiretype), jsonTag, moreTags)
+		tag := fmt.Sprintf("protobuf:%s json:%q pg:%q%s", g.goTag(message, field, wiretype), jsonTag, pgTag, moreTags)
 		if *field.Type == descriptor.FieldDescriptorProto_TYPE_MESSAGE && gogoproto.IsEmbed(field) {
 			fieldName = ""
 		}
