@@ -6,7 +6,7 @@ package proto3extension
 import (
 	fmt "fmt"
 	proto "github.com/gogo/protobuf/proto"
-	descriptor "github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
+	descriptor "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
 	math "math"
 )
 

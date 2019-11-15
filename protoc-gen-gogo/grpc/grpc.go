@@ -39,7 +39,7 @@ import (
 	"strconv"
 	"strings"
 
-	pb "github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
+	pb "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
 	"github.com/tron-us/protobuf/protoc-gen-gogo/generator"
 )
 

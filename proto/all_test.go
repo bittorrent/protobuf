@@ -49,7 +49,7 @@ import (
 	. "github.com/gogo/protobuf/proto"
 	pb3 "github.com/gogo/protobuf/proto/proto3_proto"
 	. "github.com/gogo/protobuf/proto/test_proto"
-	descriptorpb "github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
+	descriptorpb "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
 )
 
 var globalO *Buffer

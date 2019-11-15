@@ -81,7 +81,7 @@ import (
 	"fmt"
 	"github.com/gogo/protobuf/gogoproto"
 	"github.com/gogo/protobuf/proto"
-	descriptor "github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
+	descriptor "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
 	"github.com/tron-us/protobuf/protoc-gen-gogo/generator"
 )
 
@@ -107,7 +107,7 @@ func (p *plugin) Generate(file *generator.FileDescriptor) {
 	localName := generator.FileName(file)
 
 	p.PluginImports = generator.NewPluginImports(p.Generator)
-	descriptorPkg := p.NewImport("github.com/gogo/protobuf/protoc-gen-gogo/descriptor")
+	descriptorPkg := p.NewImport("github.com/tron-us/protobuf/protoc-gen-gogo/descriptor")
 	protoPkg := p.NewImport("github.com/gogo/protobuf/proto")
 	gzipPkg := p.NewImport("compress/gzip")
 	bytesPkg := p.NewImport("bytes")

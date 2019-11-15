@@ -1,5 +1,5 @@
 test:
-	go install github.com/gogo/protobuf/protoc-gen-gogo
+	go install github.com/tron-us/protobuf/protoc-gen-gogo
 	go install github.com/gogo/protobuf/protoc-min-version
 	go get -u golang.org/x/net/context
 	go get -u google.golang.org/grpc

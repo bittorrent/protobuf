@@ -35,7 +35,7 @@ import (
 	"testing"
 
 	"github.com/gogo/protobuf/proto"
-	pb "github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
+	pb "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
 )
 
 func TestMarshalUnmarshal(t *testing.T) {
