@@ -34,7 +34,7 @@ package types
 import (
 	"testing"
 
-	"github.com/gogo/protobuf/proto"
+	"github.com/tron-us/protobuf/proto"
 	pb "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
 )
 

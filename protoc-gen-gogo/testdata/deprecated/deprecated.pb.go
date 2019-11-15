@@ -8,7 +8,7 @@ package deprecated
 import (
 	context "context"
 	fmt "fmt"
-	proto "github.com/gogo/protobuf/proto"
+	proto "github.com/tron-us/protobuf/proto"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -85,7 +85,7 @@ var xxx_messageInfo_DeprecatedRequest proto.InternalMessageInfo
 // Deprecated: Do not use.
 type DeprecatedResponse struct {
 	// DeprecatedField contains a DeprecatedEnum.
-	DeprecatedField DeprecatedEnum `protobuf:"varint,1,opt,name=deprecated_field,json=deprecatedField,proto3,enum=deprecated.DeprecatedEnum" json:"deprecated_field,omitempty"` // Deprecated: Do not use.
+	DeprecatedField DeprecatedEnum `protobuf:"varint,1,opt,name=deprecated_field,json=deprecatedField,proto3,enum=deprecated.DeprecatedEnum" json:"deprecated_field,omitempty" pg:"deprecated_field"` // Deprecated: Do not use.
 	// DeprecatedOneof contains a deprecated field.
 	//
 	// Types that are valid to be assigned to DeprecatedOneof:
@@ -125,7 +125,7 @@ type isDeprecatedResponse_DeprecatedOneof interface {
 }
 
 type DeprecatedResponse_DeprecatedOneofField struct {
-	DeprecatedOneofField string `protobuf:"bytes,2,opt,name=deprecated_oneof_field,json=deprecatedOneofField,proto3,oneof" json:"deprecated_oneof_field,omitempty"`
+	DeprecatedOneofField string `protobuf:"bytes,2,opt,name=deprecated_oneof_field,json=deprecatedOneofField,proto3,oneof" json:"deprecated_oneof_field,omitempty" pg:"deprecated_oneof_field"`
 }
 
 func (*DeprecatedResponse_DeprecatedOneofField) isDeprecatedResponse_DeprecatedOneof() {}

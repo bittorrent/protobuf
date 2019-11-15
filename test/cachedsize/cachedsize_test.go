@@ -29,7 +29,7 @@
 package cachedsize
 
 import (
-	"github.com/gogo/protobuf/proto"
+	"github.com/tron-us/protobuf/proto"
 	"testing"
 )
 

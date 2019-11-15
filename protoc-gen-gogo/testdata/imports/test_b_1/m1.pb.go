@@ -5,7 +5,7 @@ package beta
 
 import (
 	fmt "fmt"
-	proto "github.com/gogo/protobuf/proto"
+	proto "github.com/tron-us/protobuf/proto"
 	math "math"
 )
 

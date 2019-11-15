@@ -31,8 +31,8 @@ package vanity
 import (
 	"path/filepath"
 
-	"github.com/gogo/protobuf/gogoproto"
-	"github.com/gogo/protobuf/proto"
+	"github.com/tron-us/protobuf/gogoproto"
+	"github.com/tron-us/protobuf/proto"
 	descriptor "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
 )
 

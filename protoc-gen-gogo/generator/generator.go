@@ -62,8 +62,8 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/gogo/protobuf/gogoproto"
-	"github.com/gogo/protobuf/proto"
+	"github.com/tron-us/protobuf/gogoproto"
+	"github.com/tron-us/protobuf/proto"
 	descriptor "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
 	"github.com/tron-us/protobuf/protoc-gen-gogo/generator/internal/remap"
 	plugin "github.com/tron-us/protobuf/protoc-gen-gogo/plugin"
@@ -1406,7 +1406,7 @@ func (g *Generator) generateImports() {
 	g.PrintImport(GoPackageName(g.Pkg["fmt"]), "fmt")
 	g.PrintImport(GoPackageName(g.Pkg["math"]), "math")
 	if gogoproto.ImportsGoGoProto(g.file.FileDescriptorProto) {
-		g.PrintImport(GoPackageName(g.Pkg["proto"]), GoImportPath(g.ImportPrefix)+GoImportPath("github.com/gogo/protobuf/proto"))
+		g.PrintImport(GoPackageName(g.Pkg["proto"]), GoImportPath(g.ImportPrefix)+GoImportPath("github.com/tron-us/protobuf/proto"))
 		if gogoproto.RegistersGolangProto(g.file.FileDescriptorProto) {
 			g.PrintImport(GoPackageName(g.Pkg["golang_proto"]), GoImportPath(g.ImportPrefix)+GoImportPath("github.com/golang/protobuf/proto"))
 		}
@@ -2845,11 +2845,9 @@ func (g *Generator) generateMessage(message *Descriptor) {
 		}
 		// pg tag
 		pgTag := jsonName
-		repeatedNativeType := (!field.IsMessage() && !gogoproto.IsCustomType(field) && field.IsRepeated())
 		if !gogoproto.IsNullable(field) && !repeatedNativeType {
 			pgTag = jsonName
 		}
-		gogoJsonTag := gogoproto.GetJsonTag(field)
 		if gogoJsonTag != nil {
 			pgTag = *gogoJsonTag
 		}

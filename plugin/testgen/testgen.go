@@ -55,7 +55,7 @@ The following message:
   message A {
 	optional string Description = 1 [(gogoproto.nullable) = false];
 	optional int64 Number = 2 [(gogoproto.nullable) = false];
-	optional bytes Id = 3 [(gogoproto.customtype) = "github.com/gogo/protobuf/test/custom.Uuid", (gogoproto.nullable) = false];
+	optional bytes Id = 3 [(gogoproto.customtype) = "github.com/tron-us/protobuf/test/custom.Uuid", (gogoproto.nullable) = false];
   }
 
 given to the testgen plugin, will generate the following test code:
@@ -205,7 +205,7 @@ A good idea is to let each plugin generate its own tests.
 package testgen
 
 import (
-	"github.com/gogo/protobuf/gogoproto"
+	"github.com/tron-us/protobuf/gogoproto"
 	"github.com/tron-us/protobuf/protoc-gen-gogo/generator"
 )
 
@@ -270,7 +270,7 @@ func (p *testProto) Generate(imports generator.PluginImports, file *generator.Fi
 	testingPkg := imports.NewImport("testing")
 	randPkg := imports.NewImport("math/rand")
 	timePkg := imports.NewImport("time")
-	protoPkg := imports.NewImport("github.com/gogo/protobuf/proto")
+	protoPkg := imports.NewImport("github.com/tron-us/protobuf/proto")
 	if !gogoproto.ImportsGoGoProto(file.FileDescriptorProto) {
 		protoPkg = imports.NewImport("github.com/golang/protobuf/proto")
 	}
@@ -468,7 +468,7 @@ func (p *testJson) Generate(imports generator.PluginImports, file *generator.Fil
 	testingPkg := imports.NewImport("testing")
 	randPkg := imports.NewImport("math/rand")
 	timePkg := imports.NewImport("time")
-	jsonPkg := imports.NewImport("github.com/gogo/protobuf/jsonpb")
+	jsonPkg := imports.NewImport("github.com/tron-us/protobuf/jsonpb")
 	for _, message := range file.Messages() {
 		ccTypeName := generator.CamelCaseSlice(message.TypeName())
 		if message.DescriptorProto.GetOptions().GetMapEntry() {
@@ -527,7 +527,7 @@ func (p *testText) Generate(imports generator.PluginImports, file *generator.Fil
 	testingPkg := imports.NewImport("testing")
 	randPkg := imports.NewImport("math/rand")
 	timePkg := imports.NewImport("time")
-	protoPkg := imports.NewImport("github.com/gogo/protobuf/proto")
+	protoPkg := imports.NewImport("github.com/tron-us/protobuf/proto")
 	if !gogoproto.ImportsGoGoProto(file.FileDescriptorProto) {
 		protoPkg = imports.NewImport("github.com/golang/protobuf/proto")
 	}

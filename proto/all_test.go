@@ -45,10 +45,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gogo/protobuf/jsonpb"
-	. "github.com/gogo/protobuf/proto"
-	pb3 "github.com/gogo/protobuf/proto/proto3_proto"
-	. "github.com/gogo/protobuf/proto/test_proto"
+	"github.com/tron-us/protobuf/jsonpb"
+	. "github.com/tron-us/protobuf/proto"
+	pb3 "github.com/tron-us/protobuf/proto/proto3_proto"
+	. "github.com/tron-us/protobuf/proto/test_proto"
 	descriptorpb "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
 )
 

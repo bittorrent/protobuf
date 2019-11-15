@@ -5,7 +5,7 @@ package importing
 
 import (
 	fmt "fmt"
-	proto "github.com/gogo/protobuf/proto"
+	proto "github.com/tron-us/protobuf/proto"
 	_ "github.com/tron-us/protobuf/protoc-gen-gogo/testdata/import_public"
 	sub "github.com/tron-us/protobuf/protoc-gen-gogo/testdata/import_public/sub"
 	math "math"
@@ -24,7 +24,7 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type M struct {
 	// Message type defined in a file publicly imported by a file we import.
-	M                    *sub.M   `protobuf:"bytes,1,opt,name=m" json:"m,omitempty"`
+	M                    *sub.M   `protobuf:"bytes,1,opt,name=m" json:"m,omitempty" pg:"m"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`

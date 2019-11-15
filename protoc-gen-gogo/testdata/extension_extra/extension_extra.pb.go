@@ -5,7 +5,7 @@ package extension_extra
 
 import (
 	fmt "fmt"
-	proto "github.com/gogo/protobuf/proto"
+	proto "github.com/tron-us/protobuf/proto"
 	math "math"
 )
 
@@ -21,7 +21,7 @@ var _ = math.Inf
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type ExtraMessage struct {
-	Width                *int32   `protobuf:"varint,1,opt,name=width" json:"width,omitempty"`
+	Width                *int32   `protobuf:"varint,1,opt,name=width" json:"width,omitempty" pg:"width"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`

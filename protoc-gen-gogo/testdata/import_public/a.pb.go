@@ -5,7 +5,7 @@ package import_public
 
 import (
 	fmt "fmt"
-	proto "github.com/gogo/protobuf/proto"
+	proto "github.com/tron-us/protobuf/proto"
 	sub "github.com/tron-us/protobuf/protoc-gen-gogo/testdata/import_public/sub"
 	math "math"
 )
@@ -63,9 +63,9 @@ const M_Submessage_M_SUBMESSAGE_ZERO = M_Submessage_Submessage_Subenum(sub.M_Sub
 var E_ExtensionField = sub.E_ExtensionField
 
 type Public struct {
-	M                    *sub.M   `protobuf:"bytes,1,opt,name=m" json:"m,omitempty"`
-	E                    *sub.E   `protobuf:"varint,2,opt,name=e,enum=goproto.test.import_public.sub.E" json:"e,omitempty"`
-	Local                *Local   `protobuf:"bytes,3,opt,name=local" json:"local,omitempty"`
+	M                    *sub.M   `protobuf:"bytes,1,opt,name=m" json:"m,omitempty" pg:"m"`
+	E                    *sub.E   `protobuf:"varint,2,opt,name=e,enum=goproto.test.import_public.sub.E" json:"e,omitempty" pg:"e"`
+	Local                *Local   `protobuf:"bytes,3,opt,name=local" json:"local,omitempty" pg:"local"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`

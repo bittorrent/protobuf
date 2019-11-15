@@ -31,7 +31,7 @@ package proto2_maps
 import (
 	"testing"
 
-	"github.com/gogo/protobuf/proto"
+	"github.com/tron-us/protobuf/proto"
 )
 
 func TestNilMaps(t *testing.T) {

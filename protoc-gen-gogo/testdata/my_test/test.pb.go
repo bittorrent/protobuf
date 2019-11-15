@@ -7,7 +7,7 @@ package test
 
 import (
 	fmt "fmt"
-	proto "github.com/gogo/protobuf/proto"
+	proto "github.com/tron-us/protobuf/proto"
 	_ "github.com/tron-us/protobuf/protoc-gen-gogo/testdata/multi"
 	math "math"
 )
@@ -193,26 +193,26 @@ func (Reply_Entry_Game) EnumDescriptor() ([]byte, []int) {
 
 // This is a message that might be sent somewhere.
 type Request struct {
-	Key []int64 `protobuf:"varint,1,rep,name=key" json:"key,omitempty"`
+	Key []int64 `protobuf:"varint,1,rep,name=key" json:"key,omitempty" pg:"key"`
 	//  optional imp.ImportedMessage imported_message = 2;
-	Hue *Request_Color `protobuf:"varint,3,opt,name=hue,enum=my.test.Request_Color" json:"hue,omitempty"`
-	Hat *HatType       `protobuf:"varint,4,opt,name=hat,enum=my.test.HatType,def=1" json:"hat,omitempty"`
+	Hue *Request_Color `protobuf:"varint,3,opt,name=hue,enum=my.test.Request_Color" json:"hue,omitempty" pg:"hue"`
+	Hat *HatType       `protobuf:"varint,4,opt,name=hat,enum=my.test.HatType,def=1" json:"hat,omitempty" pg:"hat"`
 	//  optional imp.ImportedMessage.Owner owner = 6;
-	Deadline  *float32           `protobuf:"fixed32,7,opt,name=deadline,def=inf" json:"deadline,omitempty"`
-	Somegroup *Request_SomeGroup `protobuf:"group,8,opt,name=SomeGroup,json=somegroup" json:"somegroup,omitempty"`
+	Deadline  *float32           `protobuf:"fixed32,7,opt,name=deadline,def=inf" json:"deadline,omitempty" pg:"deadline"`
+	Somegroup *Request_SomeGroup `protobuf:"group,8,opt,name=SomeGroup,json=somegroup" json:"somegroup,omitempty" pg:"somegroup"`
 	// This is a map field. It will generate map[int32]string.
-	NameMapping map[int32]string `protobuf:"bytes,14,rep,name=name_mapping,json=nameMapping" json:"name_mapping,omitempty" protobuf_key:"varint,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	NameMapping map[int32]string `protobuf:"bytes,14,rep,name=name_mapping,json=nameMapping" json:"name_mapping,omitempty" pg:"name_mapping" protobuf_key:"varint,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	// This is a map field whose value type is a message.
-	MsgMapping map[int64]*Reply `protobuf:"bytes,15,rep,name=msg_mapping,json=msgMapping" json:"msg_mapping,omitempty" protobuf_key:"zigzag64,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	Reset_     *int32           `protobuf:"varint,12,opt,name=reset" json:"reset,omitempty"`
+	MsgMapping map[int64]*Reply `protobuf:"bytes,15,rep,name=msg_mapping,json=msgMapping" json:"msg_mapping,omitempty" pg:"msg_mapping" protobuf_key:"zigzag64,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	Reset_     *int32           `protobuf:"varint,12,opt,name=reset" json:"reset,omitempty" pg:"reset"`
 	// This field should not conflict with any getters.
-	GetKey_              *string  `protobuf:"bytes,16,opt,name=get_key,json=getKey" json:"get_key,omitempty"`
-	FloatNinf            *float32 `protobuf:"fixed32,20,opt,name=float_ninf,json=floatNinf,def=-inf" json:"float_ninf,omitempty"`
-	FloatPinf            *float32 `protobuf:"fixed32,21,opt,name=float_pinf,json=floatPinf,def=inf" json:"float_pinf,omitempty"`
-	FloatExp             *float32 `protobuf:"fixed32,22,opt,name=float_exp,json=floatExp,def=1e+09" json:"float_exp,omitempty"`
-	DoubleNinf           *float64 `protobuf:"fixed64,23,opt,name=double_ninf,json=doubleNinf,def=-inf" json:"double_ninf,omitempty"`
-	DoublePinf           *float64 `protobuf:"fixed64,24,opt,name=double_pinf,json=doublePinf,def=inf" json:"double_pinf,omitempty"`
-	DoubleExp            *float64 `protobuf:"fixed64,25,opt,name=double_exp,json=doubleExp,def=1e+09" json:"double_exp,omitempty"`
+	GetKey_              *string  `protobuf:"bytes,16,opt,name=get_key,json=getKey" json:"get_key,omitempty" pg:"get_key"`
+	FloatNinf            *float32 `protobuf:"fixed32,20,opt,name=float_ninf,json=floatNinf,def=-inf" json:"float_ninf,omitempty" pg:"float_ninf"`
+	FloatPinf            *float32 `protobuf:"fixed32,21,opt,name=float_pinf,json=floatPinf,def=inf" json:"float_pinf,omitempty" pg:"float_pinf"`
+	FloatExp             *float32 `protobuf:"fixed32,22,opt,name=float_exp,json=floatExp,def=1e+09" json:"float_exp,omitempty" pg:"float_exp"`
+	DoubleNinf           *float64 `protobuf:"fixed64,23,opt,name=double_ninf,json=doubleNinf,def=-inf" json:"double_ninf,omitempty" pg:"double_ninf"`
+	DoublePinf           *float64 `protobuf:"fixed64,24,opt,name=double_pinf,json=doublePinf,def=inf" json:"double_pinf,omitempty" pg:"double_pinf"`
+	DoubleExp            *float64 `protobuf:"fixed64,25,opt,name=double_exp,json=doubleExp,def=1e+09" json:"double_exp,omitempty" pg:"double_exp"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -361,7 +361,7 @@ func (m *Request) GetDoubleExp() float64 {
 }
 
 type Request_SomeGroup struct {
-	GroupField           *int32   `protobuf:"varint,9,opt,name=group_field,json=groupField" json:"group_field,omitempty"`
+	GroupField           *int32   `protobuf:"varint,9,opt,name=group_field,json=groupField" json:"group_field,omitempty" pg:"group_field"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -399,8 +399,8 @@ func (m *Request_SomeGroup) GetGroupField() int32 {
 }
 
 type Reply struct {
-	Found                        []*Reply_Entry `protobuf:"bytes,1,rep,name=found" json:"found,omitempty"`
-	CompactKeys                  []int32        `protobuf:"varint,2,rep,packed,name=compact_keys,json=compactKeys" json:"compact_keys,omitempty"`
+	Found                        []*Reply_Entry `protobuf:"bytes,1,rep,name=found" json:"found,omitempty" pg:"found"`
+	CompactKeys                  []int32        `protobuf:"varint,2,rep,packed,name=compact_keys,json=compactKeys" json:"compact_keys,omitempty" pg:"compact_keys"`
 	XXX_NoUnkeyedLiteral         struct{}       `json:"-"`
 	proto.XXX_InternalExtensions `json:"-"`
 	XXX_unrecognized             []byte `json:"-"`
@@ -455,9 +455,9 @@ func (m *Reply) GetCompactKeys() []int32 {
 }
 
 type Reply_Entry struct {
-	KeyThatNeeds_1234Camel_CasIng *int64   `protobuf:"varint,1,req,name=key_that_needs_1234camel_CasIng,json=keyThatNeeds1234camelCasIng" json:"key_that_needs_1234camel_CasIng,omitempty"`
-	Value                         *int64   `protobuf:"varint,2,opt,name=value,def=7" json:"value,omitempty"`
-	XMyFieldName_2                *int64   `protobuf:"varint,3,opt,name=_my_field_name_2,json=MyFieldName2" json:"_my_field_name_2,omitempty"`
+	KeyThatNeeds_1234Camel_CasIng *int64   `protobuf:"varint,1,req,name=key_that_needs_1234camel_CasIng,json=keyThatNeeds1234camelCasIng" json:"key_that_needs_1234camel_CasIng,omitempty" pg:"key_that_needs_1234camel_CasIng"`
+	Value                         *int64   `protobuf:"varint,2,opt,name=value,def=7" json:"value,omitempty" pg:"value"`
+	XMyFieldName_2                *int64   `protobuf:"varint,3,opt,name=_my_field_name_2,json=MyFieldName2" json:"_my_field_name_2,omitempty" pg:"_my_field_name_2"`
 	XXX_NoUnkeyedLiteral          struct{} `json:"-"`
 	XXX_unrecognized              []byte   `json:"-"`
 	XXX_sizecache                 int32    `json:"-"`
@@ -511,7 +511,7 @@ func (m *Reply_Entry) GetXMyFieldName_2() int64 {
 }
 
 type OtherBase struct {
-	Name                         *string  `protobuf:"bytes,1,opt,name=name" json:"name,omitempty"`
+	Name                         *string  `protobuf:"bytes,1,opt,name=name" json:"name,omitempty" pg:"name"`
 	XXX_NoUnkeyedLiteral         struct{} `json:"-"`
 	proto.XXX_InternalExtensions `json:"-"`
 	XXX_unrecognized             []byte `json:"-"`
@@ -616,7 +616,7 @@ var E_ReplyExtensions_Donut = &proto.ExtensionDesc{
 }
 
 type OtherReplyExtensions struct {
-	Key                  *int32   `protobuf:"varint,1,opt,name=key" json:"key,omitempty"`
+	Key                  *int32   `protobuf:"varint,1,opt,name=key" json:"key,omitempty" pg:"key"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -694,7 +694,7 @@ func (m *OldReply) XXX_DiscardUnknown() {
 var xxx_messageInfo_OldReply proto.InternalMessageInfo
 
 type Communique struct {
-	MakeMeCry *bool `protobuf:"varint,1,opt,name=make_me_cry,json=makeMeCry" json:"make_me_cry,omitempty"`
+	MakeMeCry *bool `protobuf:"varint,1,opt,name=make_me_cry,json=makeMeCry" json:"make_me_cry,omitempty" pg:"make_me_cry"`
 	// This is a oneof, called "union".
 	//
 	// Types that are valid to be assigned to Union:
@@ -743,34 +743,34 @@ type isCommunique_Union interface {
 }
 
 type Communique_Number struct {
-	Number int32 `protobuf:"varint,5,opt,name=number,oneof" json:"number,omitempty"`
+	Number int32 `protobuf:"varint,5,opt,name=number,oneof" json:"number,omitempty" pg:"number"`
 }
 type Communique_Name struct {
-	Name string `protobuf:"bytes,6,opt,name=name,oneof" json:"name,omitempty"`
+	Name string `protobuf:"bytes,6,opt,name=name,oneof" json:"name,omitempty" pg:"name"`
 }
 type Communique_Data struct {
-	Data []byte `protobuf:"bytes,7,opt,name=data,oneof" json:"data,omitempty"`
+	Data []byte `protobuf:"bytes,7,opt,name=data,oneof" json:"data,omitempty" pg:"data"`
 }
 type Communique_TempC struct {
-	TempC float64 `protobuf:"fixed64,8,opt,name=temp_c,json=tempC,oneof" json:"temp_c,omitempty"`
+	TempC float64 `protobuf:"fixed64,8,opt,name=temp_c,json=tempC,oneof" json:"temp_c,omitempty" pg:"temp_c"`
 }
 type Communique_Height struct {
-	Height float32 `protobuf:"fixed32,9,opt,name=height,oneof" json:"height,omitempty"`
+	Height float32 `protobuf:"fixed32,9,opt,name=height,oneof" json:"height,omitempty" pg:"height"`
 }
 type Communique_Today struct {
-	Today Days `protobuf:"varint,10,opt,name=today,enum=my.test.Days,oneof" json:"today,omitempty"`
+	Today Days `protobuf:"varint,10,opt,name=today,enum=my.test.Days,oneof" json:"today,omitempty" pg:"today"`
 }
 type Communique_Maybe struct {
-	Maybe bool `protobuf:"varint,11,opt,name=maybe,oneof" json:"maybe,omitempty"`
+	Maybe bool `protobuf:"varint,11,opt,name=maybe,oneof" json:"maybe,omitempty" pg:"maybe"`
 }
 type Communique_Delta_ struct {
-	Delta int32 `protobuf:"zigzag32,12,opt,name=delta,oneof" json:"delta,omitempty"`
+	Delta int32 `protobuf:"zigzag32,12,opt,name=delta,oneof" json:"delta,omitempty" pg:"delta"`
 }
 type Communique_Msg struct {
-	Msg *Reply `protobuf:"bytes,16,opt,name=msg,oneof" json:"msg,omitempty"`
+	Msg *Reply `protobuf:"bytes,16,opt,name=msg,oneof" json:"msg,omitempty" pg:"msg"`
 }
 type Communique_Somegroup struct {
-	Somegroup *Communique_SomeGroup `protobuf:"group,14,opt,name=SomeGroup,json=somegroup,oneof" json:"somegroup,omitempty"`
+	Somegroup *Communique_SomeGroup `protobuf:"group,14,opt,name=SomeGroup,json=somegroup,oneof" json:"somegroup,omitempty" pg:"somegroup"`
 }
 
 func (*Communique_Number) isCommunique_Union()    {}
@@ -885,7 +885,7 @@ func (*Communique) XXX_OneofWrappers() []interface{} {
 }
 
 type Communique_SomeGroup struct {
-	Member               *string  `protobuf:"bytes,15,opt,name=member" json:"member,omitempty"`
+	Member               *string  `protobuf:"bytes,15,opt,name=member" json:"member,omitempty" pg:"member"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`

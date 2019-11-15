@@ -38,7 +38,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/gogo/protobuf/proto"
+	"github.com/tron-us/protobuf/proto"
 	base "github.com/tron-us/protobuf/protoc-gen-gogo/testdata/extension_base"
 	user "github.com/tron-us/protobuf/protoc-gen-gogo/testdata/extension_user"
 )

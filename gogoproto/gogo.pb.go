@@ -5,7 +5,7 @@ package gogoproto
 
 import (
 	fmt "fmt"
-	proto "github.com/gogo/protobuf/proto"
+	proto "github.com/tron-us/protobuf/proto"
 	descriptor "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
 	math "math"
 )

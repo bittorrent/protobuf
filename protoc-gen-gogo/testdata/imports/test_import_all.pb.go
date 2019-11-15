@@ -5,7 +5,7 @@ package imports
 
 import (
 	fmt "fmt"
-	proto "github.com/gogo/protobuf/proto"
+	proto "github.com/tron-us/protobuf/proto"
 	fmt1 "github.com/tron-us/protobuf/protoc-gen-gogo/testdata/imports/fmt"
 	test_a_1 "github.com/tron-us/protobuf/protoc-gen-gogo/testdata/imports/test_a_1"
 	test_a_2 "github.com/tron-us/protobuf/protoc-gen-gogo/testdata/imports/test_a_2"
@@ -25,13 +25,13 @@ var _ = math.Inf
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type All struct {
-	Am1                  *test_a_1.M1 `protobuf:"bytes,1,opt,name=am1,proto3" json:"am1,omitempty"`
-	Am2                  *test_a_1.M2 `protobuf:"bytes,2,opt,name=am2,proto3" json:"am2,omitempty"`
-	Am3                  *test_a_2.M3 `protobuf:"bytes,3,opt,name=am3,proto3" json:"am3,omitempty"`
-	Am4                  *test_a_2.M4 `protobuf:"bytes,4,opt,name=am4,proto3" json:"am4,omitempty"`
-	Bm1                  *test_b_1.M1 `protobuf:"bytes,5,opt,name=bm1,proto3" json:"bm1,omitempty"`
-	Bm2                  *test_b_1.M2 `protobuf:"bytes,6,opt,name=bm2,proto3" json:"bm2,omitempty"`
-	Fmt                  *fmt1.M      `protobuf:"bytes,7,opt,name=fmt,proto3" json:"fmt,omitempty"`
+	Am1                  *test_a_1.M1 `protobuf:"bytes,1,opt,name=am1,proto3" json:"am1,omitempty" pg:"am1"`
+	Am2                  *test_a_1.M2 `protobuf:"bytes,2,opt,name=am2,proto3" json:"am2,omitempty" pg:"am2"`
+	Am3                  *test_a_2.M3 `protobuf:"bytes,3,opt,name=am3,proto3" json:"am3,omitempty" pg:"am3"`
+	Am4                  *test_a_2.M4 `protobuf:"bytes,4,opt,name=am4,proto3" json:"am4,omitempty" pg:"am4"`
+	Bm1                  *test_b_1.M1 `protobuf:"bytes,5,opt,name=bm1,proto3" json:"bm1,omitempty" pg:"bm1"`
+	Bm2                  *test_b_1.M2 `protobuf:"bytes,6,opt,name=bm2,proto3" json:"bm2,omitempty" pg:"bm2"`
+	Fmt                  *fmt1.M      `protobuf:"bytes,7,opt,name=fmt,proto3" json:"fmt,omitempty" pg:"fmt"`
 	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
 	XXX_unrecognized     []byte       `json:"-"`
 	XXX_sizecache        int32        `json:"-"`

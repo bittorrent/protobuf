@@ -5,7 +5,7 @@ package extension_base
 
 import (
 	fmt "fmt"
-	proto "github.com/gogo/protobuf/proto"
+	proto "github.com/tron-us/protobuf/proto"
 	math "math"
 )
 
@@ -21,7 +21,7 @@ var _ = math.Inf
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type BaseMessage struct {
-	Height                       *int32   `protobuf:"varint,1,opt,name=height" json:"height,omitempty"`
+	Height                       *int32   `protobuf:"varint,1,opt,name=height" json:"height,omitempty" pg:"height"`
 	XXX_NoUnkeyedLiteral         struct{} `json:"-"`
 	proto.XXX_InternalExtensions `json:"-"`
 	XXX_unrecognized             []byte `json:"-"`

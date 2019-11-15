@@ -29,8 +29,8 @@
 package required
 
 import (
-	"github.com/gogo/protobuf/proto"
-	"github.com/gogo/protobuf/test"
+	"github.com/tron-us/protobuf/proto"
+	"github.com/tron-us/protobuf/test"
 	"math/rand"
 	"reflect"
 	"strconv"

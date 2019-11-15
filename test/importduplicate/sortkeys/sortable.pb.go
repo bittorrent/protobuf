@@ -6,8 +6,8 @@ package sortkeys
 import (
 	bytes "bytes"
 	fmt "fmt"
-	_ "github.com/gogo/protobuf/gogoproto"
-	proto "github.com/gogo/protobuf/proto"
+	_ "github.com/tron-us/protobuf/gogoproto"
+	proto "github.com/tron-us/protobuf/proto"
 	math "math"
 	reflect "reflect"
 	strings "strings"

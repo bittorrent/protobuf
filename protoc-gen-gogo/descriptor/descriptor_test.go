@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	tpb "github.com/gogo/protobuf/proto/test_proto"
+	tpb "github.com/tron-us/protobuf/proto/test_proto"
 	"github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
 )
 

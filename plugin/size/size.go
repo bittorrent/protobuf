@@ -63,7 +63,7 @@ The following message:
   message B {
 	option (gogoproto.description) = true;
 	optional A A = 1 [(gogoproto.nullable) = false, (gogoproto.embed) = true];
-	repeated bytes G = 2 [(gogoproto.customtype) = "github.com/gogo/protobuf/test/custom.Uint128", (gogoproto.nullable) = false];
+	repeated bytes G = 2 [(gogoproto.customtype) = "github.com/tron-us/protobuf/test/custom.Uint128", (gogoproto.nullable) = false];
   }
 
 given to the size plugin, will generate the following code:
@@ -128,11 +128,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/gogo/protobuf/gogoproto"
-	"github.com/gogo/protobuf/proto"
-	"github.com/gogo/protobuf/vanity"
+	"github.com/tron-us/protobuf/gogoproto"
+	"github.com/tron-us/protobuf/proto"
 	descriptor "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
 	"github.com/tron-us/protobuf/protoc-gen-gogo/generator"
+	"github.com/tron-us/protobuf/vanity"
 )
 
 type size struct {
@@ -581,8 +581,8 @@ func (p *size) Generate(file *generator.FileDescriptor) {
 	p.PluginImports = generator.NewPluginImports(p.Generator)
 	p.atleastOne = false
 	p.localName = generator.FileName(file)
-	p.typesPkg = p.NewImport("github.com/gogo/protobuf/types")
-	protoPkg := p.NewImport("github.com/gogo/protobuf/proto")
+	p.typesPkg = p.NewImport("github.com/tron-us/protobuf/types")
+	protoPkg := p.NewImport("github.com/tron-us/protobuf/proto")
 	p.bitsPkg = p.NewImport("math/bits")
 	if !gogoproto.ImportsGoGoProto(file.FileDescriptorProto) {
 		protoPkg = p.NewImport("github.com/golang/protobuf/proto")

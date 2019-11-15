@@ -5,7 +5,7 @@ package extension_user
 
 import (
 	fmt "fmt"
-	proto "github.com/gogo/protobuf/proto"
+	proto "github.com/tron-us/protobuf/proto"
 	extension_base "github.com/tron-us/protobuf/protoc-gen-gogo/testdata/extension_base"
 	extension_extra "github.com/tron-us/protobuf/protoc-gen-gogo/testdata/extension_extra"
 	math "math"
@@ -23,8 +23,8 @@ var _ = math.Inf
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type UserMessage struct {
-	Name                 *string  `protobuf:"bytes,1,opt,name=name" json:"name,omitempty"`
-	Rank                 *string  `protobuf:"bytes,2,opt,name=rank" json:"rank,omitempty"`
+	Name                 *string  `protobuf:"bytes,1,opt,name=name" json:"name,omitempty" pg:"name"`
+	Rank                 *string  `protobuf:"bytes,2,opt,name=rank" json:"rank,omitempty" pg:"rank"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -159,7 +159,7 @@ var E_LoginMessage_UserMessage = &proto.ExtensionDesc{
 }
 
 type Detail struct {
-	Color                *string  `protobuf:"bytes,1,opt,name=color" json:"color,omitempty"`
+	Color                *string  `protobuf:"bytes,1,opt,name=color" json:"color,omitempty" pg:"color"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -198,7 +198,7 @@ func (m *Detail) GetColor() string {
 
 // An extension of an extension
 type Announcement struct {
-	Words                *string  `protobuf:"bytes,1,opt,name=words" json:"words,omitempty"`
+	Words                *string  `protobuf:"bytes,1,opt,name=words" json:"words,omitempty" pg:"words"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -246,8 +246,8 @@ var E_Announcement_LoudExt = &proto.ExtensionDesc{
 
 // Something that can be put in a message set.
 type OldStyleParcel struct {
-	Name                 *string  `protobuf:"bytes,1,req,name=name" json:"name,omitempty"`
-	Height               *int32   `protobuf:"varint,2,opt,name=height" json:"height,omitempty"`
+	Name                 *string  `protobuf:"bytes,1,req,name=name" json:"name,omitempty" pg:"name"`
+	Height               *int32   `protobuf:"varint,2,opt,name=height" json:"height,omitempty" pg:"height"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`

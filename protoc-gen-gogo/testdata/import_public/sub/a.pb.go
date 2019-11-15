@@ -5,7 +5,7 @@ package sub
 
 import (
 	fmt "fmt"
-	proto "github.com/gogo/protobuf/proto"
+	proto "github.com/tron-us/protobuf/proto"
 	math "math"
 )
 
@@ -133,13 +133,13 @@ func (M_Submessage_Submessage_Subenum) EnumDescriptor() ([]byte, []int) {
 
 type M struct {
 	// Field using a type in the same Go package, but a different source file.
-	M2 *M2 `protobuf:"bytes,1,opt,name=m2" json:"m2,omitempty"`
+	M2 *M2 `protobuf:"bytes,1,opt,name=m2" json:"m2,omitempty" pg:"m2"`
 	// Types that are valid to be assigned to OneofField:
 	//	*M_OneofInt32
 	//	*M_OneofInt64
 	OneofField           isM_OneofField `protobuf_oneof:"oneof_field"`
-	Grouping             *M_Grouping    `protobuf:"group,4,opt,name=Grouping,json=grouping" json:"grouping,omitempty"`
-	DefaultField         *string        `protobuf:"bytes,6,opt,name=default_field,json=defaultField,def=def" json:"default_field,omitempty"`
+	Grouping             *M_Grouping    `protobuf:"group,4,opt,name=Grouping,json=grouping" json:"grouping,omitempty" pg:"grouping"`
+	DefaultField         *string        `protobuf:"bytes,6,opt,name=default_field,json=defaultField,def=def" json:"default_field,omitempty" pg:"default_field"`
 	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
 	XXX_unrecognized     []byte         `json:"-"`
 	XXX_sizecache        int32          `json:"-"`
@@ -176,10 +176,10 @@ type isM_OneofField interface {
 }
 
 type M_OneofInt32 struct {
-	OneofInt32 int32 `protobuf:"varint,2,opt,name=oneof_int32,json=oneofInt32,oneof" json:"oneof_int32,omitempty"`
+	OneofInt32 int32 `protobuf:"varint,2,opt,name=oneof_int32,json=oneofInt32,oneof" json:"oneof_int32,omitempty" pg:"oneof_int32"`
 }
 type M_OneofInt64 struct {
-	OneofInt64 int64 `protobuf:"varint,3,opt,name=oneof_int64,json=oneofInt64,oneof" json:"oneof_int64,omitempty"`
+	OneofInt64 int64 `protobuf:"varint,3,opt,name=oneof_int64,json=oneofInt64,oneof" json:"oneof_int64,omitempty" pg:"oneof_int64"`
 }
 
 func (*M_OneofInt32) isM_OneofField() {}
@@ -236,7 +236,7 @@ func (*M) XXX_OneofWrappers() []interface{} {
 }
 
 type M_Grouping struct {
-	GroupField           *string  `protobuf:"bytes,5,opt,name=group_field,json=groupField" json:"group_field,omitempty"`
+	GroupField           *string  `protobuf:"bytes,5,opt,name=group_field,json=groupField" json:"group_field,omitempty" pg:"group_field"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -312,10 +312,10 @@ type isM_Submessage_SubmessageOneofField interface {
 }
 
 type M_Submessage_SubmessageOneofInt32 struct {
-	SubmessageOneofInt32 int32 `protobuf:"varint,1,opt,name=submessage_oneof_int32,json=submessageOneofInt32,oneof" json:"submessage_oneof_int32,omitempty"`
+	SubmessageOneofInt32 int32 `protobuf:"varint,1,opt,name=submessage_oneof_int32,json=submessageOneofInt32,oneof" json:"submessage_oneof_int32,omitempty" pg:"submessage_oneof_int32"`
 }
 type M_Submessage_SubmessageOneofInt64 struct {
-	SubmessageOneofInt64 int64 `protobuf:"varint,2,opt,name=submessage_oneof_int64,json=submessageOneofInt64,oneof" json:"submessage_oneof_int64,omitempty"`
+	SubmessageOneofInt64 int64 `protobuf:"varint,2,opt,name=submessage_oneof_int64,json=submessageOneofInt64,oneof" json:"submessage_oneof_int64,omitempty" pg:"submessage_oneof_int64"`
 }
 
 func (*M_Submessage_SubmessageOneofInt32) isM_Submessage_SubmessageOneofField() {}

@@ -111,7 +111,7 @@ and the following test code:
 package union
 
 import (
-	"github.com/gogo/protobuf/gogoproto"
+	"github.com/tron-us/protobuf/gogoproto"
 	"github.com/tron-us/protobuf/protoc-gen-gogo/generator"
 )
 

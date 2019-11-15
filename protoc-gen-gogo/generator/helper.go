@@ -36,8 +36,8 @@ import (
 	"path"
 	"strings"
 
-	"github.com/gogo/protobuf/gogoproto"
-	"github.com/gogo/protobuf/proto"
+	"github.com/tron-us/protobuf/gogoproto"
+	"github.com/tron-us/protobuf/proto"
 	descriptor "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
 	plugin "github.com/tron-us/protobuf/protoc-gen-gogo/plugin"
 )
@@ -451,8 +451,8 @@ func (d *Descriptor) Path() string {
 }
 
 func (g *Generator) useTypes() string {
-	pkg := strings.Map(badToUnderscore, "github.com/gogo/protobuf/types")
-	g.customImports = append(g.customImports, "github.com/gogo/protobuf/types")
+	pkg := strings.Map(badToUnderscore, "github.com/tron-us/protobuf/types")
+	g.customImports = append(g.customImports, "github.com/tron-us/protobuf/types")
 	return pkg
 }
 

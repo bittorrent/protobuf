@@ -31,7 +31,7 @@ package mapdefaults
 import (
 	"testing"
 
-	"github.com/gogo/protobuf/proto"
+	"github.com/tron-us/protobuf/proto"
 )
 
 func TestUnmarshalImplicitDefaultKeyValue1(t *testing.T) {

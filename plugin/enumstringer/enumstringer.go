@@ -40,7 +40,7 @@ This package is subject to change.
 package enumstringer
 
 import (
-	"github.com/gogo/protobuf/gogoproto"
+	"github.com/tron-us/protobuf/gogoproto"
 	"github.com/tron-us/protobuf/protoc-gen-gogo/generator"
 )
 

@@ -5,11 +5,11 @@ package events
 
 import (
 	fmt "fmt"
-	_ "github.com/gogo/protobuf/gogoproto"
-	github_com_gogo_protobuf_jsonpb "github.com/gogo/protobuf/jsonpb"
-	github_com_gogo_protobuf_proto "github.com/gogo/protobuf/proto"
-	proto "github.com/gogo/protobuf/proto"
-	_ "github.com/gogo/protobuf/test/issue312"
+	_ "github.com/tron-us/protobuf/gogoproto"
+	github_com_gogo_protobuf_jsonpb "github.com/tron-us/protobuf/jsonpb"
+	github_com_gogo_protobuf_proto "github.com/tron-us/protobuf/proto"
+	proto "github.com/tron-us/protobuf/proto"
+	_ "github.com/tron-us/protobuf/test/issue312"
 	go_parser "go/parser"
 	math "math"
 	math_rand "math/rand"

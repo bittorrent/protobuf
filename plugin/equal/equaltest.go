@@ -29,8 +29,8 @@
 package equal
 
 import (
-	"github.com/gogo/protobuf/gogoproto"
-	"github.com/gogo/protobuf/plugin/testgen"
+	"github.com/tron-us/protobuf/gogoproto"
+	"github.com/tron-us/protobuf/plugin/testgen"
 	"github.com/tron-us/protobuf/protoc-gen-gogo/generator"
 )
 
@@ -47,7 +47,7 @@ func (p *test) Generate(imports generator.PluginImports, file *generator.FileDes
 	randPkg := imports.NewImport("math/rand")
 	timePkg := imports.NewImport("time")
 	testingPkg := imports.NewImport("testing")
-	protoPkg := imports.NewImport("github.com/gogo/protobuf/proto")
+	protoPkg := imports.NewImport("github.com/tron-us/protobuf/proto")
 	unsafePkg := imports.NewImport("unsafe")
 	if !gogoproto.ImportsGoGoProto(file.FileDescriptorProto) {
 		protoPkg = imports.NewImport("github.com/golang/protobuf/proto")

@@ -29,8 +29,8 @@
 package union
 
 import (
-	"github.com/gogo/protobuf/gogoproto"
-	"github.com/gogo/protobuf/plugin/testgen"
+	"github.com/tron-us/protobuf/gogoproto"
+	"github.com/tron-us/protobuf/plugin/testgen"
 	"github.com/tron-us/protobuf/protoc-gen-gogo/generator"
 )
 

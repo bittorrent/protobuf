@@ -36,8 +36,8 @@ package proto_test
 import (
 	"testing"
 
-	"github.com/gogo/protobuf/proto"
-	tpb "github.com/gogo/protobuf/proto/proto3_proto"
+	"github.com/tron-us/protobuf/proto"
+	tpb "github.com/tron-us/protobuf/proto/proto3_proto"
 )
 
 var msgBlackhole = new(tpb.Message)

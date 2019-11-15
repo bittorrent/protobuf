@@ -5,7 +5,7 @@ package imports
 
 import (
 	fmt "fmt"
-	proto "github.com/gogo/protobuf/proto"
+	proto "github.com/tron-us/protobuf/proto"
 	test_a_1 "github.com/tron-us/protobuf/protoc-gen-gogo/testdata/imports/test_a_1"
 	math "math"
 )
@@ -22,7 +22,7 @@ var _ = math.Inf
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type A1M2 struct {
-	F                    *test_a_1.M2 `protobuf:"bytes,1,opt,name=f,proto3" json:"f,omitempty"`
+	F                    *test_a_1.M2 `protobuf:"bytes,1,opt,name=f,proto3" json:"f,omitempty" pg:"f"`
 	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
 	XXX_unrecognized     []byte       `json:"-"`
 	XXX_sizecache        int32        `json:"-"`

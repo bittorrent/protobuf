@@ -38,7 +38,7 @@ package oneofcheck
 
 import (
 	"fmt"
-	"github.com/gogo/protobuf/gogoproto"
+	"github.com/tron-us/protobuf/gogoproto"
 	"github.com/tron-us/protobuf/protoc-gen-gogo/generator"
 	"os"
 )

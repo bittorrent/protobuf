@@ -31,7 +31,7 @@ package moredefaults
 import (
 	"testing"
 
-	test "github.com/gogo/protobuf/test/example"
+	test "github.com/tron-us/protobuf/test/example"
 )
 
 func TestDefaults(t *testing.T) {
