@@ -65,8 +65,8 @@ import (
 	"github.com/gogo/protobuf/gogoproto"
 	"github.com/gogo/protobuf/proto"
 	descriptor "github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
-	"github.com/gogo/protobuf/protoc-gen-gogo/generator/internal/remap"
 	plugin "github.com/gogo/protobuf/protoc-gen-gogo/plugin"
+	"github.com/tron-us/protobuf/protoc-gen-gogo/generator/internal/remap"
 )
 
 // generatedCodeVersion indicates a version of the generated code.

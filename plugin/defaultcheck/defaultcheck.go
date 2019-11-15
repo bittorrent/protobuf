@@ -54,7 +54,7 @@ package defaultcheck
 import (
 	"fmt"
 	"github.com/gogo/protobuf/gogoproto"
-	"github.com/gogo/protobuf/protoc-gen-gogo/generator"
+	"github.com/tron-us/protobuf/protoc-gen-gogo/generator"
 	"os"
 )
 

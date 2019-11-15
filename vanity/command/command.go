@@ -52,9 +52,9 @@ import (
 	_ "github.com/gogo/protobuf/plugin/union"
 	_ "github.com/gogo/protobuf/plugin/unmarshal"
 	"github.com/gogo/protobuf/proto"
-	"github.com/gogo/protobuf/protoc-gen-gogo/generator"
 	_ "github.com/gogo/protobuf/protoc-gen-gogo/grpc"
 	plugin "github.com/gogo/protobuf/protoc-gen-gogo/plugin"
+	"github.com/tron-us/protobuf/protoc-gen-gogo/generator"
 )
 
 func Read() *plugin.CodeGeneratorRequest {
