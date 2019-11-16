@@ -37,11 +37,11 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 type Api struct {
 	// The fully qualified name of this interface, including package name
 	// followed by the interface's simple name.
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" pg:"name"`
 	// The methods of this interface, in unspecified order.
-	Methods []*Method `protobuf:"bytes,2,rep,name=methods,proto3" json:"methods,omitempty"`
+	Methods []*Method `protobuf:"bytes,2,rep,name=methods,proto3" json:"methods,omitempty" pg:"methods"`
 	// Any metadata attached to the interface.
-	Options []*Option `protobuf:"bytes,3,rep,name=options,proto3" json:"options,omitempty"`
+	Options []*Option `protobuf:"bytes,3,rep,name=options,proto3" json:"options,omitempty" pg:"options"`
 	// A version string for this interface. If specified, must have the form
 	// `major-version.minor-version`, as in `1.10`. If the minor version is
 	// omitted, it defaults to zero. If the entire version field is empty, the
@@ -63,14 +63,14 @@ type Api struct {
 	// experimental, non-GA interfaces.
 	//
 	//
-	Version string `protobuf:"bytes,4,opt,name=version,proto3" json:"version,omitempty"`
+	Version string `protobuf:"bytes,4,opt,name=version,proto3" json:"version,omitempty" pg:"version"`
 	// Source context for the protocol buffer service represented by this
 	// message.
-	SourceContext *SourceContext `protobuf:"bytes,5,opt,name=source_context,json=sourceContext,proto3" json:"source_context,omitempty"`
+	SourceContext *SourceContext `protobuf:"bytes,5,opt,name=source_context,json=sourceContext,proto3" json:"source_context,omitempty" pg:"source_context"`
 	// Included interfaces. See [Mixin][].
-	Mixins []*Mixin `protobuf:"bytes,6,rep,name=mixins,proto3" json:"mixins,omitempty"`
+	Mixins []*Mixin `protobuf:"bytes,6,rep,name=mixins,proto3" json:"mixins,omitempty" pg:"mixins"`
 	// The source syntax of the service.
-	Syntax               Syntax   `protobuf:"varint,7,opt,name=syntax,proto3,enum=google.protobuf.Syntax" json:"syntax,omitempty"`
+	Syntax               Syntax   `protobuf:"varint,7,opt,name=syntax,proto3,enum=google.protobuf.Syntax" json:"syntax,omitempty" pg:"syntax"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -164,19 +164,19 @@ func (*Api) XXX_MessageName() string {
 // Method represents a method of an API interface.
 type Method struct {
 	// The simple name of this method.
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" pg:"name"`
 	// A URL of the input message type.
-	RequestTypeUrl string `protobuf:"bytes,2,opt,name=request_type_url,json=requestTypeUrl,proto3" json:"request_type_url,omitempty"`
+	RequestTypeUrl string `protobuf:"bytes,2,opt,name=request_type_url,json=requestTypeUrl,proto3" json:"request_type_url,omitempty" pg:"request_type_url"`
 	// If true, the request is streamed.
-	RequestStreaming bool `protobuf:"varint,3,opt,name=request_streaming,json=requestStreaming,proto3" json:"request_streaming,omitempty"`
+	RequestStreaming bool `protobuf:"varint,3,opt,name=request_streaming,json=requestStreaming,proto3" json:"request_streaming,omitempty" pg:"request_streaming"`
 	// The URL of the output message type.
-	ResponseTypeUrl string `protobuf:"bytes,4,opt,name=response_type_url,json=responseTypeUrl,proto3" json:"response_type_url,omitempty"`
+	ResponseTypeUrl string `protobuf:"bytes,4,opt,name=response_type_url,json=responseTypeUrl,proto3" json:"response_type_url,omitempty" pg:"response_type_url"`
 	// If true, the response is streamed.
-	ResponseStreaming bool `protobuf:"varint,5,opt,name=response_streaming,json=responseStreaming,proto3" json:"response_streaming,omitempty"`
+	ResponseStreaming bool `protobuf:"varint,5,opt,name=response_streaming,json=responseStreaming,proto3" json:"response_streaming,omitempty" pg:"response_streaming"`
 	// Any metadata attached to the method.
-	Options []*Option `protobuf:"bytes,6,rep,name=options,proto3" json:"options,omitempty"`
+	Options []*Option `protobuf:"bytes,6,rep,name=options,proto3" json:"options,omitempty" pg:"options"`
 	// The source syntax of this method.
-	Syntax               Syntax   `protobuf:"varint,7,opt,name=syntax,proto3,enum=google.protobuf.Syntax" json:"syntax,omitempty"`
+	Syntax               Syntax   `protobuf:"varint,7,opt,name=syntax,proto3,enum=google.protobuf.Syntax" json:"syntax,omitempty" pg:"syntax"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -347,10 +347,10 @@ func (*Method) XXX_MessageName() string {
 //     }
 type Mixin struct {
 	// The fully qualified name of the interface which is included.
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" pg:"name"`
 	// If non-empty specifies a path under which inherited HTTP paths
 	// are rooted.
-	Root                 string   `protobuf:"bytes,2,opt,name=root,proto3" json:"root,omitempty"`
+	Root                 string   `protobuf:"bytes,2,opt,name=root,proto3" json:"root,omitempty" pg:"root"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`

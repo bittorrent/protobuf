@@ -5,9 +5,9 @@ package proto3_proto
 
 import (
 	fmt "fmt"
+	test_proto "github.com/gogo/protobuf/proto/test_proto"
+	types "github.com/gogo/protobuf/types"
 	proto "github.com/tron-us/protobuf/proto"
-	test_proto "github.com/tron-us/protobuf/proto/test_proto"
-	types "github.com/tron-us/protobuf/types"
 	math "math"
 )
 
@@ -54,25 +54,25 @@ func (Message_Humour) EnumDescriptor() ([]byte, []int) {
 }
 
 type Message struct {
-	Name                 string                             `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Hilarity             Message_Humour                     `protobuf:"varint,2,opt,name=hilarity,proto3,enum=proto3_proto.Message_Humour" json:"hilarity,omitempty"`
-	HeightInCm           uint32                             `protobuf:"varint,3,opt,name=height_in_cm,json=heightInCm,proto3" json:"height_in_cm,omitempty"`
-	Data                 []byte                             `protobuf:"bytes,4,opt,name=data,proto3" json:"data,omitempty"`
-	ResultCount          int64                              `protobuf:"varint,7,opt,name=result_count,json=resultCount,proto3" json:"result_count,omitempty"`
-	TrueScotsman         bool                               `protobuf:"varint,8,opt,name=true_scotsman,json=trueScotsman,proto3" json:"true_scotsman,omitempty"`
-	Score                float32                            `protobuf:"fixed32,9,opt,name=score,proto3" json:"score,omitempty"`
-	Key                  []uint64                           `protobuf:"varint,5,rep,packed,name=key,proto3" json:"key,omitempty"`
-	ShortKey             []int32                            `protobuf:"varint,19,rep,packed,name=short_key,json=shortKey,proto3" json:"short_key,omitempty"`
-	Nested               *Nested                            `protobuf:"bytes,6,opt,name=nested,proto3" json:"nested,omitempty"`
-	RFunny               []Message_Humour                   `protobuf:"varint,16,rep,packed,name=r_funny,json=rFunny,proto3,enum=proto3_proto.Message_Humour" json:"r_funny,omitempty"`
-	Terrain              map[string]*Nested                 `protobuf:"bytes,10,rep,name=terrain,proto3" json:"terrain,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	Proto2Field          *test_proto.SubDefaults            `protobuf:"bytes,11,opt,name=proto2_field,json=proto2Field,proto3" json:"proto2_field,omitempty"`
-	Proto2Value          map[string]*test_proto.SubDefaults `protobuf:"bytes,13,rep,name=proto2_value,json=proto2Value,proto3" json:"proto2_value,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	Anything             *types.Any                         `protobuf:"bytes,14,opt,name=anything,proto3" json:"anything,omitempty"`
-	ManyThings           []*types.Any                       `protobuf:"bytes,15,rep,name=many_things,json=manyThings,proto3" json:"many_things,omitempty"`
-	Submessage           *Message                           `protobuf:"bytes,17,opt,name=submessage,proto3" json:"submessage,omitempty"`
-	Children             []*Message                         `protobuf:"bytes,18,rep,name=children,proto3" json:"children,omitempty"`
-	StringMap            map[string]string                  `protobuf:"bytes,20,rep,name=string_map,json=stringMap,proto3" json:"string_map,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	Name                 string                             `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" pg:"name"`
+	Hilarity             Message_Humour                     `protobuf:"varint,2,opt,name=hilarity,proto3,enum=proto3_proto.Message_Humour" json:"hilarity,omitempty" pg:"hilarity"`
+	HeightInCm           uint32                             `protobuf:"varint,3,opt,name=height_in_cm,json=heightInCm,proto3" json:"height_in_cm,omitempty" pg:"height_in_cm"`
+	Data                 []byte                             `protobuf:"bytes,4,opt,name=data,proto3" json:"data,omitempty" pg:"data"`
+	ResultCount          int64                              `protobuf:"varint,7,opt,name=result_count,json=resultCount,proto3" json:"result_count,omitempty" pg:"result_count"`
+	TrueScotsman         bool                               `protobuf:"varint,8,opt,name=true_scotsman,json=trueScotsman,proto3" json:"true_scotsman,omitempty" pg:"true_scotsman"`
+	Score                float32                            `protobuf:"fixed32,9,opt,name=score,proto3" json:"score,omitempty" pg:"score"`
+	Key                  []uint64                           `protobuf:"varint,5,rep,packed,name=key,proto3" json:"key,omitempty" pg:"key"`
+	ShortKey             []int32                            `protobuf:"varint,19,rep,packed,name=short_key,json=shortKey,proto3" json:"short_key,omitempty" pg:"short_key"`
+	Nested               *Nested                            `protobuf:"bytes,6,opt,name=nested,proto3" json:"nested,omitempty" pg:"nested"`
+	RFunny               []Message_Humour                   `protobuf:"varint,16,rep,packed,name=r_funny,json=rFunny,proto3,enum=proto3_proto.Message_Humour" json:"r_funny,omitempty" pg:"r_funny"`
+	Terrain              map[string]*Nested                 `protobuf:"bytes,10,rep,name=terrain,proto3" json:"terrain,omitempty" pg:"terrain" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	Proto2Field          *test_proto.SubDefaults            `protobuf:"bytes,11,opt,name=proto2_field,json=proto2Field,proto3" json:"proto2_field,omitempty" pg:"proto2_field"`
+	Proto2Value          map[string]*test_proto.SubDefaults `protobuf:"bytes,13,rep,name=proto2_value,json=proto2Value,proto3" json:"proto2_value,omitempty" pg:"proto2_value" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	Anything             *types.Any                         `protobuf:"bytes,14,opt,name=anything,proto3" json:"anything,omitempty" pg:"anything"`
+	ManyThings           []*types.Any                       `protobuf:"bytes,15,rep,name=many_things,json=manyThings,proto3" json:"many_things,omitempty" pg:"many_things"`
+	Submessage           *Message                           `protobuf:"bytes,17,opt,name=submessage,proto3" json:"submessage,omitempty" pg:"submessage"`
+	Children             []*Message                         `protobuf:"bytes,18,rep,name=children,proto3" json:"children,omitempty" pg:"children"`
+	StringMap            map[string]string                  `protobuf:"bytes,20,rep,name=string_map,json=stringMap,proto3" json:"string_map,omitempty" pg:"string_map" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	XXX_NoUnkeyedLiteral struct{}                           `json:"-"`
 	XXX_unrecognized     []byte                             `json:"-"`
 	XXX_sizecache        int32                              `json:"-"`
@@ -236,8 +236,8 @@ func (m *Message) GetStringMap() map[string]string {
 }
 
 type Nested struct {
-	Bunny                string   `protobuf:"bytes,1,opt,name=bunny,proto3" json:"bunny,omitempty"`
-	Cute                 bool     `protobuf:"varint,2,opt,name=cute,proto3" json:"cute,omitempty"`
+	Bunny                string   `protobuf:"bytes,1,opt,name=bunny,proto3" json:"bunny,omitempty" pg:"bunny"`
+	Cute                 bool     `protobuf:"varint,2,opt,name=cute,proto3" json:"cute,omitempty" pg:"cute"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -282,7 +282,7 @@ func (m *Nested) GetCute() bool {
 }
 
 type MessageWithMap struct {
-	ByteMapping          map[bool][]byte `protobuf:"bytes,1,rep,name=byte_mapping,json=byteMapping,proto3" json:"byte_mapping,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	ByteMapping          map[bool][]byte `protobuf:"bytes,1,rep,name=byte_mapping,json=byteMapping,proto3" json:"byte_mapping,omitempty" pg:"byte_mapping" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
 	XXX_unrecognized     []byte          `json:"-"`
 	XXX_sizecache        int32           `json:"-"`
@@ -320,7 +320,7 @@ func (m *MessageWithMap) GetByteMapping() map[bool][]byte {
 }
 
 type IntMap struct {
-	Rtt                  map[int32]int32 `protobuf:"bytes,1,rep,name=rtt,proto3" json:"rtt,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	Rtt                  map[int32]int32 `protobuf:"bytes,1,rep,name=rtt,proto3" json:"rtt,omitempty" pg:"rtt" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
 	XXX_unrecognized     []byte          `json:"-"`
 	XXX_sizecache        int32           `json:"-"`
@@ -358,7 +358,7 @@ func (m *IntMap) GetRtt() map[int32]int32 {
 }
 
 type IntMaps struct {
-	Maps                 []*IntMap `protobuf:"bytes,1,rep,name=maps,proto3" json:"maps,omitempty"`
+	Maps                 []*IntMap `protobuf:"bytes,1,rep,name=maps,proto3" json:"maps,omitempty" pg:"maps"`
 	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
 	XXX_unrecognized     []byte    `json:"-"`
 	XXX_sizecache        int32     `json:"-"`
@@ -396,13 +396,13 @@ func (m *IntMaps) GetMaps() []*IntMap {
 }
 
 type TestUTF8 struct {
-	Scalar string   `protobuf:"bytes,1,opt,name=scalar,proto3" json:"scalar,omitempty"`
-	Vector []string `protobuf:"bytes,2,rep,name=vector,proto3" json:"vector,omitempty"`
+	Scalar string   `protobuf:"bytes,1,opt,name=scalar,proto3" json:"scalar,omitempty" pg:"scalar"`
+	Vector []string `protobuf:"bytes,2,rep,name=vector,proto3" json:"vector,omitempty" pg:"vector"`
 	// Types that are valid to be assigned to Oneof:
 	//	*TestUTF8_Field
 	Oneof                isTestUTF8_Oneof `protobuf_oneof:"oneof"`
-	MapKey               map[string]int64 `protobuf:"bytes,4,rep,name=map_key,json=mapKey,proto3" json:"map_key,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	MapValue             map[int64]string `protobuf:"bytes,5,rep,name=map_value,json=mapValue,proto3" json:"map_value,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	MapKey               map[string]int64 `protobuf:"bytes,4,rep,name=map_key,json=mapKey,proto3" json:"map_key,omitempty" pg:"map_key" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	MapValue             map[int64]string `protobuf:"bytes,5,rep,name=map_value,json=mapValue,proto3" json:"map_value,omitempty" pg:"map_value" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
 	XXX_unrecognized     []byte           `json:"-"`
 	XXX_sizecache        int32            `json:"-"`
@@ -437,7 +437,7 @@ type isTestUTF8_Oneof interface {
 }
 
 type TestUTF8_Field struct {
-	Field string `protobuf:"bytes,3,opt,name=field,proto3,oneof" json:"field,omitempty"`
+	Field string `protobuf:"bytes,3,opt,name=field,proto3,oneof" json:"field,omitempty" pg:"field"`
 }
 
 func (*TestUTF8_Field) isTestUTF8_Oneof() {}

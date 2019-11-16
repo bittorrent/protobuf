@@ -23,7 +23,7 @@ var _ = math.Inf
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type Aproto3 struct {
-	B string `protobuf:"bytes,1,opt,name=B,proto3" json:"B,omitempty"`
+	B string `protobuf:"bytes,1,opt,name=B,proto3" json:"B,omitempty" pg:"B"`
 }
 
 func (m *Aproto3) Reset()         { *m = Aproto3{} }

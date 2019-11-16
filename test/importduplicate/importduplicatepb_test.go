@@ -6,8 +6,8 @@ package importduplicate
 import (
 	fmt "fmt"
 	_ "github.com/tron-us/protobuf/gogoproto"
-	github_com_gogo_protobuf_jsonpb "github.com/tron-us/protobuf/jsonpb"
-	github_com_gogo_protobuf_proto "github.com/tron-us/protobuf/proto"
+	github_com_tron_us_protobuf_jsonpb "github.com/tron-us/protobuf/jsonpb"
+	github_com_tron_us_protobuf_proto "github.com/tron-us/protobuf/proto"
 	proto "github.com/tron-us/protobuf/proto"
 	_ "github.com/tron-us/protobuf/test/importduplicate/proto"
 	_ "github.com/tron-us/protobuf/test/importduplicate/sortkeys"
@@ -27,12 +27,12 @@ func TestMapAndSortKeysProto(t *testing.T) {
 	seed := time.Now().UnixNano()
 	popr := math_rand.New(math_rand.NewSource(seed))
 	p := NewPopulatedMapAndSortKeys(popr, false)
-	dAtA, err := github_com_gogo_protobuf_proto.Marshal(p)
+	dAtA, err := github_com_tron_us_protobuf_proto.Marshal(p)
 	if err != nil {
 		t.Fatalf("seed = %d, err = %v", seed, err)
 	}
 	msg := &MapAndSortKeys{}
-	if err := github_com_gogo_protobuf_proto.Unmarshal(dAtA, msg); err != nil {
+	if err := github_com_tron_us_protobuf_proto.Unmarshal(dAtA, msg); err != nil {
 		t.Fatalf("seed = %d, err = %v", seed, err)
 	}
 	littlefuzz := make([]byte, len(dAtA))
@@ -50,7 +50,7 @@ func TestMapAndSortKeysProto(t *testing.T) {
 			littlefuzz = append(littlefuzz, byte(popr.Intn(256)))
 		}
 		// shouldn't panic
-		_ = github_com_gogo_protobuf_proto.Unmarshal(littlefuzz, msg)
+		_ = github_com_tron_us_protobuf_proto.Unmarshal(littlefuzz, msg)
 	}
 }
 
@@ -58,13 +58,13 @@ func TestMapAndSortKeysJSON(t *testing.T) {
 	seed := time.Now().UnixNano()
 	popr := math_rand.New(math_rand.NewSource(seed))
 	p := NewPopulatedMapAndSortKeys(popr, true)
-	marshaler := github_com_gogo_protobuf_jsonpb.Marshaler{}
+	marshaler := github_com_tron_us_protobuf_jsonpb.Marshaler{}
 	jsondata, err := marshaler.MarshalToString(p)
 	if err != nil {
 		t.Fatalf("seed = %d, err = %v", seed, err)
 	}
 	msg := &MapAndSortKeys{}
-	err = github_com_gogo_protobuf_jsonpb.UnmarshalString(jsondata, msg)
+	err = github_com_tron_us_protobuf_jsonpb.UnmarshalString(jsondata, msg)
 	if err != nil {
 		t.Fatalf("seed = %d, err = %v", seed, err)
 	}
@@ -76,9 +76,9 @@ func TestMapAndSortKeysProtoText(t *testing.T) {
 	seed := time.Now().UnixNano()
 	popr := math_rand.New(math_rand.NewSource(seed))
 	p := NewPopulatedMapAndSortKeys(popr, true)
-	dAtA := github_com_gogo_protobuf_proto.MarshalTextString(p)
+	dAtA := github_com_tron_us_protobuf_proto.MarshalTextString(p)
 	msg := &MapAndSortKeys{}
-	if err := github_com_gogo_protobuf_proto.UnmarshalText(dAtA, msg); err != nil {
+	if err := github_com_tron_us_protobuf_proto.UnmarshalText(dAtA, msg); err != nil {
 		t.Fatalf("seed = %d, err = %v", seed, err)
 	}
 	if !p.Equal(msg) {
@@ -90,9 +90,9 @@ func TestMapAndSortKeysProtoCompactText(t *testing.T) {
 	seed := time.Now().UnixNano()
 	popr := math_rand.New(math_rand.NewSource(seed))
 	p := NewPopulatedMapAndSortKeys(popr, true)
-	dAtA := github_com_gogo_protobuf_proto.CompactTextString(p)
+	dAtA := github_com_tron_us_protobuf_proto.CompactTextString(p)
 	msg := &MapAndSortKeys{}
-	if err := github_com_gogo_protobuf_proto.UnmarshalText(dAtA, msg); err != nil {
+	if err := github_com_tron_us_protobuf_proto.UnmarshalText(dAtA, msg); err != nil {
 		t.Fatalf("seed = %d, err = %v", seed, err)
 	}
 	if !p.Equal(msg) {

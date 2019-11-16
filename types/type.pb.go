@@ -177,17 +177,17 @@ func (Field_Cardinality) EnumDescriptor() ([]byte, []int) {
 // A protocol buffer message type.
 type Type struct {
 	// The fully qualified message name.
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" pg:"name"`
 	// The list of fields.
-	Fields []*Field `protobuf:"bytes,2,rep,name=fields,proto3" json:"fields,omitempty"`
+	Fields []*Field `protobuf:"bytes,2,rep,name=fields,proto3" json:"fields,omitempty" pg:"fields"`
 	// The list of types appearing in `oneof` definitions in this type.
-	Oneofs []string `protobuf:"bytes,3,rep,name=oneofs,proto3" json:"oneofs,omitempty"`
+	Oneofs []string `protobuf:"bytes,3,rep,name=oneofs,proto3" json:"oneofs,omitempty" pg:"oneofs"`
 	// The protocol buffer options.
-	Options []*Option `protobuf:"bytes,4,rep,name=options,proto3" json:"options,omitempty"`
+	Options []*Option `protobuf:"bytes,4,rep,name=options,proto3" json:"options,omitempty" pg:"options"`
 	// The source context.
-	SourceContext *SourceContext `protobuf:"bytes,5,opt,name=source_context,json=sourceContext,proto3" json:"source_context,omitempty"`
+	SourceContext *SourceContext `protobuf:"bytes,5,opt,name=source_context,json=sourceContext,proto3" json:"source_context,omitempty" pg:"source_context"`
 	// The source syntax.
-	Syntax               Syntax   `protobuf:"varint,6,opt,name=syntax,proto3,enum=google.protobuf.Syntax" json:"syntax,omitempty"`
+	Syntax               Syntax   `protobuf:"varint,6,opt,name=syntax,proto3,enum=google.protobuf.Syntax" json:"syntax,omitempty" pg:"syntax"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -274,27 +274,27 @@ func (*Type) XXX_MessageName() string {
 // A single field of a message type.
 type Field struct {
 	// The field type.
-	Kind Field_Kind `protobuf:"varint,1,opt,name=kind,proto3,enum=google.protobuf.Field_Kind" json:"kind,omitempty"`
+	Kind Field_Kind `protobuf:"varint,1,opt,name=kind,proto3,enum=google.protobuf.Field_Kind" json:"kind,omitempty" pg:"kind"`
 	// The field cardinality.
-	Cardinality Field_Cardinality `protobuf:"varint,2,opt,name=cardinality,proto3,enum=google.protobuf.Field_Cardinality" json:"cardinality,omitempty"`
+	Cardinality Field_Cardinality `protobuf:"varint,2,opt,name=cardinality,proto3,enum=google.protobuf.Field_Cardinality" json:"cardinality,omitempty" pg:"cardinality"`
 	// The field number.
-	Number int32 `protobuf:"varint,3,opt,name=number,proto3" json:"number,omitempty"`
+	Number int32 `protobuf:"varint,3,opt,name=number,proto3" json:"number,omitempty" pg:"number"`
 	// The field name.
-	Name string `protobuf:"bytes,4,opt,name=name,proto3" json:"name,omitempty"`
+	Name string `protobuf:"bytes,4,opt,name=name,proto3" json:"name,omitempty" pg:"name"`
 	// The field type URL, without the scheme, for message or enumeration
 	// types. Example: `"type.googleapis.com/google.protobuf.Timestamp"`.
-	TypeUrl string `protobuf:"bytes,6,opt,name=type_url,json=typeUrl,proto3" json:"type_url,omitempty"`
+	TypeUrl string `protobuf:"bytes,6,opt,name=type_url,json=typeUrl,proto3" json:"type_url,omitempty" pg:"type_url"`
 	// The index of the field type in `Type.oneofs`, for message or enumeration
 	// types. The first type has index 1; zero means the type is not in the list.
-	OneofIndex int32 `protobuf:"varint,7,opt,name=oneof_index,json=oneofIndex,proto3" json:"oneof_index,omitempty"`
+	OneofIndex int32 `protobuf:"varint,7,opt,name=oneof_index,json=oneofIndex,proto3" json:"oneof_index,omitempty" pg:"oneof_index"`
 	// Whether to use alternative packed wire representation.
-	Packed bool `protobuf:"varint,8,opt,name=packed,proto3" json:"packed,omitempty"`
+	Packed bool `protobuf:"varint,8,opt,name=packed,proto3" json:"packed,omitempty" pg:"packed"`
 	// The protocol buffer options.
-	Options []*Option `protobuf:"bytes,9,rep,name=options,proto3" json:"options,omitempty"`
+	Options []*Option `protobuf:"bytes,9,rep,name=options,proto3" json:"options,omitempty" pg:"options"`
 	// The field JSON name.
-	JsonName string `protobuf:"bytes,10,opt,name=json_name,json=jsonName,proto3" json:"json_name,omitempty"`
+	JsonName string `protobuf:"bytes,10,opt,name=json_name,json=jsonName,proto3" json:"json_name,omitempty" pg:"json_name"`
 	// The string value of the default value of this field. Proto2 syntax only.
-	DefaultValue         string   `protobuf:"bytes,11,opt,name=default_value,json=defaultValue,proto3" json:"default_value,omitempty"`
+	DefaultValue         string   `protobuf:"bytes,11,opt,name=default_value,json=defaultValue,proto3" json:"default_value,omitempty" pg:"default_value"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -409,15 +409,15 @@ func (*Field) XXX_MessageName() string {
 // Enum type definition.
 type Enum struct {
 	// Enum type name.
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" pg:"name"`
 	// Enum value definitions.
-	Enumvalue []*EnumValue `protobuf:"bytes,2,rep,name=enumvalue,proto3" json:"enumvalue,omitempty"`
+	Enumvalue []*EnumValue `protobuf:"bytes,2,rep,name=enumvalue,proto3" json:"enumvalue,omitempty" pg:"enumvalue"`
 	// Protocol buffer options.
-	Options []*Option `protobuf:"bytes,3,rep,name=options,proto3" json:"options,omitempty"`
+	Options []*Option `protobuf:"bytes,3,rep,name=options,proto3" json:"options,omitempty" pg:"options"`
 	// The source context.
-	SourceContext *SourceContext `protobuf:"bytes,4,opt,name=source_context,json=sourceContext,proto3" json:"source_context,omitempty"`
+	SourceContext *SourceContext `protobuf:"bytes,4,opt,name=source_context,json=sourceContext,proto3" json:"source_context,omitempty" pg:"source_context"`
 	// The source syntax.
-	Syntax               Syntax   `protobuf:"varint,5,opt,name=syntax,proto3,enum=google.protobuf.Syntax" json:"syntax,omitempty"`
+	Syntax               Syntax   `protobuf:"varint,5,opt,name=syntax,proto3,enum=google.protobuf.Syntax" json:"syntax,omitempty" pg:"syntax"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -497,11 +497,11 @@ func (*Enum) XXX_MessageName() string {
 // Enum value definition.
 type EnumValue struct {
 	// Enum value name.
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" pg:"name"`
 	// Enum value number.
-	Number int32 `protobuf:"varint,2,opt,name=number,proto3" json:"number,omitempty"`
+	Number int32 `protobuf:"varint,2,opt,name=number,proto3" json:"number,omitempty" pg:"number"`
 	// Protocol buffer options.
-	Options              []*Option `protobuf:"bytes,3,rep,name=options,proto3" json:"options,omitempty"`
+	Options              []*Option `protobuf:"bytes,3,rep,name=options,proto3" json:"options,omitempty" pg:"options"`
 	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
 	XXX_unrecognized     []byte    `json:"-"`
 	XXX_sizecache        int32     `json:"-"`
@@ -571,12 +571,12 @@ type Option struct {
 	// descriptor.proto), this is the short name. For example, `"map_entry"`.
 	// For custom options, it should be the fully-qualified name. For example,
 	// `"google.api.http"`.
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" pg:"name"`
 	// The option's value packed in an Any message. If the value is a primitive,
 	// the corresponding wrapper type defined in google/protobuf/wrappers.proto
 	// should be used. If the value is an enum, it should be stored as an int32
 	// value using the google.protobuf.Int32Value type.
-	Value                *Any     `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
+	Value                *Any     `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty" pg:"value"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`

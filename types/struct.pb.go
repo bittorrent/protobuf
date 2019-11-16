@@ -8,7 +8,7 @@ import (
 	encoding_binary "encoding/binary"
 	fmt "fmt"
 	proto "github.com/tron-us/protobuf/proto"
-	github_com_gogo_protobuf_sortkeys "github.com/tron-us/protobuf/sortkeys"
+	github_com_tron_us_protobuf_sortkeys "github.com/tron-us/protobuf/sortkeys"
 	io "io"
 	math "math"
 	math_bits "math/bits"
@@ -63,7 +63,7 @@ func (NullValue) XXX_WellKnownType() string { return "NullValue" }
 // The JSON representation for `Struct` is JSON object.
 type Struct struct {
 	// Unordered map of dynamically typed values.
-	Fields               map[string]*Value `protobuf:"bytes,1,rep,name=fields,proto3" json:"fields,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	Fields               map[string]*Value `protobuf:"bytes,1,rep,name=fields,proto3" json:"fields,omitempty" pg:"fields" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
 	XXX_unrecognized     []byte            `json:"-"`
 	XXX_sizecache        int32             `json:"-"`
@@ -177,22 +177,22 @@ type isValue_Kind interface {
 }
 
 type Value_NullValue struct {
-	NullValue NullValue `protobuf:"varint,1,opt,name=null_value,json=nullValue,proto3,enum=google.protobuf.NullValue,oneof" json:"null_value,omitempty"`
+	NullValue NullValue `protobuf:"varint,1,opt,name=null_value,json=nullValue,proto3,enum=google.protobuf.NullValue,oneof" json:"null_value,omitempty" pg:"null_value"`
 }
 type Value_NumberValue struct {
-	NumberValue float64 `protobuf:"fixed64,2,opt,name=number_value,json=numberValue,proto3,oneof" json:"number_value,omitempty"`
+	NumberValue float64 `protobuf:"fixed64,2,opt,name=number_value,json=numberValue,proto3,oneof" json:"number_value,omitempty" pg:"number_value"`
 }
 type Value_StringValue struct {
-	StringValue string `protobuf:"bytes,3,opt,name=string_value,json=stringValue,proto3,oneof" json:"string_value,omitempty"`
+	StringValue string `protobuf:"bytes,3,opt,name=string_value,json=stringValue,proto3,oneof" json:"string_value,omitempty" pg:"string_value"`
 }
 type Value_BoolValue struct {
-	BoolValue bool `protobuf:"varint,4,opt,name=bool_value,json=boolValue,proto3,oneof" json:"bool_value,omitempty"`
+	BoolValue bool `protobuf:"varint,4,opt,name=bool_value,json=boolValue,proto3,oneof" json:"bool_value,omitempty" pg:"bool_value"`
 }
 type Value_StructValue struct {
-	StructValue *Struct `protobuf:"bytes,5,opt,name=struct_value,json=structValue,proto3,oneof" json:"struct_value,omitempty"`
+	StructValue *Struct `protobuf:"bytes,5,opt,name=struct_value,json=structValue,proto3,oneof" json:"struct_value,omitempty" pg:"struct_value"`
 }
 type Value_ListValue struct {
-	ListValue *ListValue `protobuf:"bytes,6,opt,name=list_value,json=listValue,proto3,oneof" json:"list_value,omitempty"`
+	ListValue *ListValue `protobuf:"bytes,6,opt,name=list_value,json=listValue,proto3,oneof" json:"list_value,omitempty" pg:"list_value"`
 }
 
 func (*Value_NullValue) isValue_Kind()   {}
@@ -272,7 +272,7 @@ func (*Value) XXX_MessageName() string {
 // The JSON representation for `ListValue` is JSON array.
 type ListValue struct {
 	// Repeated field of dynamically typed values.
-	Values               []*Value `protobuf:"bytes,1,rep,name=values,proto3" json:"values,omitempty"`
+	Values               []*Value `protobuf:"bytes,1,rep,name=values,proto3" json:"values,omitempty" pg:"values"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -976,7 +976,7 @@ func (this *Struct) GoString() string {
 	for k := range this.Fields {
 		keysForFields = append(keysForFields, k)
 	}
-	github_com_gogo_protobuf_sortkeys.Strings(keysForFields)
+	github_com_tron_us_protobuf_sortkeys.Strings(keysForFields)
 	mapStringForFields := "map[string]*Value{"
 	for _, k := range keysForFields {
 		mapStringForFields += fmt.Sprintf("%#v: %#v,", k, this.Fields[k])
@@ -1607,7 +1607,7 @@ func (this *Struct) String() string {
 	for k := range this.Fields {
 		keysForFields = append(keysForFields, k)
 	}
-	github_com_gogo_protobuf_sortkeys.Strings(keysForFields)
+	github_com_tron_us_protobuf_sortkeys.Strings(keysForFields)
 	mapStringForFields := "map[string]*Value{"
 	for _, k := range keysForFields {
 		mapStringForFields += fmt.Sprintf("%v: %v,", k, this.Fields[k])

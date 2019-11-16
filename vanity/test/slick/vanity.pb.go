@@ -5,7 +5,7 @@ package vanity
 
 import (
 	fmt "fmt"
-	github_com_gogo_protobuf_proto "github.com/tron-us/protobuf/proto"
+	github_com_tron_us_protobuf_proto "github.com/tron-us/protobuf/proto"
 	proto "github.com/tron-us/protobuf/proto"
 	io "io"
 	math "math"
@@ -26,8 +26,8 @@ var _ = math.Inf
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type A struct {
-	Strings string `protobuf:"bytes,1,opt,name=Strings" json:"Strings"`
-	Int     int64  `protobuf:"varint,2,req,name=Int" json:"Int"`
+	Strings string `protobuf:"bytes,1,opt,name=Strings" json:"Strings" pg:"Strings"`
+	Int     int64  `protobuf:"varint,2,req,name=Int" json:"Int" pg:"Int"`
 }
 
 func (m *A) Reset()      { *m = A{} }
@@ -322,7 +322,7 @@ func (m *A) Unmarshal(dAtA []byte) error {
 		}
 	}
 	if hasFields[0]&uint64(0x00000001) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Int")
+		return github_com_tron_us_protobuf_proto.NewRequiredNotSetError("Int")
 	}
 
 	if iNdEx > l {

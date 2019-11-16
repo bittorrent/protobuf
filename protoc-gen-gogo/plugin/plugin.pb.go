@@ -23,12 +23,12 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 // The version number of protocol compiler.
 type Version struct {
-	Major *int32 `protobuf:"varint,1,opt,name=major" json:"major,omitempty"`
-	Minor *int32 `protobuf:"varint,2,opt,name=minor" json:"minor,omitempty"`
-	Patch *int32 `protobuf:"varint,3,opt,name=patch" json:"patch,omitempty"`
+	Major *int32 `protobuf:"varint,1,opt,name=major" json:"major,omitempty" pg:"major"`
+	Minor *int32 `protobuf:"varint,2,opt,name=minor" json:"minor,omitempty" pg:"minor"`
+	Patch *int32 `protobuf:"varint,3,opt,name=patch" json:"patch,omitempty" pg:"patch"`
 	// A suffix for alpha, beta or rc release, e.g., "alpha-1", "rc2". It should
 	// be empty for mainline stable releases.
-	Suffix               *string  `protobuf:"bytes,4,opt,name=suffix" json:"suffix,omitempty"`
+	Suffix               *string  `protobuf:"bytes,4,opt,name=suffix" json:"suffix,omitempty" pg:"suffix"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -91,9 +91,9 @@ type CodeGeneratorRequest struct {
 	// The .proto files that were explicitly listed on the command-line.  The
 	// code generator should generate code only for these files.  Each file's
 	// descriptor will be included in proto_file, below.
-	FileToGenerate []string `protobuf:"bytes,1,rep,name=file_to_generate,json=fileToGenerate" json:"file_to_generate,omitempty"`
+	FileToGenerate []string `protobuf:"bytes,1,rep,name=file_to_generate,json=fileToGenerate" json:"file_to_generate,omitempty" pg:"file_to_generate"`
 	// The generator parameter passed on the command-line.
-	Parameter *string `protobuf:"bytes,2,opt,name=parameter" json:"parameter,omitempty"`
+	Parameter *string `protobuf:"bytes,2,opt,name=parameter" json:"parameter,omitempty" pg:"parameter"`
 	// FileDescriptorProtos for all files in files_to_generate and everything
 	// they import.  The files will appear in topological order, so each file
 	// appears before any file that imports it.
@@ -108,9 +108,9 @@ type CodeGeneratorRequest struct {
 	//
 	// Type names of fields and extensions in the FileDescriptorProto are always
 	// fully qualified.
-	ProtoFile []*descriptor.FileDescriptorProto `protobuf:"bytes,15,rep,name=proto_file,json=protoFile" json:"proto_file,omitempty"`
+	ProtoFile []*descriptor.FileDescriptorProto `protobuf:"bytes,15,rep,name=proto_file,json=protoFile" json:"proto_file,omitempty" pg:"proto_file"`
 	// The version number of protocol compiler.
-	CompilerVersion      *Version `protobuf:"bytes,3,opt,name=compiler_version,json=compilerVersion" json:"compiler_version,omitempty"`
+	CompilerVersion      *Version `protobuf:"bytes,3,opt,name=compiler_version,json=compilerVersion" json:"compiler_version,omitempty" pg:"compiler_version"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -178,8 +178,8 @@ type CodeGeneratorResponse struct {
 	// problem in protoc itself -- such as the input CodeGeneratorRequest being
 	// unparseable -- should be reported by writing a message to stderr and
 	// exiting with a non-zero status code.
-	Error                *string                       `protobuf:"bytes,1,opt,name=error" json:"error,omitempty"`
-	File                 []*CodeGeneratorResponse_File `protobuf:"bytes,15,rep,name=file" json:"file,omitempty"`
+	Error                *string                       `protobuf:"bytes,1,opt,name=error" json:"error,omitempty" pg:"error"`
+	File                 []*CodeGeneratorResponse_File `protobuf:"bytes,15,rep,name=file" json:"file,omitempty" pg:"file"`
 	XXX_NoUnkeyedLiteral struct{}                      `json:"-"`
 	XXX_unrecognized     []byte                        `json:"-"`
 	XXX_sizecache        int32                         `json:"-"`
@@ -236,7 +236,7 @@ type CodeGeneratorResponse_File struct {
 	// files need not reside completely in memory at one time.  Note that as of
 	// this writing protoc does not optimize for this -- it will read the entire
 	// CodeGeneratorResponse before writing files to disk.
-	Name *string `protobuf:"bytes,1,opt,name=name" json:"name,omitempty"`
+	Name *string `protobuf:"bytes,1,opt,name=name" json:"name,omitempty" pg:"name"`
 	// If non-empty, indicates that the named file should already exist, and the
 	// content here is to be inserted into that file at a defined insertion
 	// point.  This feature allows a code generator to extend the output
@@ -274,9 +274,9 @@ type CodeGeneratorResponse_File struct {
 	// command line.
 	//
 	// If |insertion_point| is present, |name| must also be present.
-	InsertionPoint *string `protobuf:"bytes,2,opt,name=insertion_point,json=insertionPoint" json:"insertion_point,omitempty"`
+	InsertionPoint *string `protobuf:"bytes,2,opt,name=insertion_point,json=insertionPoint" json:"insertion_point,omitempty" pg:"insertion_point"`
 	// The file contents.
-	Content              *string  `protobuf:"bytes,15,opt,name=content" json:"content,omitempty"`
+	Content              *string  `protobuf:"bytes,15,opt,name=content" json:"content,omitempty" pg:"content"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
