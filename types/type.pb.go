@@ -188,9 +188,9 @@ type Type struct {
 	SourceContext *SourceContext `protobuf:"bytes,5,opt,name=source_context,json=sourceContext,proto3" json:"source_context,omitempty" pg:"source_context"`
 	// The source syntax.
 	Syntax               Syntax   `protobuf:"varint,6,opt,name=syntax,proto3,enum=google.protobuf.Syntax" json:"syntax,omitempty" pg:"syntax"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Type) Reset()      { *m = Type{} }
@@ -295,9 +295,9 @@ type Field struct {
 	JsonName string `protobuf:"bytes,10,opt,name=json_name,json=jsonName,proto3" json:"json_name,omitempty" pg:"json_name"`
 	// The string value of the default value of this field. Proto2 syntax only.
 	DefaultValue         string   `protobuf:"bytes,11,opt,name=default_value,json=defaultValue,proto3" json:"default_value,omitempty" pg:"default_value"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Field) Reset()      { *m = Field{} }
@@ -418,9 +418,9 @@ type Enum struct {
 	SourceContext *SourceContext `protobuf:"bytes,4,opt,name=source_context,json=sourceContext,proto3" json:"source_context,omitempty" pg:"source_context"`
 	// The source syntax.
 	Syntax               Syntax   `protobuf:"varint,5,opt,name=syntax,proto3,enum=google.protobuf.Syntax" json:"syntax,omitempty" pg:"syntax"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Enum) Reset()      { *m = Enum{} }
@@ -502,9 +502,9 @@ type EnumValue struct {
 	Number int32 `protobuf:"varint,2,opt,name=number,proto3" json:"number,omitempty" pg:"number"`
 	// Protocol buffer options.
 	Options              []*Option `protobuf:"bytes,3,rep,name=options,proto3" json:"options,omitempty" pg:"options"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *EnumValue) Reset()      { *m = EnumValue{} }
@@ -577,9 +577,9 @@ type Option struct {
 	// should be used. If the value is an enum, it should be stored as an int32
 	// value using the google.protobuf.Int32Value type.
 	Value                *Any     `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty" pg:"value"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Option) Reset()      { *m = Option{} }

@@ -54,9 +54,9 @@ type Types struct {
 	Bool                 *types.BoolValue     `protobuf:"bytes,28,opt,name=bool,proto3" json:"bool,omitempty" pg:"bool"`
 	Str                  *types.StringValue   `protobuf:"bytes,29,opt,name=str,proto3" json:"str,omitempty" pg:"str"`
 	Bytes                *types.BytesValue    `protobuf:"bytes,30,opt,name=bytes,proto3" json:"bytes,omitempty" pg:"bytes"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}             `json:"-" pg:"-"`
+	XXX_unrecognized     []byte               `json:"-" pg:"-"`
+	XXX_sizecache        int32                `json:"-" pg:"-"`
 }
 
 func (m *Types) Reset()         { *m = Types{} }

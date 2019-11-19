@@ -35,9 +35,9 @@ type NewNoGroup struct {
 	Field1               *int64    `protobuf:"varint,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
 	Field3               []float64 `protobuf:"fixed64,3,rep,name=Field3" json:"Field3,omitempty" pg:"Field3"`
 	A                    *A        `protobuf:"bytes,5,opt,name=A" json:"A,omitempty" pg:"A"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *NewNoGroup) Reset()      { *m = NewNoGroup{} }
@@ -74,9 +74,9 @@ var xxx_messageInfo_NewNoGroup proto.InternalMessageInfo
 
 type A struct {
 	AField               *int64   `protobuf:"varint,1,opt,name=AField" json:"AField,omitempty" pg:"AField"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *A) Reset()      { *m = A{} }
@@ -116,9 +116,9 @@ type OldWithGroup struct {
 	Group1               *OldWithGroup_Group1 `protobuf:"group,2,opt,name=Group1,json=group1" json:"group1,omitempty" pg:"group1"`
 	Field3               []float64            `protobuf:"fixed64,3,rep,name=Field3" json:"Field3,omitempty" pg:"Field3"`
 	Group2               *OldWithGroup_Group2 `protobuf:"group,4,opt,name=Group2,json=group2" json:"group2,omitempty" pg:"group2"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}             `json:"-" pg:"-"`
+	XXX_unrecognized     []byte               `json:"-" pg:"-"`
+	XXX_sizecache        int32                `json:"-" pg:"-"`
 }
 
 func (m *OldWithGroup) Reset()      { *m = OldWithGroup{} }
@@ -148,9 +148,9 @@ type OldWithGroup_Group1 struct {
 	Field1               *int64    `protobuf:"varint,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
 	Field2               *int32    `protobuf:"varint,2,opt,name=Field2" json:"Field2,omitempty" pg:"Field2"`
 	Field3               []float64 `protobuf:"fixed64,3,rep,name=Field3" json:"Field3,omitempty" pg:"Field3"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *OldWithGroup_Group1) Reset()      { *m = OldWithGroup_Group1{} }
@@ -179,9 +179,9 @@ var xxx_messageInfo_OldWithGroup_Group1 proto.InternalMessageInfo
 type OldWithGroup_Group2 struct {
 	Field1               *int64    `protobuf:"varint,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
 	Field2               []float64 `protobuf:"fixed64,2,rep,name=Field2" json:"Field2,omitempty" pg:"Field2"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *OldWithGroup_Group2) Reset()      { *m = OldWithGroup_Group2{} }

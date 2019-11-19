@@ -27,9 +27,9 @@ type Outside struct {
 	// Types that are valid to be assigned to Filed:
 	//	*Outside_Field3
 	Filed                isOutside_Filed `protobuf_oneof:"filed"`
-	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
-	XXX_unrecognized     []byte          `json:"-"`
-	XXX_sizecache        int32           `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-" pg:"-"`
+	XXX_unrecognized     []byte          `json:"-" pg:"-"`
+	XXX_sizecache        int32           `json:"-" pg:"-"`
 }
 
 func (m *Outside) Reset()         { *m = Outside{} }
@@ -96,9 +96,9 @@ func (*Outside) XXX_OneofWrappers() []interface{} {
 
 type Inside struct {
 	Field1               *string  `protobuf:"bytes,1,opt,name=Field1" json:"MyField1" pg:"MyField1" xml:",chardata"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Inside) Reset()         { *m = Inside{} }

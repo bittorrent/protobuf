@@ -26,9 +26,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type M struct {
 	Arr                  []MyType `protobuf:"bytes,1,rep,name=arr,customtype=MyType" json:"arr" pg:"arr"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *M) Reset()         { *m = M{} }
@@ -65,9 +65,9 @@ func (m *M) XXX_DiscardUnknown() {
 var xxx_messageInfo_M proto.InternalMessageInfo
 
 type MyType struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *MyType) Reset()         { *m = MyType{} }

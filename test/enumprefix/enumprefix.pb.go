@@ -24,9 +24,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type MyMessage struct {
 	TheField             test.TheTestEnum `protobuf:"varint,1,opt,name=TheField,enum=test.TheTestEnum" json:"TheField" pg:"TheField"`
-	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
-	XXX_unrecognized     []byte           `json:"-"`
-	XXX_sizecache        int32            `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}         `json:"-" pg:"-"`
+	XXX_unrecognized     []byte           `json:"-" pg:"-"`
+	XXX_sizecache        int32            `json:"-" pg:"-"`
 }
 
 func (m *MyMessage) Reset()         { *m = MyMessage{} }

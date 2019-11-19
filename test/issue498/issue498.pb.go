@@ -30,9 +30,9 @@ type Message struct {
 	Uint16               *uint16  `protobuf:"varint,2,req,name=uint16,casttype=uint16" json:"uint16,omitempty" pg:"uint16"`
 	Int8                 *int8    `protobuf:"varint,3,req,name=int8,casttype=int8" json:"int8,omitempty" pg:"int8"`
 	Int16                *int16   `protobuf:"varint,4,req,name=int16,casttype=int16" json:"int16,omitempty" pg:"int16"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Message) Reset()         { *m = Message{} }

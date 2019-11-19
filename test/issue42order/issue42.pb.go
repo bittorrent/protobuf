@@ -27,9 +27,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 type UnorderedFields struct {
 	A                    *int64   `protobuf:"varint,10,opt,name=A" json:"A,omitempty" pg:"A"`
 	B                    *uint64  `protobuf:"fixed64,1,opt,name=B" json:"B,omitempty" pg:"B"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *UnorderedFields) Reset()         { *m = UnorderedFields{} }
@@ -82,9 +82,9 @@ func (m *UnorderedFields) GetB() uint64 {
 type OrderedFields struct {
 	B                    *uint64  `protobuf:"fixed64,1,opt,name=B" json:"B,omitempty" pg:"B"`
 	A                    *int64   `protobuf:"varint,10,opt,name=A" json:"A,omitempty" pg:"A"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *OrderedFields) Reset()         { *m = OrderedFields{} }

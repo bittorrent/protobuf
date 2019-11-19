@@ -25,9 +25,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 type PBuffMarshal struct {
 	Field1               []byte   `protobuf:"bytes,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
 	Field2               *int32   `protobuf:"varint,2,opt,name=Field2" json:"Field2,omitempty" pg:"Field2"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *PBuffMarshal) Reset()         { *m = PBuffMarshal{} }
@@ -71,9 +71,9 @@ func (m *PBuffMarshal) GetField2() int32 {
 type PBuffMarshaler struct {
 	Field1               []byte   `protobuf:"bytes,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
 	Field2               *int32   `protobuf:"varint,2,opt,name=Field2" json:"Field2,omitempty" pg:"Field2"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *PBuffMarshaler) Reset()         { *m = PBuffMarshaler{} }

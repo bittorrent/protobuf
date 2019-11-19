@@ -71,9 +71,9 @@ type Api struct {
 	Mixins []*Mixin `protobuf:"bytes,6,rep,name=mixins,proto3" json:"mixins,omitempty" pg:"mixins"`
 	// The source syntax of the service.
 	Syntax               Syntax   `protobuf:"varint,7,opt,name=syntax,proto3,enum=google.protobuf.Syntax" json:"syntax,omitempty" pg:"syntax"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Api) Reset()      { *m = Api{} }
@@ -177,9 +177,9 @@ type Method struct {
 	Options []*Option `protobuf:"bytes,6,rep,name=options,proto3" json:"options,omitempty" pg:"options"`
 	// The source syntax of this method.
 	Syntax               Syntax   `protobuf:"varint,7,opt,name=syntax,proto3,enum=google.protobuf.Syntax" json:"syntax,omitempty" pg:"syntax"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Method) Reset()      { *m = Method{} }
@@ -351,9 +351,9 @@ type Mixin struct {
 	// If non-empty specifies a path under which inherited HTTP paths
 	// are rooted.
 	Root                 string   `protobuf:"bytes,2,opt,name=root,proto3" json:"root,omitempty" pg:"root"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Mixin) Reset()      { *m = Mixin{} }

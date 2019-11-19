@@ -227,9 +227,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 type FieldMask struct {
 	// The set of field mask paths.
 	Paths                []string `protobuf:"bytes,1,rep,name=paths,proto3" json:"paths,omitempty" pg:"paths"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *FieldMask) Reset()      { *m = FieldMask{} }

@@ -24,9 +24,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 type A struct {
 	B                    B        `protobuf:"bytes,1,opt,name=B,proto3" json:"B" pg:"B"`
 	C                    []C      `protobuf:"bytes,2,rep,name=c,proto3" json:"c" pg:"c"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *A) Reset()         { *m = A{} }
@@ -69,9 +69,9 @@ func (m *A) GetC() []C {
 
 type B struct {
 	C                    int64    `protobuf:"varint,1,opt,name=c,proto3" json:"c,omitempty" pg:"c"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *B) Reset()         { *m = B{} }
@@ -107,9 +107,9 @@ func (m *B) GetC() int64 {
 
 type C struct {
 	D                    int64    `protobuf:"varint,1,opt,name=d,proto3" json:"d,omitempty" pg:"d"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *C) Reset()         { *m = C{} }

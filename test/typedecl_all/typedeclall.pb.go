@@ -106,8 +106,8 @@ var xxx_messageInfo_DroppedWithoutGetters proto.InternalMessageInfo
 type Kept struct {
 	Name                 string   `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" pg:"name"`
 	Age                  int32    `protobuf:"varint,2,opt,name=age,proto3" json:"age,omitempty" pg:"age"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Kept) Reset()         { *m = Kept{} }

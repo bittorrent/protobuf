@@ -34,8 +34,8 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 type A struct {
 	Field1               *int64   `protobuf:"varint,2,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
 	B                    []*B     `protobuf:"bytes,1,rep,name=B" json:"B,omitempty" pg:"B"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *A) Reset()      { *m = A{} }
@@ -74,9 +74,9 @@ type B struct {
 	C                    *C       `protobuf:"bytes,1,opt,name=C" json:"C,omitempty" pg:"C"`
 	D                    *D       `protobuf:"bytes,2,opt,name=D" json:"D,omitempty" pg:"D"`
 	F                    *OldC    `protobuf:"bytes,5,opt,name=F" json:"F,omitempty" pg:"F"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *B) Reset()      { *m = B{} }
@@ -113,9 +113,9 @@ var xxx_messageInfo_B proto.InternalMessageInfo
 
 type D struct {
 	Field1               *int64   `protobuf:"varint,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *D) Reset()      { *m = D{} }
@@ -157,9 +157,9 @@ type C struct {
 	Field5               [][]byte  `protobuf:"bytes,5,rep,name=Field5" json:"Field5,omitempty" pg:"Field5"`
 	Field6               *int64    `protobuf:"varint,6,opt,name=Field6" json:"Field6,omitempty" pg:"Field6"`
 	Field7               []float32 `protobuf:"fixed32,7,rep,name=Field7" json:"Field7,omitempty" pg:"Field7"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *C) Reset()      { *m = C{} }
@@ -197,8 +197,8 @@ var xxx_messageInfo_C proto.InternalMessageInfo
 type U struct {
 	Field2               []float64 `protobuf:"fixed64,2,rep,name=Field2" json:"Field2,omitempty" pg:"Field2"`
 	Field3               *uint32   `protobuf:"varint,3,opt,name=Field3" json:"Field3,omitempty" pg:"Field3"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *U) Reset()      { *m = U{} }
@@ -236,8 +236,8 @@ var xxx_messageInfo_U proto.InternalMessageInfo
 type UnoM struct {
 	Field2               []float64 `protobuf:"fixed64,2,rep,name=Field2" json:"Field2,omitempty" pg:"Field2"`
 	Field3               *uint32   `protobuf:"varint,3,opt,name=Field3" json:"Field3,omitempty" pg:"Field3"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *UnoM) Reset()      { *m = UnoM{} }
@@ -266,8 +266,8 @@ var xxx_messageInfo_UnoM proto.InternalMessageInfo
 type OldA struct {
 	Field1               *int64   `protobuf:"varint,2,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
 	B                    []*OldB  `protobuf:"bytes,1,rep,name=B" json:"B,omitempty" pg:"B"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *OldA) Reset()      { *m = OldA{} }
@@ -305,9 +305,9 @@ var xxx_messageInfo_OldA proto.InternalMessageInfo
 type OldB struct {
 	C                    *OldC    `protobuf:"bytes,1,opt,name=C" json:"C,omitempty" pg:"C"`
 	F                    *OldC    `protobuf:"bytes,5,opt,name=F" json:"F,omitempty" pg:"F"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *OldB) Reset()      { *m = OldB{} }
@@ -348,9 +348,9 @@ type OldC struct {
 	Field3               *string   `protobuf:"bytes,3,opt,name=Field3" json:"Field3,omitempty" pg:"Field3"`
 	Field6               *int64    `protobuf:"varint,6,opt,name=Field6" json:"Field6,omitempty" pg:"Field6"`
 	Field7               []float32 `protobuf:"fixed32,7,rep,name=Field7" json:"Field7,omitempty" pg:"Field7"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *OldC) Reset()      { *m = OldC{} }
@@ -388,9 +388,9 @@ var xxx_messageInfo_OldC proto.InternalMessageInfo
 type OldU struct {
 	Field1               *string   `protobuf:"bytes,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
 	Field2               []float64 `protobuf:"fixed64,2,rep,name=Field2" json:"Field2,omitempty" pg:"Field2"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *OldU) Reset()      { *m = OldU{} }
@@ -428,9 +428,9 @@ var xxx_messageInfo_OldU proto.InternalMessageInfo
 type OldUnoM struct {
 	Field1               *string   `protobuf:"bytes,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
 	Field2               []float64 `protobuf:"fixed64,2,rep,name=Field2" json:"Field2,omitempty" pg:"Field2"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *OldUnoM) Reset()      { *m = OldUnoM{} }

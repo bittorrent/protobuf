@@ -67,9 +67,9 @@ func (TheTestEnum) EnumDescriptor() ([]byte, []int) {
 
 type NidOptEnum struct {
 	Field1               TheTestEnum `protobuf:"varint,1,opt,name=Field1,enum=enumstringer.TheTestEnum" json:"Field1" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{}    `json:"-"`
-	XXX_unrecognized     []byte      `json:"-"`
-	XXX_sizecache        int32       `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}    `json:"-" pg:"-"`
+	XXX_unrecognized     []byte      `json:"-" pg:"-"`
+	XXX_sizecache        int32       `json:"-" pg:"-"`
 }
 
 func (m *NidOptEnum) Reset()         { *m = NidOptEnum{} }
@@ -105,9 +105,9 @@ func (m *NidOptEnum) GetField1() TheTestEnum {
 
 type NinOptEnum struct {
 	Field1               *TheTestEnum `protobuf:"varint,1,opt,name=Field1,enum=enumstringer.TheTestEnum" json:"Field1,omitempty" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
-	XXX_unrecognized     []byte       `json:"-"`
-	XXX_sizecache        int32        `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-" pg:"-"`
+	XXX_unrecognized     []byte       `json:"-" pg:"-"`
+	XXX_sizecache        int32        `json:"-" pg:"-"`
 }
 
 func (m *NinOptEnum) Reset()         { *m = NinOptEnum{} }
@@ -143,9 +143,9 @@ func (m *NinOptEnum) GetField1() TheTestEnum {
 
 type NidRepEnum struct {
 	Field1               []TheTestEnum `protobuf:"varint,1,rep,name=Field1,enum=enumstringer.TheTestEnum" json:"Field1,omitempty" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
-	XXX_unrecognized     []byte        `json:"-"`
-	XXX_sizecache        int32         `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-" pg:"-"`
+	XXX_unrecognized     []byte        `json:"-" pg:"-"`
+	XXX_sizecache        int32         `json:"-" pg:"-"`
 }
 
 func (m *NidRepEnum) Reset()         { *m = NidRepEnum{} }
@@ -181,9 +181,9 @@ func (m *NidRepEnum) GetField1() []TheTestEnum {
 
 type NinRepEnum struct {
 	Field1               []TheTestEnum `protobuf:"varint,1,rep,name=Field1,enum=enumstringer.TheTestEnum" json:"Field1,omitempty" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
-	XXX_unrecognized     []byte        `json:"-"`
-	XXX_sizecache        int32         `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-" pg:"-"`
+	XXX_unrecognized     []byte        `json:"-" pg:"-"`
+	XXX_sizecache        int32         `json:"-" pg:"-"`
 }
 
 func (m *NinRepEnum) Reset()         { *m = NinRepEnum{} }

@@ -28,9 +28,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type C struct {
 	F2                   *github_com_tron_us_protobuf_test_importcustom_issue389_imported.B `protobuf:"bytes,1,opt,name=f2,proto3,customtype=github.com/tron-us/protobuf/test/importcustom-issue389/imported.B" json:"f2,omitempty" pg:"f2"`
-	XXX_NoUnkeyedLiteral struct{}                                                           `json:"-"`
-	XXX_unrecognized     []byte                                                             `json:"-"`
-	XXX_sizecache        int32                                                              `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                                                           `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                                                             `json:"-" pg:"-"`
+	XXX_sizecache        int32                                                              `json:"-" pg:"-"`
 }
 
 func (m *C) Reset()         { *m = C{} }

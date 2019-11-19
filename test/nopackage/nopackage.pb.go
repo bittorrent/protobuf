@@ -25,9 +25,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type M struct {
 	F                    map[string]float64 `protobuf:"bytes,1,rep,name=f,proto3" json:"f,omitempty" pg:"f" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"fixed64,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}           `json:"-"`
-	XXX_unrecognized     []byte             `json:"-"`
-	XXX_sizecache        int32              `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}           `json:"-" pg:"-"`
+	XXX_unrecognized     []byte             `json:"-" pg:"-"`
+	XXX_sizecache        int32              `json:"-" pg:"-"`
 }
 
 func (m *M) Reset()         { *m = M{} }

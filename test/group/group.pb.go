@@ -30,9 +30,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type Groups1 struct {
 	G                    []*Groups1_G `protobuf:"group,1,rep,name=G,json=g" json:"g,omitempty" pg:"g"`
-	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
-	XXX_unrecognized     []byte       `json:"-"`
-	XXX_sizecache        int32        `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-" pg:"-"`
+	XXX_unrecognized     []byte       `json:"-" pg:"-"`
+	XXX_sizecache        int32        `json:"-" pg:"-"`
 }
 
 func (m *Groups1) Reset()      { *m = Groups1{} }
@@ -61,9 +61,9 @@ var xxx_messageInfo_Groups1 proto.InternalMessageInfo
 type Groups1_G struct {
 	Field1               *int64   `protobuf:"varint,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
 	Field2               *float64 `protobuf:"fixed64,2,opt,name=Field2" json:"Field2,omitempty" pg:"Field2"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Groups1_G) Reset()      { *m = Groups1_G{} }
@@ -91,9 +91,9 @@ var xxx_messageInfo_Groups1_G proto.InternalMessageInfo
 
 type Groups2 struct {
 	G                    *Groups2_G `protobuf:"group,1,opt,name=G,json=g" json:"g,omitempty" pg:"g"`
-	XXX_NoUnkeyedLiteral struct{}   `json:"-"`
-	XXX_unrecognized     []byte     `json:"-"`
-	XXX_sizecache        int32      `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}   `json:"-" pg:"-"`
+	XXX_unrecognized     []byte     `json:"-" pg:"-"`
+	XXX_sizecache        int32      `json:"-" pg:"-"`
 }
 
 func (m *Groups2) Reset()      { *m = Groups2{} }
@@ -122,9 +122,9 @@ var xxx_messageInfo_Groups2 proto.InternalMessageInfo
 type Groups2_G struct {
 	Field1               *int64    `protobuf:"varint,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
 	Field2               []float64 `protobuf:"fixed64,2,rep,name=Field2" json:"Field2,omitempty" pg:"Field2"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *Groups2_G) Reset()      { *m = Groups2_G{} }

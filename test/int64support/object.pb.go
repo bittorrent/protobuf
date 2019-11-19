@@ -27,8 +27,8 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type Object struct {
 	OptionalNumber       *int64   `protobuf:"varint,1,opt,name=optional_number,json=optionalNumber" json:"optional_number,omitempty" pg:"optional_number"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Object) Reset()      { *m = Object{} }

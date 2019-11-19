@@ -33,9 +33,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type Subby struct {
 	Sub                  string   `protobuf:"bytes,1,opt,name=sub,proto3" json:"sub,omitempty" pg:"sub"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Subby) Reset()      { *m = Subby{} }
@@ -80,9 +80,9 @@ type SampleOneOf struct {
 	//	*SampleOneOf_Field15
 	//	*SampleOneOf_SubMessage
 	TestOneof            isSampleOneOf_TestOneof `protobuf_oneof:"test_oneof"`
-	XXX_NoUnkeyedLiteral struct{}                `json:"-"`
-	XXX_unrecognized     []byte                  `json:"-"`
-	XXX_sizecache        int32                   `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                  `json:"-" pg:"-"`
+	XXX_sizecache        int32                   `json:"-" pg:"-"`
 }
 
 func (m *SampleOneOf) Reset()      { *m = SampleOneOf{} }

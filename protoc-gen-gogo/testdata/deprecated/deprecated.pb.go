@@ -53,9 +53,9 @@ func (DeprecatedEnum) EnumDescriptor() ([]byte, []int) {
 //
 // Deprecated: Do not use.
 type DeprecatedRequest struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *DeprecatedRequest) Reset()         { *m = DeprecatedRequest{} }
@@ -91,9 +91,9 @@ type DeprecatedResponse struct {
 	// Types that are valid to be assigned to DeprecatedOneof:
 	//	*DeprecatedResponse_DeprecatedOneofField
 	DeprecatedOneof      isDeprecatedResponse_DeprecatedOneof `protobuf_oneof:"deprecated_oneof"`
-	XXX_NoUnkeyedLiteral struct{}                             `json:"-"`
-	XXX_unrecognized     []byte                               `json:"-"`
-	XXX_sizecache        int32                                `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                             `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                               `json:"-" pg:"-"`
+	XXX_sizecache        int32                                `json:"-" pg:"-"`
 }
 
 func (m *DeprecatedResponse) Reset()         { *m = DeprecatedResponse{} }

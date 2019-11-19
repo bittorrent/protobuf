@@ -99,9 +99,9 @@ type Message struct {
 	Terrain              map[int64]*Nested          `protobuf:"bytes,10,rep,name=terrain,proto3" json:"terrain,omitempty" pg:"terrain" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	Proto2Field          *both.NinOptNative         `protobuf:"bytes,11,opt,name=proto2_field,json=proto2Field,proto3" json:"proto2_field,omitempty" pg:"proto2_field"`
 	Proto2Value          map[int64]*both.NinOptEnum `protobuf:"bytes,13,rep,name=proto2_value,json=proto2Value,proto3" json:"proto2_value,omitempty" pg:"proto2_value" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}                   `json:"-"`
-	XXX_unrecognized     []byte                     `json:"-"`
-	XXX_sizecache        int32                      `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                   `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                     `json:"-" pg:"-"`
+	XXX_sizecache        int32                      `json:"-" pg:"-"`
 }
 
 func (m *Message) Reset()      { *m = Message{} }
@@ -138,9 +138,9 @@ var xxx_messageInfo_Message proto.InternalMessageInfo
 
 type Nested struct {
 	Bunny                string   `protobuf:"bytes,1,opt,name=bunny,proto3" json:"bunny,omitempty" pg:"bunny"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Nested) Reset()      { *m = Nested{} }
@@ -193,9 +193,9 @@ type AllMaps struct {
 	StringToBytesMap     map[string][]byte         `protobuf:"bytes,15,rep,name=StringToBytesMap,proto3" json:"StringToBytesMap,omitempty" pg:"StringToBytesMap" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	StringToEnumMap      map[string]MapEnum        `protobuf:"bytes,16,rep,name=StringToEnumMap,proto3" json:"StringToEnumMap,omitempty" pg:"StringToEnumMap" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3,enum=theproto3.MapEnum"`
 	StringToMsgMap       map[string]*FloatingPoint `protobuf:"bytes,17,rep,name=StringToMsgMap,proto3" json:"StringToMsgMap,omitempty" pg:"StringToMsgMap" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}                  `json:"-"`
-	XXX_unrecognized     []byte                    `json:"-"`
-	XXX_sizecache        int32                     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                    `json:"-" pg:"-"`
+	XXX_sizecache        int32                     `json:"-" pg:"-"`
 }
 
 func (m *AllMaps) Reset()      { *m = AllMaps{} }
@@ -248,9 +248,9 @@ type AllMapsOrdered struct {
 	StringToBytesMap     map[string][]byte         `protobuf:"bytes,15,rep,name=StringToBytesMap,proto3" json:"StringToBytesMap,omitempty" pg:"StringToBytesMap" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	StringToEnumMap      map[string]MapEnum        `protobuf:"bytes,16,rep,name=StringToEnumMap,proto3" json:"StringToEnumMap,omitempty" pg:"StringToEnumMap" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3,enum=theproto3.MapEnum"`
 	StringToMsgMap       map[string]*FloatingPoint `protobuf:"bytes,17,rep,name=StringToMsgMap,proto3" json:"StringToMsgMap,omitempty" pg:"StringToMsgMap" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}                  `json:"-"`
-	XXX_unrecognized     []byte                    `json:"-"`
-	XXX_sizecache        int32                     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                    `json:"-" pg:"-"`
+	XXX_sizecache        int32                     `json:"-" pg:"-"`
 }
 
 func (m *AllMapsOrdered) Reset()      { *m = AllMapsOrdered{} }
@@ -285,9 +285,9 @@ type MessageWithMap struct {
 	NameMapping          map[int32]string         `protobuf:"bytes,1,rep,name=name_mapping,json=nameMapping,proto3" json:"name_mapping,omitempty" pg:"name_mapping" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	MsgMapping           map[int64]*FloatingPoint `protobuf:"bytes,2,rep,name=msg_mapping,json=msgMapping,proto3" json:"msg_mapping,omitempty" pg:"msg_mapping" protobuf_key:"zigzag64,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	ByteMapping          map[bool][]byte          `protobuf:"bytes,3,rep,name=byte_mapping,json=byteMapping,proto3" json:"byte_mapping,omitempty" pg:"byte_mapping" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}                 `json:"-"`
-	XXX_unrecognized     []byte                   `json:"-"`
-	XXX_sizecache        int32                    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                 `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                   `json:"-" pg:"-"`
+	XXX_sizecache        int32                    `json:"-" pg:"-"`
 }
 
 func (m *MessageWithMap) Reset()      { *m = MessageWithMap{} }
@@ -324,9 +324,9 @@ var xxx_messageInfo_MessageWithMap proto.InternalMessageInfo
 
 type FloatingPoint struct {
 	F                    float64  `protobuf:"fixed64,1,opt,name=f,proto3" json:"f,omitempty" pg:"f"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *FloatingPoint) Reset()      { *m = FloatingPoint{} }
@@ -364,9 +364,9 @@ var xxx_messageInfo_FloatingPoint proto.InternalMessageInfo
 type Uint128Pair struct {
 	Left                 github_com_tron_us_protobuf_test_custom.Uint128  `protobuf:"bytes,1,opt,name=left,proto3,customtype=github.com/tron-us/protobuf/test/custom.Uint128" json:"left" pg:"left"`
 	Right                *github_com_tron_us_protobuf_test_custom.Uint128 `protobuf:"bytes,2,opt,name=right,proto3,customtype=github.com/tron-us/protobuf/test/custom.Uint128" json:"right,omitempty" pg:"right"`
-	XXX_NoUnkeyedLiteral struct{}                                         `json:"-"`
-	XXX_unrecognized     []byte                                           `json:"-"`
-	XXX_sizecache        int32                                            `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                                         `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                                           `json:"-" pg:"-"`
+	XXX_sizecache        int32                                            `json:"-" pg:"-"`
 }
 
 func (m *Uint128Pair) Reset()      { *m = Uint128Pair{} }
@@ -402,9 +402,9 @@ func (m *Uint128Pair) XXX_DiscardUnknown() {
 var xxx_messageInfo_Uint128Pair proto.InternalMessageInfo
 
 type ContainsNestedMap struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *ContainsNestedMap) Reset()      { *m = ContainsNestedMap{} }
@@ -441,9 +441,9 @@ var xxx_messageInfo_ContainsNestedMap proto.InternalMessageInfo
 
 type ContainsNestedMap_NestedMap struct {
 	NestedMapField       map[string]float64 `protobuf:"bytes,1,rep,name=NestedMapField,proto3" json:"NestedMapField,omitempty" pg:"NestedMapField" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"fixed64,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}           `json:"-"`
-	XXX_unrecognized     []byte             `json:"-"`
-	XXX_sizecache        int32              `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}           `json:"-" pg:"-"`
+	XXX_unrecognized     []byte             `json:"-" pg:"-"`
+	XXX_sizecache        int32              `json:"-" pg:"-"`
 }
 
 func (m *ContainsNestedMap_NestedMap) Reset()      { *m = ContainsNestedMap_NestedMap{} }
@@ -480,9 +480,9 @@ var xxx_messageInfo_ContainsNestedMap_NestedMap proto.InternalMessageInfo
 
 type NotPacked struct {
 	Key                  []uint64 `protobuf:"varint,5,rep,name=key,proto3" json:"key,omitempty" pg:"key"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NotPacked) Reset()      { *m = NotPacked{} }

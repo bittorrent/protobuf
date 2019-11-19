@@ -29,9 +29,9 @@ type Foo struct {
 	Num2                 []int32  `protobuf:"varint,2,rep,packed,name=num2,proto3" json:"num2,omitempty" pg:"num2"`
 	Str1                 []string `protobuf:"bytes,3,rep,name=str1,proto3" json:"str1,omitempty" pg:"str1"`
 	Dat1                 [][]byte `protobuf:"bytes,4,rep,name=dat1,proto3" json:"dat1,omitempty" pg:"dat1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Foo) Reset()         { *m = Foo{} }

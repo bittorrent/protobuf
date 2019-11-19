@@ -123,9 +123,9 @@ type ConformanceRequest struct {
 	Payload isConformanceRequest_Payload `protobuf_oneof:"payload"`
 	// Which format should the testee serialize its message to?
 	RequestedOutputFormat WireFormat `protobuf:"varint,3,opt,name=requested_output_format,json=requestedOutputFormat,proto3,enum=conformance.WireFormat" json:"requested_output_format,omitempty" pg:"requested_output_format"`
-	XXX_NoUnkeyedLiteral  struct{}   `json:"-"`
-	XXX_unrecognized      []byte     `json:"-"`
-	XXX_sizecache         int32      `json:"-"`
+	XXX_NoUnkeyedLiteral  struct{}   `json:"-" pg:"-"`
+	XXX_unrecognized      []byte     `json:"-" pg:"-"`
+	XXX_sizecache         int32      `json:"-" pg:"-"`
 }
 
 func (m *ConformanceRequest) Reset()         { *m = ConformanceRequest{} }
@@ -212,9 +212,9 @@ type ConformanceResponse struct {
 	//	*ConformanceResponse_JsonPayload
 	//	*ConformanceResponse_Skipped
 	Result               isConformanceResponse_Result `protobuf_oneof:"result"`
-	XXX_NoUnkeyedLiteral struct{}                     `json:"-"`
-	XXX_unrecognized     []byte                       `json:"-"`
-	XXX_sizecache        int32                        `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                     `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                       `json:"-" pg:"-"`
+	XXX_sizecache        int32                        `json:"-" pg:"-"`
 }
 
 func (m *ConformanceResponse) Reset()         { *m = ConformanceResponse{} }
@@ -450,9 +450,9 @@ type TestAllTypes struct {
 	Field_Name10         int32    `protobuf:"varint,410,opt,name=Field_Name10,json=FieldName10,proto3" json:"Field_Name10,omitempty" pg:"Field_Name10"`
 	FIELD_NAME11         int32    `protobuf:"varint,411,opt,name=FIELD_NAME11,json=FIELDNAME11,proto3" json:"FIELD_NAME11,omitempty" pg:"FIELD_NAME11"`
 	FIELDName12          int32    `protobuf:"varint,412,opt,name=FIELD_name12,json=FIELDName12,proto3" json:"FIELD_name12,omitempty" pg:"FIELD_name12"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *TestAllTypes) Reset()         { *m = TestAllTypes{} }
@@ -1277,9 +1277,9 @@ func (*TestAllTypes) XXX_OneofWrappers() []interface{} {
 type TestAllTypes_NestedMessage struct {
 	A                    int32         `protobuf:"varint,1,opt,name=a,proto3" json:"a,omitempty" pg:"a"`
 	Corecursive          *TestAllTypes `protobuf:"bytes,2,opt,name=corecursive,proto3" json:"corecursive,omitempty" pg:"corecursive"`
-	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
-	XXX_unrecognized     []byte        `json:"-"`
-	XXX_sizecache        int32         `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-" pg:"-"`
+	XXX_unrecognized     []byte        `json:"-" pg:"-"`
+	XXX_sizecache        int32         `json:"-" pg:"-"`
 }
 
 func (m *TestAllTypes_NestedMessage) Reset()         { *m = TestAllTypes_NestedMessage{} }
@@ -1322,9 +1322,9 @@ func (m *TestAllTypes_NestedMessage) GetCorecursive() *TestAllTypes {
 
 type ForeignMessage struct {
 	C                    int32    `protobuf:"varint,1,opt,name=c,proto3" json:"c,omitempty" pg:"c"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *ForeignMessage) Reset()         { *m = ForeignMessage{} }

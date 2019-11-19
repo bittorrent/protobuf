@@ -29,9 +29,9 @@ type RequiredExample struct {
 	TheRequiredString    *string  `protobuf:"bytes,1,req,name=theRequiredString" json:"theRequiredString,omitempty" pg:"theRequiredString"`
 	TheOptionalString    *string  `protobuf:"bytes,2,opt,name=theOptionalString" json:"theOptionalString,omitempty" pg:"theOptionalString"`
 	TheRepeatedStrings   []string `protobuf:"bytes,3,rep,name=theRepeatedStrings" json:"theRepeatedStrings,omitempty" pg:"theRepeatedStrings"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *RequiredExample) Reset()         { *m = RequiredExample{} }
@@ -104,9 +104,9 @@ type NidOptNative struct {
 	Field13              bool     `protobuf:"varint,13,req,name=Field13" json:"Field13" pg:"Field13"`
 	Field14              string   `protobuf:"bytes,14,req,name=Field14" json:"Field14" pg:"Field14"`
 	Field15              []byte   `protobuf:"bytes,15,req,name=Field15" json:"Field15" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NidOptNative) Reset()         { *m = NidOptNative{} }
@@ -263,9 +263,9 @@ type NinOptNative struct {
 	Field13              *bool    `protobuf:"varint,13,req,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	Field14              *string  `protobuf:"bytes,14,req,name=Field14" json:"Field14,omitempty" pg:"Field14"`
 	Field15              []byte   `protobuf:"bytes,15,req,name=Field15" json:"Field15,omitempty" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NinOptNative) Reset()         { *m = NinOptNative{} }
@@ -408,9 +408,9 @@ func (m *NinOptNative) GetField15() []byte {
 
 type NestedNinOptNative struct {
 	NestedNinOpts        []*NinOptNative `protobuf:"bytes,1,rep,name=NestedNinOpts" json:"NestedNinOpts,omitempty" pg:"NestedNinOpts"`
-	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
-	XXX_unrecognized     []byte          `json:"-"`
-	XXX_sizecache        int32           `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-" pg:"-"`
+	XXX_unrecognized     []byte          `json:"-" pg:"-"`
+	XXX_sizecache        int32           `json:"-" pg:"-"`
 }
 
 func (m *NestedNinOptNative) Reset()         { *m = NestedNinOptNative{} }

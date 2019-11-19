@@ -32,9 +32,9 @@ type All struct {
 	Bm1                  *test_b_1.M1 `protobuf:"bytes,5,opt,name=bm1,proto3" json:"bm1,omitempty" pg:"bm1"`
 	Bm2                  *test_b_1.M2 `protobuf:"bytes,6,opt,name=bm2,proto3" json:"bm2,omitempty" pg:"bm2"`
 	Fmt                  *fmt1.M      `protobuf:"bytes,7,opt,name=fmt,proto3" json:"fmt,omitempty" pg:"fmt"`
-	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
-	XXX_unrecognized     []byte       `json:"-"`
-	XXX_sizecache        int32        `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-" pg:"-"`
+	XXX_unrecognized     []byte       `json:"-" pg:"-"`
+	XXX_sizecache        int32        `json:"-" pg:"-"`
 }
 
 func (m *All) Reset()         { *m = All{} }

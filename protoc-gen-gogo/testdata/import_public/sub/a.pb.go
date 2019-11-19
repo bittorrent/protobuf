@@ -140,9 +140,9 @@ type M struct {
 	OneofField           isM_OneofField `protobuf_oneof:"oneof_field"`
 	Grouping             *M_Grouping    `protobuf:"group,4,opt,name=Grouping,json=grouping" json:"grouping,omitempty" pg:"grouping"`
 	DefaultField         *string        `protobuf:"bytes,6,opt,name=default_field,json=defaultField,def=def" json:"default_field,omitempty" pg:"default_field"`
-	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
-	XXX_unrecognized     []byte         `json:"-"`
-	XXX_sizecache        int32          `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-" pg:"-"`
+	XXX_unrecognized     []byte         `json:"-" pg:"-"`
+	XXX_sizecache        int32          `json:"-" pg:"-"`
 }
 
 func (m *M) Reset()         { *m = M{} }
@@ -237,9 +237,9 @@ func (*M) XXX_OneofWrappers() []interface{} {
 
 type M_Grouping struct {
 	GroupField           *string  `protobuf:"bytes,5,opt,name=group_field,json=groupField" json:"group_field,omitempty" pg:"group_field"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *M_Grouping) Reset()         { *m = M_Grouping{} }
@@ -278,9 +278,9 @@ type M_Submessage struct {
 	//	*M_Submessage_SubmessageOneofInt32
 	//	*M_Submessage_SubmessageOneofInt64
 	SubmessageOneofField isM_Submessage_SubmessageOneofField `protobuf_oneof:"submessage_oneof_field"`
-	XXX_NoUnkeyedLiteral struct{}                            `json:"-"`
-	XXX_unrecognized     []byte                              `json:"-"`
-	XXX_sizecache        int32                               `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                            `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                              `json:"-" pg:"-"`
+	XXX_sizecache        int32                               `json:"-" pg:"-"`
 }
 
 func (m *M_Submessage) Reset()         { *m = M_Submessage{} }

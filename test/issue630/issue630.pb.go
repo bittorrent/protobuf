@@ -25,9 +25,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type Foo struct {
 	Bar1                 []Bar    `protobuf:"bytes,1,rep,name=Bar1" json:"Bar1" pg:"Bar1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Foo) Reset()         { *m = Foo{} }
@@ -63,9 +63,9 @@ func (m *Foo) GetBar1() []Bar {
 
 type Qux struct {
 	Bar1                 []*Bar   `protobuf:"bytes,1,rep,name=Bar1" json:"Bar1,omitempty" pg:"Bar1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Qux) Reset()         { *m = Qux{} }
@@ -101,9 +101,9 @@ func (m *Qux) GetBar1() []*Bar {
 
 type Bar struct {
 	Baz                  string   `protobuf:"bytes,1,opt,name=Baz" json:"Baz" pg:"Baz"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Bar) Reset()         { *m = Bar{} }

@@ -35,9 +35,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type Subby struct {
 	Sub                  *string  `protobuf:"bytes,1,opt,name=sub" json:"sub,omitempty" pg:"sub"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Subby) Reset()      { *m = Subby{} }
@@ -82,9 +82,9 @@ type AllTypesOneOf struct {
 	//	*AllTypesOneOf_Field15
 	//	*AllTypesOneOf_SubMessage
 	TestOneof            isAllTypesOneOf_TestOneof `protobuf_oneof:"test_oneof"`
-	XXX_NoUnkeyedLiteral struct{}                  `json:"-"`
-	XXX_unrecognized     []byte                    `json:"-"`
-	XXX_sizecache        int32                     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                    `json:"-" pg:"-"`
+	XXX_sizecache        int32                     `json:"-" pg:"-"`
 }
 
 func (m *AllTypesOneOf) Reset()      { *m = AllTypesOneOf{} }
@@ -336,9 +336,9 @@ type TwoOneofs struct {
 	//	*TwoOneofs_Field35
 	//	*TwoOneofs_SubMessage2
 	Two                  isTwoOneofs_Two `protobuf_oneof:"two"`
-	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
-	XXX_unrecognized     []byte          `json:"-"`
-	XXX_sizecache        int32           `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-" pg:"-"`
+	XXX_unrecognized     []byte          `json:"-" pg:"-"`
+	XXX_sizecache        int32           `json:"-" pg:"-"`
 }
 
 func (m *TwoOneofs) Reset()      { *m = TwoOneofs{} }
@@ -479,9 +479,9 @@ type CustomOneof struct {
 	//	*CustomOneof_CastType
 	//	*CustomOneof_MyCustomName
 	Custom               isCustomOneof_Custom `protobuf_oneof:"custom"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}             `json:"-" pg:"-"`
+	XXX_unrecognized     []byte               `json:"-" pg:"-"`
+	XXX_sizecache        int32                `json:"-" pg:"-"`
 }
 
 func (m *CustomOneof) Reset()      { *m = CustomOneof{} }

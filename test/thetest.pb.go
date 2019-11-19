@@ -254,9 +254,9 @@ type NidOptNative struct {
 	Field13              bool     `protobuf:"varint,13,opt,name=Field13" json:"Field13" pg:"Field13"`
 	Field14              string   `protobuf:"bytes,14,opt,name=Field14" json:"Field14" pg:"Field14"`
 	Field15              []byte   `protobuf:"bytes,15,opt,name=Field15" json:"Field15" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NidOptNative) Reset()      { *m = NidOptNative{} }
@@ -298,9 +298,9 @@ type NinOptNative struct {
 	Field13              *bool    `protobuf:"varint,13,opt,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	Field14              *string  `protobuf:"bytes,14,opt,name=Field14" json:"Field14,omitempty" pg:"Field14"`
 	Field15              []byte   `protobuf:"bytes,15,opt,name=Field15" json:"Field15,omitempty" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NinOptNative) Reset()      { *m = NinOptNative{} }
@@ -342,9 +342,9 @@ type NidRepNative struct {
 	Field13              []bool    `protobuf:"varint,13,rep,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	Field14              []string  `protobuf:"bytes,14,rep,name=Field14" json:"Field14,omitempty" pg:"Field14"`
 	Field15              [][]byte  `protobuf:"bytes,15,rep,name=Field15" json:"Field15,omitempty" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *NidRepNative) Reset()      { *m = NidRepNative{} }
@@ -386,9 +386,9 @@ type NinRepNative struct {
 	Field13              []bool    `protobuf:"varint,13,rep,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	Field14              []string  `protobuf:"bytes,14,rep,name=Field14" json:"Field14,omitempty" pg:"Field14"`
 	Field15              [][]byte  `protobuf:"bytes,15,rep,name=Field15" json:"Field15,omitempty" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *NinRepNative) Reset()      { *m = NinRepNative{} }
@@ -428,9 +428,9 @@ type NidRepPackedNative struct {
 	Field11              []uint64  `protobuf:"fixed64,11,rep,packed,name=Field11" json:"Field11,omitempty" pg:"Field11"`
 	Field12              []int64   `protobuf:"fixed64,12,rep,packed,name=Field12" json:"Field12,omitempty" pg:"Field12"`
 	Field13              []bool    `protobuf:"varint,13,rep,packed,name=Field13" json:"Field13,omitempty" pg:"Field13"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *NidRepPackedNative) Reset()      { *m = NidRepPackedNative{} }
@@ -470,9 +470,9 @@ type NinRepPackedNative struct {
 	Field11              []uint64  `protobuf:"fixed64,11,rep,packed,name=Field11" json:"Field11,omitempty" pg:"Field11"`
 	Field12              []int64   `protobuf:"fixed64,12,rep,packed,name=Field12" json:"Field12,omitempty" pg:"Field12"`
 	Field13              []bool    `protobuf:"varint,13,rep,packed,name=Field13" json:"Field13,omitempty" pg:"Field13"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *NinRepPackedNative) Reset()      { *m = NinRepPackedNative{} }
@@ -509,9 +509,9 @@ type NidOptStruct struct {
 	Field13              bool         `protobuf:"varint,13,opt,name=Field13" json:"Field13" pg:"Field13"`
 	Field14              string       `protobuf:"bytes,14,opt,name=Field14" json:"Field14" pg:"Field14"`
 	Field15              []byte       `protobuf:"bytes,15,opt,name=Field15" json:"Field15" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
-	XXX_unrecognized     []byte       `json:"-"`
-	XXX_sizecache        int32        `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-" pg:"-"`
+	XXX_unrecognized     []byte       `json:"-" pg:"-"`
+	XXX_sizecache        int32        `json:"-" pg:"-"`
 }
 
 func (m *NidOptStruct) Reset()      { *m = NidOptStruct{} }
@@ -548,9 +548,9 @@ type NinOptStruct struct {
 	Field13              *bool         `protobuf:"varint,13,opt,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	Field14              *string       `protobuf:"bytes,14,opt,name=Field14" json:"Field14,omitempty" pg:"Field14"`
 	Field15              []byte        `protobuf:"bytes,15,opt,name=Field15" json:"Field15,omitempty" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
-	XXX_unrecognized     []byte        `json:"-"`
-	XXX_sizecache        int32         `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-" pg:"-"`
+	XXX_unrecognized     []byte        `json:"-" pg:"-"`
+	XXX_sizecache        int32         `json:"-" pg:"-"`
 }
 
 func (m *NinOptStruct) Reset()      { *m = NinOptStruct{} }
@@ -587,9 +587,9 @@ type NidRepStruct struct {
 	Field13              []bool         `protobuf:"varint,13,rep,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	Field14              []string       `protobuf:"bytes,14,rep,name=Field14" json:"Field14,omitempty" pg:"Field14"`
 	Field15              [][]byte       `protobuf:"bytes,15,rep,name=Field15" json:"Field15,omitempty" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
-	XXX_unrecognized     []byte         `json:"-"`
-	XXX_sizecache        int32          `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-" pg:"-"`
+	XXX_unrecognized     []byte         `json:"-" pg:"-"`
+	XXX_sizecache        int32          `json:"-" pg:"-"`
 }
 
 func (m *NidRepStruct) Reset()      { *m = NidRepStruct{} }
@@ -626,9 +626,9 @@ type NinRepStruct struct {
 	Field13              []bool          `protobuf:"varint,13,rep,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	Field14              []string        `protobuf:"bytes,14,rep,name=Field14" json:"Field14,omitempty" pg:"Field14"`
 	Field15              [][]byte        `protobuf:"bytes,15,rep,name=Field15" json:"Field15,omitempty" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
-	XXX_unrecognized     []byte          `json:"-"`
-	XXX_sizecache        int32           `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-" pg:"-"`
+	XXX_unrecognized     []byte          `json:"-" pg:"-"`
+	XXX_sizecache        int32           `json:"-" pg:"-"`
 }
 
 func (m *NinRepStruct) Reset()      { *m = NinRepStruct{} }
@@ -658,9 +658,9 @@ type NidEmbeddedStruct struct {
 	*NidOptNative        `protobuf:"bytes,1,opt,name=Field1,embedded=Field1" json:"Field1,omitempty" pg:"Field1"`
 	Field200             NidOptNative `protobuf:"bytes,200,opt,name=Field200" json:"Field200" pg:"Field200"`
 	Field210             bool         `protobuf:"varint,210,opt,name=Field210" json:"Field210" pg:"Field210"`
-	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
-	XXX_unrecognized     []byte       `json:"-"`
-	XXX_sizecache        int32        `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-" pg:"-"`
+	XXX_unrecognized     []byte       `json:"-" pg:"-"`
+	XXX_sizecache        int32        `json:"-" pg:"-"`
 }
 
 func (m *NidEmbeddedStruct) Reset()      { *m = NidEmbeddedStruct{} }
@@ -690,9 +690,9 @@ type NinEmbeddedStruct struct {
 	*NidOptNative        `protobuf:"bytes,1,opt,name=Field1,embedded=Field1" json:"Field1,omitempty" pg:"Field1"`
 	Field200             *NidOptNative `protobuf:"bytes,200,opt,name=Field200" json:"Field200,omitempty" pg:"Field200"`
 	Field210             *bool         `protobuf:"varint,210,opt,name=Field210" json:"Field210,omitempty" pg:"Field210"`
-	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
-	XXX_unrecognized     []byte        `json:"-"`
-	XXX_sizecache        int32         `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-" pg:"-"`
+	XXX_unrecognized     []byte        `json:"-" pg:"-"`
+	XXX_sizecache        int32         `json:"-" pg:"-"`
 }
 
 func (m *NinEmbeddedStruct) Reset()      { *m = NinEmbeddedStruct{} }
@@ -721,9 +721,9 @@ var xxx_messageInfo_NinEmbeddedStruct proto.InternalMessageInfo
 type NidNestedStruct struct {
 	Field1               NidOptStruct   `protobuf:"bytes,1,opt,name=Field1" json:"Field1" pg:"Field1"`
 	Field2               []NidRepStruct `protobuf:"bytes,2,rep,name=Field2" json:"Field2" pg:"Field2"`
-	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
-	XXX_unrecognized     []byte         `json:"-"`
-	XXX_sizecache        int32          `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-" pg:"-"`
+	XXX_unrecognized     []byte         `json:"-" pg:"-"`
+	XXX_sizecache        int32          `json:"-" pg:"-"`
 }
 
 func (m *NidNestedStruct) Reset()      { *m = NidNestedStruct{} }
@@ -752,9 +752,9 @@ var xxx_messageInfo_NidNestedStruct proto.InternalMessageInfo
 type NinNestedStruct struct {
 	Field1               *NinOptStruct   `protobuf:"bytes,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
 	Field2               []*NinRepStruct `protobuf:"bytes,2,rep,name=Field2" json:"Field2,omitempty" pg:"Field2"`
-	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
-	XXX_unrecognized     []byte          `json:"-"`
-	XXX_sizecache        int32           `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-" pg:"-"`
+	XXX_unrecognized     []byte          `json:"-" pg:"-"`
+	XXX_sizecache        int32           `json:"-" pg:"-"`
 }
 
 func (m *NinNestedStruct) Reset()      { *m = NinNestedStruct{} }
@@ -783,9 +783,9 @@ var xxx_messageInfo_NinNestedStruct proto.InternalMessageInfo
 type NidOptCustom struct {
 	Id                   Uuid                                            `protobuf:"bytes,1,opt,name=Id,customtype=Uuid" json:"Id" pg:"Id"`
 	Value                github_com_tron_us_protobuf_test_custom.Uint128 `protobuf:"bytes,2,opt,name=Value,customtype=github.com/tron-us/protobuf/test/custom.Uint128" json:"Value" pg:"Value"`
-	XXX_NoUnkeyedLiteral struct{}                                        `json:"-"`
-	XXX_unrecognized     []byte                                          `json:"-"`
-	XXX_sizecache        int32                                           `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                                        `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                                          `json:"-" pg:"-"`
+	XXX_sizecache        int32                                           `json:"-" pg:"-"`
 }
 
 func (m *NidOptCustom) Reset()      { *m = NidOptCustom{} }
@@ -813,9 +813,9 @@ var xxx_messageInfo_NidOptCustom proto.InternalMessageInfo
 
 type CustomDash struct {
 	Value                *github_com_tron_us_protobuf_test_custom_dash_type.Bytes `protobuf:"bytes,1,opt,name=Value,customtype=github.com/tron-us/protobuf/test/custom-dash-type.Bytes" json:"Value,omitempty" pg:"Value"`
-	XXX_NoUnkeyedLiteral struct{}                                                 `json:"-"`
-	XXX_unrecognized     []byte                                                   `json:"-"`
-	XXX_sizecache        int32                                                    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                                                 `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                                                   `json:"-" pg:"-"`
+	XXX_sizecache        int32                                                    `json:"-" pg:"-"`
 }
 
 func (m *CustomDash) Reset()      { *m = CustomDash{} }
@@ -844,9 +844,9 @@ var xxx_messageInfo_CustomDash proto.InternalMessageInfo
 type NinOptCustom struct {
 	Id                   *Uuid                                            `protobuf:"bytes,1,opt,name=Id,customtype=Uuid" json:"Id,omitempty" pg:"Id"`
 	Value                *github_com_tron_us_protobuf_test_custom.Uint128 `protobuf:"bytes,2,opt,name=Value,customtype=github.com/tron-us/protobuf/test/custom.Uint128" json:"Value,omitempty" pg:"Value"`
-	XXX_NoUnkeyedLiteral struct{}                                         `json:"-"`
-	XXX_unrecognized     []byte                                           `json:"-"`
-	XXX_sizecache        int32                                            `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                                         `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                                           `json:"-" pg:"-"`
+	XXX_sizecache        int32                                            `json:"-" pg:"-"`
 }
 
 func (m *NinOptCustom) Reset()      { *m = NinOptCustom{} }
@@ -875,9 +875,9 @@ var xxx_messageInfo_NinOptCustom proto.InternalMessageInfo
 type NidRepCustom struct {
 	Id                   []Uuid                                            `protobuf:"bytes,1,rep,name=Id,customtype=Uuid" json:"Id" pg:"Id"`
 	Value                []github_com_tron_us_protobuf_test_custom.Uint128 `protobuf:"bytes,2,rep,name=Value,customtype=github.com/tron-us/protobuf/test/custom.Uint128" json:"Value" pg:"Value"`
-	XXX_NoUnkeyedLiteral struct{}                                          `json:"-"`
-	XXX_unrecognized     []byte                                            `json:"-"`
-	XXX_sizecache        int32                                             `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                                          `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                                            `json:"-" pg:"-"`
+	XXX_sizecache        int32                                             `json:"-" pg:"-"`
 }
 
 func (m *NidRepCustom) Reset()      { *m = NidRepCustom{} }
@@ -906,9 +906,9 @@ var xxx_messageInfo_NidRepCustom proto.InternalMessageInfo
 type NinRepCustom struct {
 	Id                   []Uuid                                            `protobuf:"bytes,1,rep,name=Id,customtype=Uuid" json:"Id,omitempty" pg:"Id"`
 	Value                []github_com_tron_us_protobuf_test_custom.Uint128 `protobuf:"bytes,2,rep,name=Value,customtype=github.com/tron-us/protobuf/test/custom.Uint128" json:"Value,omitempty" pg:"Value"`
-	XXX_NoUnkeyedLiteral struct{}                                          `json:"-"`
-	XXX_unrecognized     []byte                                            `json:"-"`
-	XXX_sizecache        int32                                             `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                                          `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                                            `json:"-" pg:"-"`
+	XXX_sizecache        int32                                             `json:"-" pg:"-"`
 }
 
 func (m *NinRepCustom) Reset()      { *m = NinRepCustom{} }
@@ -944,9 +944,9 @@ type NinOptNativeUnion struct {
 	Field13              *bool    `protobuf:"varint,13,opt,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	Field14              *string  `protobuf:"bytes,14,opt,name=Field14" json:"Field14,omitempty" pg:"Field14"`
 	Field15              []byte   `protobuf:"bytes,15,opt,name=Field15" json:"Field15,omitempty" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NinOptNativeUnion) Reset()      { *m = NinOptNativeUnion{} }
@@ -982,9 +982,9 @@ type NinOptStructUnion struct {
 	Field13              *bool         `protobuf:"varint,13,opt,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	Field14              *string       `protobuf:"bytes,14,opt,name=Field14" json:"Field14,omitempty" pg:"Field14"`
 	Field15              []byte        `protobuf:"bytes,15,opt,name=Field15" json:"Field15,omitempty" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
-	XXX_unrecognized     []byte        `json:"-"`
-	XXX_sizecache        int32         `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-" pg:"-"`
+	XXX_unrecognized     []byte        `json:"-" pg:"-"`
+	XXX_sizecache        int32         `json:"-" pg:"-"`
 }
 
 func (m *NinOptStructUnion) Reset()      { *m = NinOptStructUnion{} }
@@ -1014,9 +1014,9 @@ type NinEmbeddedStructUnion struct {
 	*NidOptNative        `protobuf:"bytes,1,opt,name=Field1,embedded=Field1" json:"Field1,omitempty" pg:"Field1"`
 	Field200             *NinOptNative `protobuf:"bytes,200,opt,name=Field200" json:"Field200,omitempty" pg:"Field200"`
 	Field210             *bool         `protobuf:"varint,210,opt,name=Field210" json:"Field210,omitempty" pg:"Field210"`
-	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
-	XXX_unrecognized     []byte        `json:"-"`
-	XXX_sizecache        int32         `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-" pg:"-"`
+	XXX_unrecognized     []byte        `json:"-" pg:"-"`
+	XXX_sizecache        int32         `json:"-" pg:"-"`
 }
 
 func (m *NinEmbeddedStructUnion) Reset()      { *m = NinEmbeddedStructUnion{} }
@@ -1046,9 +1046,9 @@ type NinNestedStructUnion struct {
 	Field1               *NinOptNativeUnion      `protobuf:"bytes,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
 	Field2               *NinOptStructUnion      `protobuf:"bytes,2,opt,name=Field2" json:"Field2,omitempty" pg:"Field2"`
 	Field3               *NinEmbeddedStructUnion `protobuf:"bytes,3,opt,name=Field3" json:"Field3,omitempty" pg:"Field3"`
-	XXX_NoUnkeyedLiteral struct{}                `json:"-"`
-	XXX_unrecognized     []byte                  `json:"-"`
-	XXX_sizecache        int32                   `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                  `json:"-" pg:"-"`
+	XXX_sizecache        int32                   `json:"-" pg:"-"`
 }
 
 func (m *NinNestedStructUnion) Reset()      { *m = NinNestedStructUnion{} }
@@ -1078,9 +1078,9 @@ type Tree struct {
 	Or                   *OrBranch  `protobuf:"bytes,1,opt,name=Or" json:"Or,omitempty" pg:"Or"`
 	And                  *AndBranch `protobuf:"bytes,2,opt,name=And" json:"And,omitempty" pg:"And"`
 	Leaf                 *Leaf      `protobuf:"bytes,3,opt,name=Leaf" json:"Leaf,omitempty" pg:"Leaf"`
-	XXX_NoUnkeyedLiteral struct{}   `json:"-"`
-	XXX_unrecognized     []byte     `json:"-"`
-	XXX_sizecache        int32      `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}   `json:"-" pg:"-"`
+	XXX_unrecognized     []byte     `json:"-" pg:"-"`
+	XXX_sizecache        int32      `json:"-" pg:"-"`
 }
 
 func (m *Tree) Reset()      { *m = Tree{} }
@@ -1109,9 +1109,9 @@ var xxx_messageInfo_Tree proto.InternalMessageInfo
 type OrBranch struct {
 	Left                 Tree     `protobuf:"bytes,1,opt,name=Left" json:"Left" pg:"Left"`
 	Right                Tree     `protobuf:"bytes,2,opt,name=Right" json:"Right" pg:"Right"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *OrBranch) Reset()      { *m = OrBranch{} }
@@ -1140,9 +1140,9 @@ var xxx_messageInfo_OrBranch proto.InternalMessageInfo
 type AndBranch struct {
 	Left                 Tree     `protobuf:"bytes,1,opt,name=Left" json:"Left" pg:"Left"`
 	Right                Tree     `protobuf:"bytes,2,opt,name=Right" json:"Right" pg:"Right"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *AndBranch) Reset()      { *m = AndBranch{} }
@@ -1171,9 +1171,9 @@ var xxx_messageInfo_AndBranch proto.InternalMessageInfo
 type Leaf struct {
 	Value                int64    `protobuf:"varint,1,opt,name=Value" json:"Value" pg:"Value"`
 	StrValue             string   `protobuf:"bytes,2,opt,name=StrValue" json:"StrValue" pg:"StrValue"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Leaf) Reset()      { *m = Leaf{} }
@@ -1203,9 +1203,9 @@ type DeepTree struct {
 	Down                 *ADeepBranch   `protobuf:"bytes,1,opt,name=Down" json:"Down,omitempty" pg:"Down"`
 	And                  *AndDeepBranch `protobuf:"bytes,2,opt,name=And" json:"And,omitempty" pg:"And"`
 	Leaf                 *DeepLeaf      `protobuf:"bytes,3,opt,name=Leaf" json:"Leaf,omitempty" pg:"Leaf"`
-	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
-	XXX_unrecognized     []byte         `json:"-"`
-	XXX_sizecache        int32          `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-" pg:"-"`
+	XXX_unrecognized     []byte         `json:"-" pg:"-"`
+	XXX_sizecache        int32          `json:"-" pg:"-"`
 }
 
 func (m *DeepTree) Reset()      { *m = DeepTree{} }
@@ -1233,9 +1233,9 @@ var xxx_messageInfo_DeepTree proto.InternalMessageInfo
 
 type ADeepBranch struct {
 	Down                 DeepTree `protobuf:"bytes,2,opt,name=Down" json:"Down" pg:"Down"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *ADeepBranch) Reset()      { *m = ADeepBranch{} }
@@ -1264,9 +1264,9 @@ var xxx_messageInfo_ADeepBranch proto.InternalMessageInfo
 type AndDeepBranch struct {
 	Left                 DeepTree `protobuf:"bytes,1,opt,name=Left" json:"Left" pg:"Left"`
 	Right                DeepTree `protobuf:"bytes,2,opt,name=Right" json:"Right" pg:"Right"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *AndDeepBranch) Reset()      { *m = AndDeepBranch{} }
@@ -1294,9 +1294,9 @@ var xxx_messageInfo_AndDeepBranch proto.InternalMessageInfo
 
 type DeepLeaf struct {
 	Tree                 Tree     `protobuf:"bytes,1,opt,name=Tree" json:"Tree" pg:"Tree"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *DeepLeaf) Reset()      { *m = DeepLeaf{} }
@@ -1323,9 +1323,9 @@ func (m *DeepLeaf) XXX_DiscardUnknown() {
 var xxx_messageInfo_DeepLeaf proto.InternalMessageInfo
 
 type Nil struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Nil) Reset()      { *m = Nil{} }
@@ -1353,9 +1353,9 @@ var xxx_messageInfo_Nil proto.InternalMessageInfo
 
 type NidOptEnum struct {
 	Field1               TheTestEnum `protobuf:"varint,1,opt,name=Field1,enum=test.TheTestEnum" json:"Field1" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{}    `json:"-"`
-	XXX_unrecognized     []byte      `json:"-"`
-	XXX_sizecache        int32       `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}    `json:"-" pg:"-"`
+	XXX_unrecognized     []byte      `json:"-" pg:"-"`
+	XXX_sizecache        int32       `json:"-" pg:"-"`
 }
 
 func (m *NidOptEnum) Reset()      { *m = NidOptEnum{} }
@@ -1385,9 +1385,9 @@ type NinOptEnum struct {
 	Field1               *TheTestEnum           `protobuf:"varint,1,opt,name=Field1,enum=test.TheTestEnum" json:"Field1,omitempty" pg:"Field1"`
 	Field2               *YetAnotherTestEnum    `protobuf:"varint,2,opt,name=Field2,enum=test.YetAnotherTestEnum" json:"Field2,omitempty" pg:"Field2"`
 	Field3               *YetYetAnotherTestEnum `protobuf:"varint,3,opt,name=Field3,enum=test.YetYetAnotherTestEnum" json:"Field3,omitempty" pg:"Field3"`
-	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
-	XXX_unrecognized     []byte                 `json:"-"`
-	XXX_sizecache        int32                  `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}               `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                 `json:"-" pg:"-"`
+	XXX_sizecache        int32                  `json:"-" pg:"-"`
 }
 
 func (m *NinOptEnum) Reset()      { *m = NinOptEnum{} }
@@ -1417,9 +1417,9 @@ type NidRepEnum struct {
 	Field1               []TheTestEnum           `protobuf:"varint,1,rep,name=Field1,enum=test.TheTestEnum" json:"Field1,omitempty" pg:"Field1"`
 	Field2               []YetAnotherTestEnum    `protobuf:"varint,2,rep,name=Field2,enum=test.YetAnotherTestEnum" json:"Field2,omitempty" pg:"Field2"`
 	Field3               []YetYetAnotherTestEnum `protobuf:"varint,3,rep,name=Field3,enum=test.YetYetAnotherTestEnum" json:"Field3,omitempty" pg:"Field3"`
-	XXX_NoUnkeyedLiteral struct{}                `json:"-"`
-	XXX_unrecognized     []byte                  `json:"-"`
-	XXX_sizecache        int32                   `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                  `json:"-" pg:"-"`
+	XXX_sizecache        int32                   `json:"-" pg:"-"`
 }
 
 func (m *NidRepEnum) Reset()      { *m = NidRepEnum{} }
@@ -1449,9 +1449,9 @@ type NinRepEnum struct {
 	Field1               []TheTestEnum           `protobuf:"varint,1,rep,name=Field1,enum=test.TheTestEnum" json:"Field1,omitempty" pg:"Field1"`
 	Field2               []YetAnotherTestEnum    `protobuf:"varint,2,rep,name=Field2,enum=test.YetAnotherTestEnum" json:"Field2,omitempty" pg:"Field2"`
 	Field3               []YetYetAnotherTestEnum `protobuf:"varint,3,rep,name=Field3,enum=test.YetYetAnotherTestEnum" json:"Field3,omitempty" pg:"Field3"`
-	XXX_NoUnkeyedLiteral struct{}                `json:"-"`
-	XXX_unrecognized     []byte                  `json:"-"`
-	XXX_sizecache        int32                   `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                  `json:"-" pg:"-"`
+	XXX_sizecache        int32                   `json:"-" pg:"-"`
 }
 
 func (m *NinRepEnum) Reset()      { *m = NinRepEnum{} }
@@ -1481,9 +1481,9 @@ type NinOptEnumDefault struct {
 	Field1               *TheTestEnum           `protobuf:"varint,1,opt,name=Field1,enum=test.TheTestEnum,def=2" json:"Field1,omitempty" pg:"Field1"`
 	Field2               *YetAnotherTestEnum    `protobuf:"varint,2,opt,name=Field2,enum=test.YetAnotherTestEnum,def=1" json:"Field2,omitempty" pg:"Field2"`
 	Field3               *YetYetAnotherTestEnum `protobuf:"varint,3,opt,name=Field3,enum=test.YetYetAnotherTestEnum,def=0" json:"Field3,omitempty" pg:"Field3"`
-	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
-	XXX_unrecognized     []byte                 `json:"-"`
-	XXX_sizecache        int32                  `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}               `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                 `json:"-" pg:"-"`
+	XXX_sizecache        int32                  `json:"-" pg:"-"`
 }
 
 func (m *NinOptEnumDefault) Reset()      { *m = NinOptEnumDefault{} }
@@ -1538,9 +1538,9 @@ type AnotherNinOptEnum struct {
 	Field1               *AnotherTestEnum       `protobuf:"varint,1,opt,name=Field1,enum=test.AnotherTestEnum" json:"Field1,omitempty" pg:"Field1"`
 	Field2               *YetAnotherTestEnum    `protobuf:"varint,2,opt,name=Field2,enum=test.YetAnotherTestEnum" json:"Field2,omitempty" pg:"Field2"`
 	Field3               *YetYetAnotherTestEnum `protobuf:"varint,3,opt,name=Field3,enum=test.YetYetAnotherTestEnum" json:"Field3,omitempty" pg:"Field3"`
-	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
-	XXX_unrecognized     []byte                 `json:"-"`
-	XXX_sizecache        int32                  `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}               `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                 `json:"-" pg:"-"`
+	XXX_sizecache        int32                  `json:"-" pg:"-"`
 }
 
 func (m *AnotherNinOptEnum) Reset()      { *m = AnotherNinOptEnum{} }
@@ -1570,9 +1570,9 @@ type AnotherNinOptEnumDefault struct {
 	Field1               *AnotherTestEnum       `protobuf:"varint,1,opt,name=Field1,enum=test.AnotherTestEnum,def=11" json:"Field1,omitempty" pg:"Field1"`
 	Field2               *YetAnotherTestEnum    `protobuf:"varint,2,opt,name=Field2,enum=test.YetAnotherTestEnum,def=1" json:"Field2,omitempty" pg:"Field2"`
 	Field3               *YetYetAnotherTestEnum `protobuf:"varint,3,opt,name=Field3,enum=test.YetYetAnotherTestEnum,def=0" json:"Field3,omitempty" pg:"Field3"`
-	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
-	XXX_unrecognized     []byte                 `json:"-"`
-	XXX_sizecache        int32                  `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}               `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                 `json:"-" pg:"-"`
+	XXX_sizecache        int32                  `json:"-" pg:"-"`
 }
 
 func (m *AnotherNinOptEnumDefault) Reset()      { *m = AnotherNinOptEnumDefault{} }
@@ -1627,9 +1627,9 @@ type Timer struct {
 	Time1                int64    `protobuf:"fixed64,1,opt,name=Time1" json:"Time1" pg:"Time1"`
 	Time2                int64    `protobuf:"fixed64,2,opt,name=Time2" json:"Time2" pg:"Time2"`
 	Data                 []byte   `protobuf:"bytes,3,opt,name=Data" json:"Data" pg:"Data"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Timer) Reset()      { *m = Timer{} }
@@ -1657,10 +1657,10 @@ var xxx_messageInfo_Timer proto.InternalMessageInfo
 
 type MyExtendable struct {
 	Field1                       *int64   `protobuf:"varint,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
-	XXX_NoUnkeyedLiteral         struct{} `json:"-"`
-	proto.XXX_InternalExtensions `json:"-"`
-	XXX_unrecognized             []byte `json:"-"`
-	XXX_sizecache                int32  `json:"-"`
+	XXX_NoUnkeyedLiteral         struct{} `json:"-" pg:"-"`
+	proto.XXX_InternalExtensions `json:"-" pg:"-"`
+	XXX_unrecognized             []byte `json:"-" pg:"-"`
+	XXX_sizecache                int32  `json:"-" pg:"-"`
 }
 
 func (m *MyExtendable) Reset()      { *m = MyExtendable{} }
@@ -1699,10 +1699,10 @@ type OtherExtenable struct {
 	Field2                       *int64        `protobuf:"varint,2,opt,name=Field2" json:"Field2,omitempty" pg:"Field2"`
 	Field13                      *int64        `protobuf:"varint,13,opt,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	M                            *MyExtendable `protobuf:"bytes,1,opt,name=M" json:"M,omitempty" pg:"M"`
-	XXX_NoUnkeyedLiteral         struct{}      `json:"-"`
-	proto.XXX_InternalExtensions `json:"-"`
-	XXX_unrecognized             []byte `json:"-"`
-	XXX_sizecache                int32  `json:"-"`
+	XXX_NoUnkeyedLiteral         struct{}      `json:"-" pg:"-"`
+	proto.XXX_InternalExtensions `json:"-" pg:"-"`
+	XXX_unrecognized             []byte `json:"-" pg:"-"`
+	XXX_sizecache                int32  `json:"-" pg:"-"`
 }
 
 func (m *OtherExtenable) Reset()      { *m = OtherExtenable{} }
@@ -1743,9 +1743,9 @@ type NestedDefinition struct {
 	EnumField            *NestedDefinition_NestedEnum                    `protobuf:"varint,2,opt,name=EnumField,enum=test.NestedDefinition_NestedEnum" json:"EnumField,omitempty" pg:"EnumField"`
 	NNM                  *NestedDefinition_NestedMessage_NestedNestedMsg `protobuf:"bytes,3,opt,name=NNM" json:"NNM,omitempty" pg:"NNM"`
 	NM                   *NestedDefinition_NestedMessage                 `protobuf:"bytes,4,opt,name=NM" json:"NM,omitempty" pg:"NM"`
-	XXX_NoUnkeyedLiteral struct{}                                        `json:"-"`
-	XXX_unrecognized     []byte                                          `json:"-"`
-	XXX_sizecache        int32                                           `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                                        `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                                          `json:"-" pg:"-"`
+	XXX_sizecache        int32                                           `json:"-" pg:"-"`
 }
 
 func (m *NestedDefinition) Reset()      { *m = NestedDefinition{} }
@@ -1774,9 +1774,9 @@ var xxx_messageInfo_NestedDefinition proto.InternalMessageInfo
 type NestedDefinition_NestedMessage struct {
 	NestedField1         *uint64                                         `protobuf:"fixed64,1,opt,name=NestedField1" json:"NestedField1,omitempty" pg:"NestedField1"`
 	NNM                  *NestedDefinition_NestedMessage_NestedNestedMsg `protobuf:"bytes,2,opt,name=NNM" json:"NNM,omitempty" pg:"NNM"`
-	XXX_NoUnkeyedLiteral struct{}                                        `json:"-"`
-	XXX_unrecognized     []byte                                          `json:"-"`
-	XXX_sizecache        int32                                           `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                                        `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                                          `json:"-" pg:"-"`
+	XXX_sizecache        int32                                           `json:"-" pg:"-"`
 }
 
 func (m *NestedDefinition_NestedMessage) Reset()      { *m = NestedDefinition_NestedMessage{} }
@@ -1804,9 +1804,9 @@ var xxx_messageInfo_NestedDefinition_NestedMessage proto.InternalMessageInfo
 
 type NestedDefinition_NestedMessage_NestedNestedMsg struct {
 	NestedNestedField1   *string  `protobuf:"bytes,10,opt,name=NestedNestedField1" json:"NestedNestedField1,omitempty" pg:"NestedNestedField1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NestedDefinition_NestedMessage_NestedNestedMsg) Reset() {
@@ -1838,9 +1838,9 @@ type NestedScope struct {
 	A                    *NestedDefinition_NestedMessage_NestedNestedMsg `protobuf:"bytes,1,opt,name=A" json:"A,omitempty" pg:"A"`
 	B                    *NestedDefinition_NestedEnum                    `protobuf:"varint,2,opt,name=B,enum=test.NestedDefinition_NestedEnum" json:"B,omitempty" pg:"B"`
 	C                    *NestedDefinition_NestedMessage                 `protobuf:"bytes,3,opt,name=C" json:"C,omitempty" pg:"C"`
-	XXX_NoUnkeyedLiteral struct{}                                        `json:"-"`
-	XXX_unrecognized     []byte                                          `json:"-"`
-	XXX_sizecache        int32                                           `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                                        `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                                          `json:"-" pg:"-"`
+	XXX_sizecache        int32                                           `json:"-" pg:"-"`
 }
 
 func (m *NestedScope) Reset()      { *m = NestedScope{} }
@@ -1882,9 +1882,9 @@ type NinOptNativeDefault struct {
 	Field13              *bool    `protobuf:"varint,13,opt,name=Field13,def=1" json:"Field13,omitempty" pg:"Field13"`
 	Field14              *string  `protobuf:"bytes,14,opt,name=Field14,def=1234" json:"Field14,omitempty" pg:"Field14"`
 	Field15              []byte   `protobuf:"bytes,15,opt,name=Field15" json:"Field15,omitempty" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NinOptNativeDefault) Reset()      { *m = NinOptNativeDefault{} }
@@ -2032,9 +2032,9 @@ func (m *NinOptNativeDefault) GetField15() []byte {
 
 type CustomContainer struct {
 	CustomStruct         NidOptCustom `protobuf:"bytes,1,opt,name=CustomStruct" json:"CustomStruct" pg:"CustomStruct"`
-	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
-	XXX_unrecognized     []byte       `json:"-"`
-	XXX_sizecache        int32        `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-" pg:"-"`
+	XXX_unrecognized     []byte       `json:"-" pg:"-"`
+	XXX_sizecache        int32        `json:"-" pg:"-"`
 }
 
 func (m *CustomContainer) Reset()      { *m = CustomContainer{} }
@@ -2076,9 +2076,9 @@ type CustomNameNidOptNative struct {
 	FieldM               bool     `protobuf:"varint,13,opt,name=Field13" json:"Field13" pg:"Field13"`
 	FieldN               string   `protobuf:"bytes,14,opt,name=Field14" json:"Field14" pg:"Field14"`
 	FieldO               []byte   `protobuf:"bytes,15,opt,name=Field15" json:"Field15" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *CustomNameNidOptNative) Reset()      { *m = CustomNameNidOptNative{} }
@@ -2120,9 +2120,9 @@ type CustomNameNinOptNative struct {
 	FieldM               *bool    `protobuf:"varint,13,opt,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	FieldN               *string  `protobuf:"bytes,14,opt,name=Field14" json:"Field14,omitempty" pg:"Field14"`
 	FieldO               []byte   `protobuf:"bytes,15,opt,name=Field15" json:"Field15,omitempty" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *CustomNameNinOptNative) Reset()      { *m = CustomNameNinOptNative{} }
@@ -2164,9 +2164,9 @@ type CustomNameNinRepNative struct {
 	FieldM               []bool    `protobuf:"varint,13,rep,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	FieldN               []string  `protobuf:"bytes,14,rep,name=Field14" json:"Field14,omitempty" pg:"Field14"`
 	FieldO               [][]byte  `protobuf:"bytes,15,rep,name=Field15" json:"Field15,omitempty" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *CustomNameNinRepNative) Reset()      { *m = CustomNameNinRepNative{} }
@@ -2203,9 +2203,9 @@ type CustomNameNinStruct struct {
 	FieldH               *bool           `protobuf:"varint,13,opt,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	FieldI               *string         `protobuf:"bytes,14,opt,name=Field14" json:"Field14,omitempty" pg:"Field14"`
 	FieldJ               []byte          `protobuf:"bytes,15,opt,name=Field15" json:"Field15,omitempty" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
-	XXX_unrecognized     []byte          `json:"-"`
-	XXX_sizecache        int32           `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-" pg:"-"`
+	XXX_unrecognized     []byte          `json:"-" pg:"-"`
+	XXX_sizecache        int32           `json:"-" pg:"-"`
 }
 
 func (m *CustomNameNinStruct) Reset()      { *m = CustomNameNinStruct{} }
@@ -2236,9 +2236,9 @@ type CustomNameCustomType struct {
 	FieldB               *github_com_tron_us_protobuf_test_custom.Uint128  `protobuf:"bytes,2,opt,name=Value,customtype=github.com/tron-us/protobuf/test/custom.Uint128" json:"Value,omitempty" pg:"Value"`
 	FieldC               []Uuid                                            `protobuf:"bytes,3,rep,name=Ids,customtype=Uuid" json:"Ids,omitempty" pg:"Ids"`
 	FieldD               []github_com_tron_us_protobuf_test_custom.Uint128 `protobuf:"bytes,4,rep,name=Values,customtype=github.com/tron-us/protobuf/test/custom.Uint128" json:"Values,omitempty" pg:"Values"`
-	XXX_NoUnkeyedLiteral struct{}                                          `json:"-"`
-	XXX_unrecognized     []byte                                            `json:"-"`
-	XXX_sizecache        int32                                             `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                                          `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                                            `json:"-" pg:"-"`
+	XXX_sizecache        int32                                             `json:"-" pg:"-"`
 }
 
 func (m *CustomNameCustomType) Reset()      { *m = CustomNameCustomType{} }
@@ -2268,9 +2268,9 @@ type CustomNameNinEmbeddedStructUnion struct {
 	*NidOptNative        `protobuf:"bytes,1,opt,name=Field1,embedded=Field1" json:"Field1,omitempty" pg:"Field1"`
 	FieldA               *NinOptNative `protobuf:"bytes,200,opt,name=Field200" json:"Field200,omitempty" pg:"Field200"`
 	FieldB               *bool         `protobuf:"varint,210,opt,name=Field210" json:"Field210,omitempty" pg:"Field210"`
-	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
-	XXX_unrecognized     []byte        `json:"-"`
-	XXX_sizecache        int32         `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-" pg:"-"`
+	XXX_unrecognized     []byte        `json:"-" pg:"-"`
+	XXX_sizecache        int32         `json:"-" pg:"-"`
 }
 
 func (m *CustomNameNinEmbeddedStructUnion) Reset()      { *m = CustomNameNinEmbeddedStructUnion{} }
@@ -2299,9 +2299,9 @@ var xxx_messageInfo_CustomNameNinEmbeddedStructUnion proto.InternalMessageInfo
 type CustomNameEnum struct {
 	FieldA               *TheTestEnum  `protobuf:"varint,1,opt,name=Field1,enum=test.TheTestEnum" json:"Field1,omitempty" pg:"Field1"`
 	FieldB               []TheTestEnum `protobuf:"varint,2,rep,name=Field2,enum=test.TheTestEnum" json:"Field2,omitempty" pg:"Field2"`
-	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
-	XXX_unrecognized     []byte        `json:"-"`
-	XXX_sizecache        int32         `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-" pg:"-"`
+	XXX_unrecognized     []byte        `json:"-" pg:"-"`
+	XXX_sizecache        int32         `json:"-" pg:"-"`
 }
 
 func (m *CustomNameEnum) Reset()      { *m = CustomNameEnum{} }
@@ -2329,10 +2329,10 @@ var xxx_messageInfo_CustomNameEnum proto.InternalMessageInfo
 
 type NoExtensionsMap struct {
 	Field1               *int64   `protobuf:"varint,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_extensions       []byte   `protobuf:"bytes,0,opt" json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_extensions       []byte   `protobuf:"bytes,0,opt" json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NoExtensionsMap) Reset()      { *m = NoExtensionsMap{} }
@@ -2375,8 +2375,8 @@ var xxx_messageInfo_NoExtensionsMap proto.InternalMessageInfo
 
 type Unrecognized struct {
 	Field1               *string  `protobuf:"bytes,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Unrecognized) Reset()      { *m = Unrecognized{} }
@@ -2405,9 +2405,9 @@ var xxx_messageInfo_Unrecognized proto.InternalMessageInfo
 type UnrecognizedWithInner struct {
 	Embedded             []*UnrecognizedWithInner_Inner `protobuf:"bytes,1,rep,name=embedded" json:"embedded,omitempty" pg:"embedded"`
 	Field2               *string                        `protobuf:"bytes,2,opt,name=Field2" json:"Field2,omitempty" pg:"Field2"`
-	XXX_NoUnkeyedLiteral struct{}                       `json:"-"`
-	XXX_unrecognized     []byte                         `json:"-"`
-	XXX_sizecache        int32                          `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                       `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                         `json:"-" pg:"-"`
+	XXX_sizecache        int32                          `json:"-" pg:"-"`
 }
 
 func (m *UnrecognizedWithInner) Reset()      { *m = UnrecognizedWithInner{} }
@@ -2435,8 +2435,8 @@ var xxx_messageInfo_UnrecognizedWithInner proto.InternalMessageInfo
 
 type UnrecognizedWithInner_Inner struct {
 	Field1               *uint32  `protobuf:"varint,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *UnrecognizedWithInner_Inner) Reset()      { *m = UnrecognizedWithInner_Inner{} }
@@ -2465,9 +2465,9 @@ var xxx_messageInfo_UnrecognizedWithInner_Inner proto.InternalMessageInfo
 type UnrecognizedWithEmbed struct {
 	UnrecognizedWithEmbed_Embedded `protobuf:"bytes,1,opt,name=embedded,embedded=embedded" json:"embedded" pg:"embedded"`
 	Field2                         *string  `protobuf:"bytes,2,opt,name=Field2" json:"Field2,omitempty" pg:"Field2"`
-	XXX_NoUnkeyedLiteral           struct{} `json:"-"`
-	XXX_unrecognized               []byte   `json:"-"`
-	XXX_sizecache                  int32    `json:"-"`
+	XXX_NoUnkeyedLiteral           struct{} `json:"-" pg:"-"`
+	XXX_unrecognized               []byte   `json:"-" pg:"-"`
+	XXX_sizecache                  int32    `json:"-" pg:"-"`
 }
 
 func (m *UnrecognizedWithEmbed) Reset()      { *m = UnrecognizedWithEmbed{} }
@@ -2495,8 +2495,8 @@ var xxx_messageInfo_UnrecognizedWithEmbed proto.InternalMessageInfo
 
 type UnrecognizedWithEmbed_Embedded struct {
 	Field1               *uint32  `protobuf:"varint,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *UnrecognizedWithEmbed_Embedded) Reset()      { *m = UnrecognizedWithEmbed_Embedded{} }
@@ -2525,9 +2525,9 @@ var xxx_messageInfo_UnrecognizedWithEmbed_Embedded proto.InternalMessageInfo
 type Node struct {
 	Label                *string  `protobuf:"bytes,1,opt,name=Label" json:"Label,omitempty" pg:"Label"`
 	Children             []*Node  `protobuf:"bytes,2,rep,name=Children" json:"Children,omitempty" pg:"Children"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Node) Reset()      { *m = Node{} }
@@ -2555,9 +2555,9 @@ var xxx_messageInfo_Node proto.InternalMessageInfo
 
 type NonByteCustomType struct {
 	Field1               *T       `protobuf:"bytes,1,opt,name=Field1,customtype=T" json:"Field1,omitempty" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NonByteCustomType) Reset()      { *m = NonByteCustomType{} }
@@ -2585,9 +2585,9 @@ var xxx_messageInfo_NonByteCustomType proto.InternalMessageInfo
 
 type NidOptNonByteCustomType struct {
 	Field1               T        `protobuf:"bytes,1,opt,name=Field1,customtype=T" json:"Field1" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NidOptNonByteCustomType) Reset()      { *m = NidOptNonByteCustomType{} }
@@ -2615,9 +2615,9 @@ var xxx_messageInfo_NidOptNonByteCustomType proto.InternalMessageInfo
 
 type NinOptNonByteCustomType struct {
 	Field1               *T       `protobuf:"bytes,1,opt,name=Field1,customtype=T" json:"Field1,omitempty" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NinOptNonByteCustomType) Reset()      { *m = NinOptNonByteCustomType{} }
@@ -2645,9 +2645,9 @@ var xxx_messageInfo_NinOptNonByteCustomType proto.InternalMessageInfo
 
 type NidRepNonByteCustomType struct {
 	Field1               []T      `protobuf:"bytes,1,rep,name=Field1,customtype=T" json:"Field1" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NidRepNonByteCustomType) Reset()      { *m = NidRepNonByteCustomType{} }
@@ -2675,9 +2675,9 @@ var xxx_messageInfo_NidRepNonByteCustomType proto.InternalMessageInfo
 
 type NinRepNonByteCustomType struct {
 	Field1               []T      `protobuf:"bytes,1,rep,name=Field1,customtype=T" json:"Field1,omitempty" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NinRepNonByteCustomType) Reset()      { *m = NinRepNonByteCustomType{} }
@@ -2705,9 +2705,9 @@ var xxx_messageInfo_NinRepNonByteCustomType proto.InternalMessageInfo
 
 type ProtoType struct {
 	Field2               *string  `protobuf:"bytes,1,opt,name=Field2" json:"Field2,omitempty" pg:"Field2"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *ProtoType) Reset()      { *m = ProtoType{} }

@@ -25,9 +25,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 type Object struct {
 	CustomField1         *CustomType  `protobuf:"bytes,1,opt,name=CustomField1,customtype=CustomType" json:"CustomField1,omitempty" pg:"CustomField1"`
 	CustomField2         []CustomType `protobuf:"bytes,2,rep,name=CustomField2,customtype=CustomType" json:"CustomField2,omitempty" pg:"CustomField2"`
-	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
-	XXX_unrecognized     []byte       `json:"-"`
-	XXX_sizecache        int32        `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-" pg:"-"`
+	XXX_unrecognized     []byte       `json:"-" pg:"-"`
+	XXX_sizecache        int32        `json:"-" pg:"-"`
 }
 
 func (m *Object) Reset()         { *m = Object{} }

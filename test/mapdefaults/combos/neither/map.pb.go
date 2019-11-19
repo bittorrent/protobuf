@@ -32,9 +32,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type MapTest struct {
 	StrStr               map[string]string `protobuf:"bytes,1,rep,name=str_str,json=strStr,proto3" json:"str_str,omitempty" pg:"str_str" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
-	XXX_unrecognized     []byte            `json:"-"`
-	XXX_sizecache        int32             `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-" pg:"-"`
+	XXX_unrecognized     []byte            `json:"-" pg:"-"`
+	XXX_sizecache        int32             `json:"-" pg:"-"`
 }
 
 func (m *MapTest) Reset()      { *m = MapTest{} }
@@ -62,9 +62,9 @@ var xxx_messageInfo_MapTest proto.InternalMessageInfo
 
 type FakeMap struct {
 	Entries              []*FakeMapEntry `protobuf:"bytes,1,rep,name=entries,proto3" json:"entries,omitempty" pg:"entries"`
-	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
-	XXX_unrecognized     []byte          `json:"-"`
-	XXX_sizecache        int32           `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-" pg:"-"`
+	XXX_unrecognized     []byte          `json:"-" pg:"-"`
+	XXX_sizecache        int32           `json:"-" pg:"-"`
 }
 
 func (m *FakeMap) Reset()      { *m = FakeMap{} }
@@ -94,9 +94,9 @@ type FakeMapEntry struct {
 	Key                  string   `protobuf:"bytes,1,opt,name=key,proto3" json:"key,omitempty" pg:"key"`
 	Value                string   `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty" pg:"value"`
 	Other                string   `protobuf:"bytes,3,opt,name=other,proto3" json:"other,omitempty" pg:"other"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *FakeMapEntry) Reset()      { *m = FakeMapEntry{} }

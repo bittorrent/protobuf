@@ -35,9 +35,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 //
 // The JSON representation for `Empty` is empty JSON object `{}`.
 type Empty struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Empty) Reset()      { *m = Empty{} }

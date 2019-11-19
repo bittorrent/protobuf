@@ -66,9 +66,9 @@ type Public struct {
 	M                    *sub.M   `protobuf:"bytes,1,opt,name=m" json:"m,omitempty" pg:"m"`
 	E                    *sub.E   `protobuf:"varint,2,opt,name=e,enum=goproto.test.import_public.sub.E" json:"e,omitempty" pg:"e"`
 	Local                *Local   `protobuf:"bytes,3,opt,name=local" json:"local,omitempty" pg:"local"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Public) Reset()         { *m = Public{} }

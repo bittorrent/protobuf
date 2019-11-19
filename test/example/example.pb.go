@@ -36,9 +36,9 @@ type A struct {
 	Description          string                                `protobuf:"bytes,1,opt,name=Description" json:"Description" pg:"Description"`
 	Number               int64                                 `protobuf:"varint,2,opt,name=Number" json:"Number" pg:"Number"`
 	Id                   github_com_tron_us_protobuf_test.Uuid `protobuf:"bytes,3,opt,name=Id,customtype=github.com/tron-us/protobuf/test.Uuid" json:"Id" pg:"Id"`
-	XXX_NoUnkeyedLiteral struct{}                              `json:"-"`
-	XXX_unrecognized     []byte                                `json:"-"`
-	XXX_sizecache        int32                                 `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                              `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                                `json:"-" pg:"-"`
+	XXX_sizecache        int32                                 `json:"-" pg:"-"`
 }
 
 func (m *A) Reset()      { *m = A{} }
@@ -76,9 +76,9 @@ var xxx_messageInfo_A proto.InternalMessageInfo
 type B struct {
 	A                    `protobuf:"bytes,1,opt,name=A,embedded=A" json:"A" pg:"A"`
 	G                    []github_com_tron_us_protobuf_test_custom.Uint128 `protobuf:"bytes,2,rep,name=G,customtype=github.com/tron-us/protobuf/test/custom.Uint128" json:"G" pg:"G"`
-	XXX_NoUnkeyedLiteral struct{}                                          `json:"-"`
-	XXX_unrecognized     []byte                                            `json:"-"`
-	XXX_sizecache        int32                                             `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                                          `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                                            `json:"-" pg:"-"`
+	XXX_sizecache        int32                                             `json:"-" pg:"-"`
 }
 
 func (m *B) Reset()      { *m = B{} }
@@ -115,9 +115,9 @@ var xxx_messageInfo_B proto.InternalMessageInfo
 
 type C struct {
 	MySize               *int64   `protobuf:"varint,1,opt,name=size" json:"size,omitempty" pg:"size"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *C) Reset()      { *m = C{} }
@@ -162,9 +162,9 @@ func (m *C) GetMySize() int64 {
 type U struct {
 	A                    *A       `protobuf:"bytes,1,opt,name=A" json:"A,omitempty" pg:"A"`
 	B                    *B       `protobuf:"bytes,2,opt,name=B" json:"B,omitempty" pg:"B"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *U) Reset()      { *m = U{} }
@@ -214,10 +214,10 @@ func (m *U) GetB() *B {
 }
 
 type E struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_extensions       []byte   `protobuf:"bytes,0,opt" json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_extensions       []byte   `protobuf:"bytes,0,opt" json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *E) Reset()      { *m = E{} }
@@ -269,8 +269,8 @@ var xxx_messageInfo_E proto.InternalMessageInfo
 
 type R struct {
 	Recognized           *uint32  `protobuf:"varint,1,opt,name=recognized" json:"recognized,omitempty" pg:"recognized"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *R) Reset()      { *m = R{} }
@@ -314,9 +314,9 @@ func (m *R) GetRecognized() uint32 {
 
 type CastType struct {
 	Int32                *int32   `protobuf:"varint,1,opt,name=Int32,casttype=int32" json:"Int32,omitempty" pg:"Int32"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *CastType) Reset()      { *m = CastType{} }

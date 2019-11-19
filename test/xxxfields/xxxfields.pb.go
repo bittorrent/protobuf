@@ -31,7 +31,7 @@ type NativeWithSizeCache struct {
 	Field13       *bool    `protobuf:"varint,13,opt,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	Field14       *string  `protobuf:"bytes,14,opt,name=Field14" json:"Field14,omitempty" pg:"Field14"`
 	Field15       []byte   `protobuf:"bytes,15,opt,name=Field15" json:"Field15,omitempty" pg:"Field15"`
-	XXX_sizecache int32    `json:"-"`
+	XXX_sizecache int32    `json:"-" pg:"-"`
 }
 
 func (m *NativeWithSizeCache) Reset()         { *m = NativeWithSizeCache{} }
@@ -124,7 +124,7 @@ type StructWithSizeCache struct {
 	Field13       []bool                 `protobuf:"varint,13,rep,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	Field14       *string                `protobuf:"bytes,14,opt,name=Field14" json:"Field14,omitempty" pg:"Field14"`
 	Field15       []byte                 `protobuf:"bytes,15,opt,name=Field15" json:"Field15" pg:"Field15"`
-	XXX_sizecache int32                  `json:"-"`
+	XXX_sizecache int32                  `json:"-" pg:"-"`
 }
 
 func (m *StructWithSizeCache) Reset()         { *m = StructWithSizeCache{} }

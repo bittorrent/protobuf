@@ -86,9 +86,9 @@ type Simple struct {
 	OString              *string  `protobuf:"bytes,18,opt,name=o_string,json=oString" json:"o_string,omitempty" pg:"o_string"`
 	OBytes               []byte   `protobuf:"bytes,19,opt,name=o_bytes,json=oBytes" json:"o_bytes,omitempty" pg:"o_bytes"`
 	OCastBytes           Bytes    `protobuf:"bytes,20,opt,name=o_cast_bytes,json=oCastBytes,casttype=Bytes" json:"o_cast_bytes,omitempty" pg:"o_cast_bytes"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Simple) Reset()         { *m = Simple{} }
@@ -263,9 +263,9 @@ type NonFinites struct {
 	DNan                 *float64 `protobuf:"fixed64,4,opt,name=d_nan,json=dNan" json:"d_nan,omitempty" pg:"d_nan"`
 	DPinf                *float64 `protobuf:"fixed64,5,opt,name=d_pinf,json=dPinf" json:"d_pinf,omitempty" pg:"d_pinf"`
 	DNinf                *float64 `protobuf:"fixed64,6,opt,name=d_ninf,json=dNinf" json:"d_ninf,omitempty" pg:"d_ninf"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NonFinites) Reset()         { *m = NonFinites{} }
@@ -347,9 +347,9 @@ type Repeats struct {
 	RDouble              []float64 `protobuf:"fixed64,9,rep,name=r_double,json=rDouble" json:"r_double,omitempty" pg:"r_double"`
 	RString              []string  `protobuf:"bytes,10,rep,name=r_string,json=rString" json:"r_string,omitempty" pg:"r_string"`
 	RBytes               [][]byte  `protobuf:"bytes,11,rep,name=r_bytes,json=rBytes" json:"r_bytes,omitempty" pg:"r_bytes"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *Repeats) Reset()         { *m = Repeats{} }
@@ -461,9 +461,9 @@ type Widget struct {
 	RSimple              []*Simple      `protobuf:"bytes,11,rep,name=r_simple,json=rSimple" json:"r_simple,omitempty" pg:"r_simple"`
 	Repeats              *Repeats       `protobuf:"bytes,20,opt,name=repeats" json:"repeats,omitempty" pg:"repeats"`
 	RRepeats             []*Repeats     `protobuf:"bytes,21,rep,name=r_repeats,json=rRepeats" json:"r_repeats,omitempty" pg:"r_repeats"`
-	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
-	XXX_unrecognized     []byte         `json:"-"`
-	XXX_sizecache        int32          `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-" pg:"-"`
+	XXX_unrecognized     []byte         `json:"-" pg:"-"`
+	XXX_sizecache        int32          `json:"-" pg:"-"`
 }
 
 func (m *Widget) Reset()         { *m = Widget{} }
@@ -535,9 +535,9 @@ func (m *Widget) GetRRepeats() []*Repeats {
 type Maps struct {
 	MInt64Str            map[int64]string `protobuf:"bytes,1,rep,name=m_int64_str,json=mInt64Str" json:"m_int64_str,omitempty" pg:"m_int64_str" protobuf_key:"varint,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	MBoolSimple          map[bool]*Simple `protobuf:"bytes,2,rep,name=m_bool_simple,json=mBoolSimple" json:"m_bool_simple,omitempty" pg:"m_bool_simple" protobuf_key:"varint,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
-	XXX_unrecognized     []byte           `json:"-"`
-	XXX_sizecache        int32            `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}         `json:"-" pg:"-"`
+	XXX_unrecognized     []byte           `json:"-" pg:"-"`
+	XXX_sizecache        int32            `json:"-" pg:"-"`
 }
 
 func (m *Maps) Reset()         { *m = Maps{} }
@@ -586,9 +586,9 @@ type MsgWithOneof struct {
 	//	*MsgWithOneof_HomeAddress
 	//	*MsgWithOneof_MsgWithRequired
 	Union                isMsgWithOneof_Union `protobuf_oneof:"union"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}             `json:"-" pg:"-"`
+	XXX_unrecognized     []byte               `json:"-" pg:"-"`
+	XXX_sizecache        int32                `json:"-" pg:"-"`
 }
 
 func (m *MsgWithOneof) Reset()         { *m = MsgWithOneof{} }
@@ -696,10 +696,10 @@ func (*MsgWithOneof) XXX_OneofWrappers() []interface{} {
 
 type Real struct {
 	Value                        *float64 `protobuf:"fixed64,1,opt,name=value" json:"value,omitempty" pg:"value"`
-	XXX_NoUnkeyedLiteral         struct{} `json:"-"`
-	proto.XXX_InternalExtensions `json:"-"`
-	XXX_unrecognized             []byte `json:"-"`
-	XXX_sizecache                int32  `json:"-"`
+	XXX_NoUnkeyedLiteral         struct{} `json:"-" pg:"-"`
+	proto.XXX_InternalExtensions `json:"-" pg:"-"`
+	XXX_unrecognized             []byte `json:"-" pg:"-"`
+	XXX_sizecache                int32  `json:"-" pg:"-"`
 }
 
 func (m *Real) Reset()         { *m = Real{} }
@@ -744,10 +744,10 @@ func (m *Real) GetValue() float64 {
 
 type Complex struct {
 	Imaginary                    *float64 `protobuf:"fixed64,1,opt,name=imaginary" json:"imaginary,omitempty" pg:"imaginary"`
-	XXX_NoUnkeyedLiteral         struct{} `json:"-"`
-	proto.XXX_InternalExtensions `json:"-"`
-	XXX_unrecognized             []byte `json:"-"`
-	XXX_sizecache                int32  `json:"-"`
+	XXX_NoUnkeyedLiteral         struct{} `json:"-" pg:"-"`
+	proto.XXX_InternalExtensions `json:"-" pg:"-"`
+	XXX_unrecognized             []byte `json:"-" pg:"-"`
+	XXX_sizecache                int32  `json:"-" pg:"-"`
 }
 
 func (m *Complex) Reset()         { *m = Complex{} }
@@ -815,9 +815,9 @@ type KnownTypes struct {
 	Bool                 *types.BoolValue   `protobuf:"bytes,9,opt,name=bool" json:"bool,omitempty" pg:"bool"`
 	Str                  *types.StringValue `protobuf:"bytes,10,opt,name=str" json:"str,omitempty" pg:"str"`
 	Bytes                *types.BytesValue  `protobuf:"bytes,11,opt,name=bytes" json:"bytes,omitempty" pg:"bytes"`
-	XXX_NoUnkeyedLiteral struct{}           `json:"-"`
-	XXX_unrecognized     []byte             `json:"-"`
-	XXX_sizecache        int32              `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}           `json:"-" pg:"-"`
+	XXX_unrecognized     []byte             `json:"-" pg:"-"`
+	XXX_sizecache        int32              `json:"-" pg:"-"`
 }
 
 func (m *KnownTypes) Reset()         { *m = KnownTypes{} }
@@ -952,9 +952,9 @@ func (m *KnownTypes) GetBytes() *types.BytesValue {
 // Test messages for marshaling/unmarshaling required fields.
 type MsgWithRequired struct {
 	Str                  *string  `protobuf:"bytes,1,req,name=str" json:"str,omitempty" pg:"str"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *MsgWithRequired) Reset()         { *m = MsgWithRequired{} }
@@ -992,9 +992,9 @@ type MsgWithIndirectRequired struct {
 	Subm                 *MsgWithRequired            `protobuf:"bytes,1,opt,name=subm" json:"subm,omitempty" pg:"subm"`
 	MapField             map[string]*MsgWithRequired `protobuf:"bytes,2,rep,name=map_field,json=mapField" json:"map_field,omitempty" pg:"map_field" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	SliceField           []*MsgWithRequired          `protobuf:"bytes,3,rep,name=slice_field,json=sliceField" json:"slice_field,omitempty" pg:"slice_field"`
-	XXX_NoUnkeyedLiteral struct{}                    `json:"-"`
-	XXX_unrecognized     []byte                      `json:"-"`
-	XXX_sizecache        int32                       `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                    `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                      `json:"-" pg:"-"`
+	XXX_sizecache        int32                       `json:"-" pg:"-"`
 }
 
 func (m *MsgWithIndirectRequired) Reset()         { *m = MsgWithIndirectRequired{} }
@@ -1044,9 +1044,9 @@ func (m *MsgWithIndirectRequired) GetSliceField() []*MsgWithRequired {
 
 type MsgWithRequiredBytes struct {
 	Byts                 []byte   `protobuf:"bytes,1,req,name=byts" json:"byts,omitempty" pg:"byts"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *MsgWithRequiredBytes) Reset()         { *m = MsgWithRequiredBytes{} }
@@ -1082,9 +1082,9 @@ func (m *MsgWithRequiredBytes) GetByts() []byte {
 
 type MsgWithRequiredWKT struct {
 	Str                  *types.StringValue `protobuf:"bytes,1,req,name=str" json:"str,omitempty" pg:"str"`
-	XXX_NoUnkeyedLiteral struct{}           `json:"-"`
-	XXX_unrecognized     []byte             `json:"-"`
-	XXX_sizecache        int32              `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}           `json:"-" pg:"-"`
+	XXX_unrecognized     []byte             `json:"-" pg:"-"`
+	XXX_sizecache        int32              `json:"-" pg:"-"`
 }
 
 func (m *MsgWithRequiredWKT) Reset()         { *m = MsgWithRequiredWKT{} }

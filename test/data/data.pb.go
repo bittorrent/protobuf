@@ -28,9 +28,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type MyMessage struct {
 	MyData               uint32   `protobuf:"varint,1,opt,name=my_data,json=myData,proto3" json:"my_data,omitempty" pg:"my_data"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *MyMessage) Reset()      { *m = MyMessage{} }

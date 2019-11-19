@@ -37,9 +37,9 @@ type NinRepNative struct {
 	Field11              []uint64  `protobuf:"fixed64,11,rep,name=Field11" json:"Field11,omitempty" pg:"Field11"`
 	Field12              []int64   `protobuf:"fixed64,12,rep,name=Field12" json:"Field12,omitempty" pg:"Field12"`
 	Field13              []bool    `protobuf:"varint,13,rep,name=Field13" json:"Field13,omitempty" pg:"Field13"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *NinRepNative) Reset()         { *m = NinRepNative{} }
@@ -171,9 +171,9 @@ type NinRepPackedNative struct {
 	Field11              []uint64  `protobuf:"fixed64,11,rep,packed,name=Field11" json:"Field11,omitempty" pg:"Field11"`
 	Field12              []int64   `protobuf:"fixed64,12,rep,packed,name=Field12" json:"Field12,omitempty" pg:"Field12"`
 	Field13              []bool    `protobuf:"varint,13,rep,packed,name=Field13" json:"Field13,omitempty" pg:"Field13"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *NinRepPackedNative) Reset()         { *m = NinRepPackedNative{} }
@@ -305,9 +305,9 @@ type NinRepNativeUnsafe struct {
 	Field11              []uint64  `protobuf:"fixed64,11,rep,name=Field11" json:"Field11,omitempty" pg:"Field11"`
 	Field12              []int64   `protobuf:"fixed64,12,rep,name=Field12" json:"Field12,omitempty" pg:"Field12"`
 	Field13              []bool    `protobuf:"varint,13,rep,name=Field13" json:"Field13,omitempty" pg:"Field13"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *NinRepNativeUnsafe) Reset()         { *m = NinRepNativeUnsafe{} }
@@ -439,9 +439,9 @@ type NinRepPackedNativeUnsafe struct {
 	Field11              []uint64  `protobuf:"fixed64,11,rep,packed,name=Field11" json:"Field11,omitempty" pg:"Field11"`
 	Field12              []int64   `protobuf:"fixed64,12,rep,packed,name=Field12" json:"Field12,omitempty" pg:"Field12"`
 	Field13              []bool    `protobuf:"varint,13,rep,packed,name=Field13" json:"Field13,omitempty" pg:"Field13"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *NinRepPackedNativeUnsafe) Reset()         { *m = NinRepPackedNativeUnsafe{} }

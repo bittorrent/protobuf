@@ -25,9 +25,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 type UserMessage struct {
 	Name                 *string  `protobuf:"bytes,1,opt,name=name" json:"name,omitempty" pg:"name"`
 	Rank                 *string  `protobuf:"bytes,2,opt,name=rank" json:"rank,omitempty" pg:"rank"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *UserMessage) Reset()         { *m = UserMessage{} }
@@ -70,10 +70,10 @@ func (m *UserMessage) GetRank() string {
 
 // Extend inside the scope of another type
 type LoudMessage struct {
-	XXX_NoUnkeyedLiteral         struct{} `json:"-"`
-	proto.XXX_InternalExtensions `json:"-"`
-	XXX_unrecognized             []byte `json:"-"`
-	XXX_sizecache                int32  `json:"-"`
+	XXX_NoUnkeyedLiteral         struct{} `json:"-" pg:"-"`
+	proto.XXX_InternalExtensions `json:"-" pg:"-"`
+	XXX_unrecognized             []byte `json:"-" pg:"-"`
+	XXX_sizecache                int32  `json:"-" pg:"-"`
 }
 
 func (m *LoudMessage) Reset()         { *m = LoudMessage{} }
@@ -120,9 +120,9 @@ var E_LoudMessage_Volume = &proto.ExtensionDesc{
 
 // Extend inside the scope of another type, using a message.
 type LoginMessage struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *LoginMessage) Reset()         { *m = LoginMessage{} }
@@ -160,9 +160,9 @@ var E_LoginMessage_UserMessage = &proto.ExtensionDesc{
 
 type Detail struct {
 	Color                *string  `protobuf:"bytes,1,opt,name=color" json:"color,omitempty" pg:"color"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Detail) Reset()         { *m = Detail{} }
@@ -199,9 +199,9 @@ func (m *Detail) GetColor() string {
 // An extension of an extension
 type Announcement struct {
 	Words                *string  `protobuf:"bytes,1,opt,name=words" json:"words,omitempty" pg:"words"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Announcement) Reset()         { *m = Announcement{} }
@@ -248,9 +248,9 @@ var E_Announcement_LoudExt = &proto.ExtensionDesc{
 type OldStyleParcel struct {
 	Name                 *string  `protobuf:"bytes,1,req,name=name" json:"name,omitempty" pg:"name"`
 	Height               *int32   `protobuf:"varint,2,opt,name=height" json:"height,omitempty" pg:"height"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *OldStyleParcel) Reset()         { *m = OldStyleParcel{} }

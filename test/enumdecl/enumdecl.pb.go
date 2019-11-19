@@ -44,9 +44,9 @@ func (MyEnum) EnumDescriptor() ([]byte, []int) {
 
 type Message struct {
 	EnumeratedField      MyEnum   `protobuf:"varint,1,opt,name=enumerated_field,json=enumeratedField,proto3,enum=enumdecl.MyEnum" json:"enumerated_field,omitempty" pg:"enumerated_field"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Message) Reset()         { *m = Message{} }

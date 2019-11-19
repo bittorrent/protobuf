@@ -73,9 +73,9 @@ type Message struct {
 	Submessage           *Message                           `protobuf:"bytes,17,opt,name=submessage,proto3" json:"submessage,omitempty" pg:"submessage"`
 	Children             []*Message                         `protobuf:"bytes,18,rep,name=children,proto3" json:"children,omitempty" pg:"children"`
 	StringMap            map[string]string                  `protobuf:"bytes,20,rep,name=string_map,json=stringMap,proto3" json:"string_map,omitempty" pg:"string_map" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}                           `json:"-"`
-	XXX_unrecognized     []byte                             `json:"-"`
-	XXX_sizecache        int32                              `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                           `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                             `json:"-" pg:"-"`
+	XXX_sizecache        int32                              `json:"-" pg:"-"`
 }
 
 func (m *Message) Reset()         { *m = Message{} }
@@ -238,9 +238,9 @@ func (m *Message) GetStringMap() map[string]string {
 type Nested struct {
 	Bunny                string   `protobuf:"bytes,1,opt,name=bunny,proto3" json:"bunny,omitempty" pg:"bunny"`
 	Cute                 bool     `protobuf:"varint,2,opt,name=cute,proto3" json:"cute,omitempty" pg:"cute"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Nested) Reset()         { *m = Nested{} }
@@ -283,9 +283,9 @@ func (m *Nested) GetCute() bool {
 
 type MessageWithMap struct {
 	ByteMapping          map[bool][]byte `protobuf:"bytes,1,rep,name=byte_mapping,json=byteMapping,proto3" json:"byte_mapping,omitempty" pg:"byte_mapping" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
-	XXX_unrecognized     []byte          `json:"-"`
-	XXX_sizecache        int32           `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-" pg:"-"`
+	XXX_unrecognized     []byte          `json:"-" pg:"-"`
+	XXX_sizecache        int32           `json:"-" pg:"-"`
 }
 
 func (m *MessageWithMap) Reset()         { *m = MessageWithMap{} }
@@ -321,9 +321,9 @@ func (m *MessageWithMap) GetByteMapping() map[bool][]byte {
 
 type IntMap struct {
 	Rtt                  map[int32]int32 `protobuf:"bytes,1,rep,name=rtt,proto3" json:"rtt,omitempty" pg:"rtt" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
-	XXX_unrecognized     []byte          `json:"-"`
-	XXX_sizecache        int32           `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-" pg:"-"`
+	XXX_unrecognized     []byte          `json:"-" pg:"-"`
+	XXX_sizecache        int32           `json:"-" pg:"-"`
 }
 
 func (m *IntMap) Reset()         { *m = IntMap{} }
@@ -359,9 +359,9 @@ func (m *IntMap) GetRtt() map[int32]int32 {
 
 type IntMaps struct {
 	Maps                 []*IntMap `protobuf:"bytes,1,rep,name=maps,proto3" json:"maps,omitempty" pg:"maps"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *IntMaps) Reset()         { *m = IntMaps{} }
@@ -403,9 +403,9 @@ type TestUTF8 struct {
 	Oneof                isTestUTF8_Oneof `protobuf_oneof:"oneof"`
 	MapKey               map[string]int64 `protobuf:"bytes,4,rep,name=map_key,json=mapKey,proto3" json:"map_key,omitempty" pg:"map_key" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
 	MapValue             map[int64]string `protobuf:"bytes,5,rep,name=map_value,json=mapValue,proto3" json:"map_value,omitempty" pg:"map_value" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
-	XXX_unrecognized     []byte           `json:"-"`
-	XXX_sizecache        int32            `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}         `json:"-" pg:"-"`
+	XXX_unrecognized     []byte           `json:"-" pg:"-"`
+	XXX_sizecache        int32            `json:"-" pg:"-"`
 }
 
 func (m *TestUTF8) Reset()         { *m = TestUTF8{} }

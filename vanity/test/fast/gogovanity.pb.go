@@ -27,9 +27,9 @@ type B struct {
 	String_              *string  `protobuf:"bytes,1,opt,name=String" json:"String,omitempty" pg:"String"`
 	Int64                *int64   `protobuf:"varint,2,opt,name=Int64" json:"Int64,omitempty" pg:"Int64"`
 	Int32                *int32   `protobuf:"varint,3,opt,name=Int32,def=1234" json:"Int32,omitempty" pg:"Int32"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *B) Reset()         { *m = B{} }

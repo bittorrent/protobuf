@@ -213,9 +213,9 @@ type Request struct {
 	DoubleNinf           *float64 `protobuf:"fixed64,23,opt,name=double_ninf,json=doubleNinf,def=-inf" json:"double_ninf,omitempty" pg:"double_ninf"`
 	DoublePinf           *float64 `protobuf:"fixed64,24,opt,name=double_pinf,json=doublePinf,def=inf" json:"double_pinf,omitempty" pg:"double_pinf"`
 	DoubleExp            *float64 `protobuf:"fixed64,25,opt,name=double_exp,json=doubleExp,def=1e+09" json:"double_exp,omitempty" pg:"double_exp"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Request) Reset()         { *m = Request{} }
@@ -362,9 +362,9 @@ func (m *Request) GetDoubleExp() float64 {
 
 type Request_SomeGroup struct {
 	GroupField           *int32   `protobuf:"varint,9,opt,name=group_field,json=groupField" json:"group_field,omitempty" pg:"group_field"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Request_SomeGroup) Reset()         { *m = Request_SomeGroup{} }
@@ -401,10 +401,10 @@ func (m *Request_SomeGroup) GetGroupField() int32 {
 type Reply struct {
 	Found                        []*Reply_Entry `protobuf:"bytes,1,rep,name=found" json:"found,omitempty" pg:"found"`
 	CompactKeys                  []int32        `protobuf:"varint,2,rep,packed,name=compact_keys,json=compactKeys" json:"compact_keys,omitempty" pg:"compact_keys"`
-	XXX_NoUnkeyedLiteral         struct{}       `json:"-"`
-	proto.XXX_InternalExtensions `json:"-"`
-	XXX_unrecognized             []byte `json:"-"`
-	XXX_sizecache                int32  `json:"-"`
+	XXX_NoUnkeyedLiteral         struct{}       `json:"-" pg:"-"`
+	proto.XXX_InternalExtensions `json:"-" pg:"-"`
+	XXX_unrecognized             []byte `json:"-" pg:"-"`
+	XXX_sizecache                int32  `json:"-" pg:"-"`
 }
 
 func (m *Reply) Reset()         { *m = Reply{} }
@@ -458,9 +458,9 @@ type Reply_Entry struct {
 	KeyThatNeeds_1234Camel_CasIng *int64   `protobuf:"varint,1,req,name=key_that_needs_1234camel_CasIng,json=keyThatNeeds1234camelCasIng" json:"key_that_needs_1234camel_CasIng,omitempty" pg:"key_that_needs_1234camel_CasIng"`
 	Value                         *int64   `protobuf:"varint,2,opt,name=value,def=7" json:"value,omitempty" pg:"value"`
 	XMyFieldName_2                *int64   `protobuf:"varint,3,opt,name=_my_field_name_2,json=MyFieldName2" json:"_my_field_name_2,omitempty" pg:"_my_field_name_2"`
-	XXX_NoUnkeyedLiteral          struct{} `json:"-"`
-	XXX_unrecognized              []byte   `json:"-"`
-	XXX_sizecache                 int32    `json:"-"`
+	XXX_NoUnkeyedLiteral          struct{} `json:"-" pg:"-"`
+	XXX_unrecognized              []byte   `json:"-" pg:"-"`
+	XXX_sizecache                 int32    `json:"-" pg:"-"`
 }
 
 func (m *Reply_Entry) Reset()         { *m = Reply_Entry{} }
@@ -512,10 +512,10 @@ func (m *Reply_Entry) GetXMyFieldName_2() int64 {
 
 type OtherBase struct {
 	Name                         *string  `protobuf:"bytes,1,opt,name=name" json:"name,omitempty" pg:"name"`
-	XXX_NoUnkeyedLiteral         struct{} `json:"-"`
-	proto.XXX_InternalExtensions `json:"-"`
-	XXX_unrecognized             []byte `json:"-"`
-	XXX_sizecache                int32  `json:"-"`
+	XXX_NoUnkeyedLiteral         struct{} `json:"-" pg:"-"`
+	proto.XXX_InternalExtensions `json:"-" pg:"-"`
+	XXX_unrecognized             []byte `json:"-" pg:"-"`
+	XXX_sizecache                int32  `json:"-" pg:"-"`
 }
 
 func (m *OtherBase) Reset()         { *m = OtherBase{} }
@@ -559,9 +559,9 @@ func (m *OtherBase) GetName() string {
 }
 
 type ReplyExtensions struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *ReplyExtensions) Reset()         { *m = ReplyExtensions{} }
@@ -617,9 +617,9 @@ var E_ReplyExtensions_Donut = &proto.ExtensionDesc{
 
 type OtherReplyExtensions struct {
 	Key                  *int32   `protobuf:"varint,1,opt,name=key" json:"key,omitempty" pg:"key"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *OtherReplyExtensions) Reset()         { *m = OtherReplyExtensions{} }
@@ -654,10 +654,10 @@ func (m *OtherReplyExtensions) GetKey() int32 {
 }
 
 type OldReply struct {
-	XXX_NoUnkeyedLiteral         struct{} `json:"-"`
-	proto.XXX_InternalExtensions `protobuf_messageset:"1" json:"-"`
-	XXX_unrecognized             []byte `json:"-"`
-	XXX_sizecache                int32  `json:"-"`
+	XXX_NoUnkeyedLiteral         struct{} `json:"-" pg:"-"`
+	proto.XXX_InternalExtensions `protobuf_messageset:"1" json:"-" pg:"-"`
+	XXX_unrecognized             []byte `json:"-" pg:"-"`
+	XXX_sizecache                int32  `json:"-" pg:"-"`
 }
 
 func (m *OldReply) Reset()         { *m = OldReply{} }
@@ -709,9 +709,9 @@ type Communique struct {
 	//	*Communique_Msg
 	//	*Communique_Somegroup
 	Union                isCommunique_Union `protobuf_oneof:"union"`
-	XXX_NoUnkeyedLiteral struct{}           `json:"-"`
-	XXX_unrecognized     []byte             `json:"-"`
-	XXX_sizecache        int32              `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}           `json:"-" pg:"-"`
+	XXX_unrecognized     []byte             `json:"-" pg:"-"`
+	XXX_sizecache        int32              `json:"-" pg:"-"`
 }
 
 func (m *Communique) Reset()         { *m = Communique{} }
@@ -886,9 +886,9 @@ func (*Communique) XXX_OneofWrappers() []interface{} {
 
 type Communique_SomeGroup struct {
 	Member               *string  `protobuf:"bytes,15,opt,name=member" json:"member,omitempty" pg:"member"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Communique_SomeGroup) Reset()         { *m = Communique_SomeGroup{} }
@@ -923,9 +923,9 @@ func (m *Communique_SomeGroup) GetMember() string {
 }
 
 type Communique_Delta struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Communique_Delta) Reset()         { *m = Communique_Delta{} }

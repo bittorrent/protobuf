@@ -24,9 +24,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 type Message struct {
 	NonnullableOptional  SubMessage   `protobuf:"bytes,1,opt,name=nonnullable_optional,json=nonnullableOptional" json:"nonnullable_optional" pg:"nonnullable_optional"`
 	NonnullableRepeated  []SubMessage `protobuf:"bytes,2,rep,name=nonnullable_repeated,json=nonnullableRepeated" json:"nonnullable_repeated" pg:"nonnullable_repeated"`
-	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
-	XXX_unrecognized     []byte       `json:"-"`
-	XXX_sizecache        int32        `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-" pg:"-"`
+	XXX_unrecognized     []byte       `json:"-" pg:"-"`
+	XXX_sizecache        int32        `json:"-" pg:"-"`
 }
 
 func (m *Message) Reset()         { *m = Message{} }
@@ -69,9 +69,9 @@ func (m *Message) GetNonnullableRepeated() []SubMessage {
 
 type SubMessage struct {
 	Value                *int64   `protobuf:"varint,1,opt,name=value,def=7" json:"value,omitempty" pg:"value"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *SubMessage) Reset()         { *m = SubMessage{} }

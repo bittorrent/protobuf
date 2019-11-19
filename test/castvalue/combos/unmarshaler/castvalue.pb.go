@@ -34,9 +34,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 type Castaway struct {
 	CastMapValueMessage         map[int32]MyWilson  `protobuf:"bytes,1,rep,name=CastMapValueMessage,castvalue=MyWilson,castvaluetype=castvalue.Wilson" json:"CastMapValueMessage" pg:"CastMapValueMessage" protobuf_key:"varint,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	CastMapValueMessageNullable map[int32]*MyWilson `protobuf:"bytes,2,rep,name=CastMapValueMessageNullable,castvalue=MyWilson,castvaluetype=castvalue.Wilson" json:"CastMapValueMessageNullable,omitempty" pg:"CastMapValueMessageNullable" protobuf_key:"varint,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	XXX_NoUnkeyedLiteral        struct{}            `json:"-"`
-	XXX_unrecognized            []byte              `json:"-"`
-	XXX_sizecache               int32               `json:"-"`
+	XXX_NoUnkeyedLiteral        struct{}            `json:"-" pg:"-"`
+	XXX_unrecognized            []byte              `json:"-" pg:"-"`
+	XXX_sizecache               int32               `json:"-" pg:"-"`
 }
 
 func (m *Castaway) Reset()      { *m = Castaway{} }
@@ -64,9 +64,9 @@ var xxx_messageInfo_Castaway proto.InternalMessageInfo
 
 type Wilson struct {
 	Int64                *int64   `protobuf:"varint,1,opt,name=Int64" json:"Int64,omitempty" pg:"Int64"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Wilson) Reset()      { *m = Wilson{} }

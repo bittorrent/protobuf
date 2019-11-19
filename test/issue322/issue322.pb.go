@@ -30,9 +30,9 @@ type OneofTest struct {
 	// Types that are valid to be assigned to Union:
 	//	*OneofTest_I
 	Union                isOneofTest_Union `protobuf_oneof:"union"`
-	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
-	XXX_unrecognized     []byte            `json:"-"`
-	XXX_sizecache        int32             `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-" pg:"-"`
+	XXX_unrecognized     []byte            `json:"-" pg:"-"`
+	XXX_sizecache        int32             `json:"-" pg:"-"`
 }
 
 func (m *OneofTest) Reset()         { *m = OneofTest{} }

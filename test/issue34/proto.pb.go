@@ -24,9 +24,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type Foo struct {
 	Bar                  []byte   `protobuf:"bytes,1,opt,name=bar" json:"bar,omitempty" pg:"bar"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Foo) Reset()         { *m = Foo{} }
@@ -62,9 +62,9 @@ func (m *Foo) GetBar() []byte {
 
 type FooWithRepeated struct {
 	Bar                  [][]byte `protobuf:"bytes,1,rep,name=bar" json:"bar,omitempty" pg:"bar"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *FooWithRepeated) Reset()         { *m = FooWithRepeated{} }

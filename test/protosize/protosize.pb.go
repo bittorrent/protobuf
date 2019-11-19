@@ -29,9 +29,9 @@ type SizeMessage struct {
 	ProtoSize_           *int64   `protobuf:"varint,2,opt,name=proto_size,json=protoSize" json:"proto_size,omitempty" pg:"proto_size"`
 	Equal_               *bool    `protobuf:"varint,3,opt,name=Equal" json:"Equal,omitempty" pg:"Equal"`
 	String_              *string  `protobuf:"bytes,4,opt,name=String" json:"String,omitempty" pg:"String"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *SizeMessage) Reset()         { *m = SizeMessage{} }

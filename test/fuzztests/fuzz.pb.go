@@ -27,9 +27,9 @@ var _ = math.Inf
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type Nil struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Nil) Reset()         { *m = Nil{} }
@@ -79,9 +79,9 @@ type NinRepPackedNative struct {
 	Field11              []uint64  `protobuf:"fixed64,11,rep,packed,name=Field11" json:"Field11,omitempty" pg:"Field11"`
 	Field12              []int64   `protobuf:"fixed64,12,rep,packed,name=Field12" json:"Field12,omitempty" pg:"Field12"`
 	Field13              []bool    `protobuf:"varint,13,rep,packed,name=Field13" json:"Field13,omitempty" pg:"Field13"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte    `json:"-" pg:"-"`
+	XXX_sizecache        int32     `json:"-" pg:"-"`
 }
 
 func (m *NinRepPackedNative) Reset()         { *m = NinRepPackedNative{} }
@@ -224,9 +224,9 @@ type NinOptNative struct {
 	Field13              *bool    `protobuf:"varint,13,opt,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	Field14              *string  `protobuf:"bytes,14,opt,name=Field14" json:"Field14,omitempty" pg:"Field14"`
 	Field15              []byte   `protobuf:"bytes,15,opt,name=Field15" json:"Field15,omitempty" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NinOptNative) Reset()         { *m = NinOptNative{} }
@@ -378,9 +378,9 @@ type NinOptStruct struct {
 	Field13              *bool         `protobuf:"varint,13,opt,name=Field13" json:"Field13,omitempty" pg:"Field13"`
 	Field14              *string       `protobuf:"bytes,14,opt,name=Field14" json:"Field14,omitempty" pg:"Field14"`
 	Field15              []byte        `protobuf:"bytes,15,opt,name=Field15" json:"Field15,omitempty" pg:"Field15"`
-	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
-	XXX_unrecognized     []byte        `json:"-"`
-	XXX_sizecache        int32         `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-" pg:"-"`
+	XXX_unrecognized     []byte        `json:"-" pg:"-"`
+	XXX_sizecache        int32         `json:"-" pg:"-"`
 }
 
 func (m *NinOptStruct) Reset()         { *m = NinOptStruct{} }

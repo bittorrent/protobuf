@@ -79,9 +79,9 @@ func (MapEnum) EnumDescriptor() ([]byte, []int) {
 
 type FloatingPoint struct {
 	F                    *float64 `protobuf:"fixed64,1,opt,name=f" json:"f,omitempty" pg:"f"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *FloatingPoint) Reset()      { *m = FloatingPoint{} }
@@ -121,9 +121,9 @@ type CustomMap struct {
 	Uint128S             map[string]github_com_tron_us_protobuf_test_custom.Uint128  `protobuf:"bytes,2,rep,name=Uint128s,customtype=github.com/tron-us/protobuf/test/custom.Uint128" json:"Uint128s" pg:"Uint128s" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	NullableIds          map[string]*github_com_tron_us_protobuf_test.Uuid           `protobuf:"bytes,3,rep,name=NullableIds,customtype=github.com/tron-us/protobuf/test.Uuid" json:"NullableIds,omitempty" pg:"NullableIds" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	Ids                  map[string]github_com_tron_us_protobuf_test.Uuid            `protobuf:"bytes,4,rep,name=Ids,customtype=github.com/tron-us/protobuf/test.Uuid" json:"Ids" pg:"Ids" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	XXX_NoUnkeyedLiteral struct{}                                                    `json:"-"`
-	XXX_unrecognized     []byte                                                      `json:"-"`
-	XXX_sizecache        int32                                                       `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                                                    `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                                                      `json:"-" pg:"-"`
+	XXX_sizecache        int32                                                       `json:"-" pg:"-"`
 }
 
 func (m *CustomMap) Reset()      { *m = CustomMap{} }
@@ -176,9 +176,9 @@ type AllMaps struct {
 	StringToBytesMap     map[string][]byte         `protobuf:"bytes,15,rep,name=StringToBytesMap" json:"StringToBytesMap,omitempty" pg:"StringToBytesMap" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	StringToEnumMap      map[string]MapEnum        `protobuf:"bytes,16,rep,name=StringToEnumMap" json:"StringToEnumMap,omitempty" pg:"StringToEnumMap" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"varint,2,opt,name=value,enum=proto2.maps.MapEnum"`
 	StringToMsgMap       map[string]*FloatingPoint `protobuf:"bytes,17,rep,name=StringToMsgMap" json:"StringToMsgMap,omitempty" pg:"StringToMsgMap" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	XXX_NoUnkeyedLiteral struct{}                  `json:"-"`
-	XXX_unrecognized     []byte                    `json:"-"`
-	XXX_sizecache        int32                     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                    `json:"-" pg:"-"`
+	XXX_sizecache        int32                     `json:"-" pg:"-"`
 }
 
 func (m *AllMaps) Reset()      { *m = AllMaps{} }
@@ -231,9 +231,9 @@ type AllMapsOrdered struct {
 	StringToBytesMap     map[string][]byte         `protobuf:"bytes,15,rep,name=StringToBytesMap" json:"StringToBytesMap,omitempty" pg:"StringToBytesMap" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	StringToEnumMap      map[string]MapEnum        `protobuf:"bytes,16,rep,name=StringToEnumMap" json:"StringToEnumMap,omitempty" pg:"StringToEnumMap" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"varint,2,opt,name=value,enum=proto2.maps.MapEnum"`
 	StringToMsgMap       map[string]*FloatingPoint `protobuf:"bytes,17,rep,name=StringToMsgMap" json:"StringToMsgMap,omitempty" pg:"StringToMsgMap" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	XXX_NoUnkeyedLiteral struct{}                  `json:"-"`
-	XXX_unrecognized     []byte                    `json:"-"`
-	XXX_sizecache        int32                     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                  `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                    `json:"-" pg:"-"`
+	XXX_sizecache        int32                     `json:"-" pg:"-"`
 }
 
 func (m *AllMapsOrdered) Reset()      { *m = AllMapsOrdered{} }

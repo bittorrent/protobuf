@@ -64,9 +64,9 @@ func (NullValue) XXX_WellKnownType() string { return "NullValue" }
 type Struct struct {
 	// Unordered map of dynamically typed values.
 	Fields               map[string]*Value `protobuf:"bytes,1,rep,name=fields,proto3" json:"fields,omitempty" pg:"fields" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
-	XXX_unrecognized     []byte            `json:"-"`
-	XXX_sizecache        int32             `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-" pg:"-"`
+	XXX_unrecognized     []byte            `json:"-" pg:"-"`
+	XXX_sizecache        int32             `json:"-" pg:"-"`
 }
 
 func (m *Struct) Reset()      { *m = Struct{} }
@@ -130,9 +130,9 @@ type Value struct {
 	//	*Value_StructValue
 	//	*Value_ListValue
 	Kind                 isValue_Kind `protobuf_oneof:"kind"`
-	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
-	XXX_unrecognized     []byte       `json:"-"`
-	XXX_sizecache        int32        `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-" pg:"-"`
+	XXX_unrecognized     []byte       `json:"-" pg:"-"`
+	XXX_sizecache        int32        `json:"-" pg:"-"`
 }
 
 func (m *Value) Reset()      { *m = Value{} }
@@ -273,9 +273,9 @@ func (*Value) XXX_MessageName() string {
 type ListValue struct {
 	// Repeated field of dynamically typed values.
 	Values               []*Value `protobuf:"bytes,1,rep,name=values,proto3" json:"values,omitempty" pg:"values"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *ListValue) Reset()      { *m = ListValue{} }

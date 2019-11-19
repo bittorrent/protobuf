@@ -25,9 +25,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type Bar struct {
 	Field1               *string  `protobuf:"bytes,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Bar) Reset()         { *m = Bar{} }
@@ -63,9 +63,9 @@ func (m *Bar) GetField1() string {
 
 type BarFast struct {
 	Field1               *string  `protobuf:"bytes,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *BarFast) Reset()         { *m = BarFast{} }

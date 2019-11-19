@@ -25,9 +25,9 @@ var _ = math.Inf
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type SimpleRequest struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *SimpleRequest) Reset()         { *m = SimpleRequest{} }
@@ -55,9 +55,9 @@ func (m *SimpleRequest) XXX_DiscardUnknown() {
 var xxx_messageInfo_SimpleRequest proto.InternalMessageInfo
 
 type SimpleResponse struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *SimpleResponse) Reset()         { *m = SimpleResponse{} }
@@ -85,9 +85,9 @@ func (m *SimpleResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_SimpleResponse proto.InternalMessageInfo
 
 type StreamMsg struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *StreamMsg) Reset()         { *m = StreamMsg{} }
@@ -115,9 +115,9 @@ func (m *StreamMsg) XXX_DiscardUnknown() {
 var xxx_messageInfo_StreamMsg proto.InternalMessageInfo
 
 type StreamMsg2 struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *StreamMsg2) Reset()         { *m = StreamMsg2{} }

@@ -32,9 +32,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 type DoubleValue struct {
 	// The double value.
 	Value                float64  `protobuf:"fixed64,1,opt,name=value,proto3" json:"value,omitempty" pg:"value"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *DoubleValue) Reset()      { *m = DoubleValue{} }
@@ -87,9 +87,9 @@ func (*DoubleValue) XXX_MessageName() string {
 type FloatValue struct {
 	// The float value.
 	Value                float32  `protobuf:"fixed32,1,opt,name=value,proto3" json:"value,omitempty" pg:"value"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *FloatValue) Reset()      { *m = FloatValue{} }
@@ -142,9 +142,9 @@ func (*FloatValue) XXX_MessageName() string {
 type Int64Value struct {
 	// The int64 value.
 	Value                int64    `protobuf:"varint,1,opt,name=value,proto3" json:"value,omitempty" pg:"value"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Int64Value) Reset()      { *m = Int64Value{} }
@@ -197,9 +197,9 @@ func (*Int64Value) XXX_MessageName() string {
 type UInt64Value struct {
 	// The uint64 value.
 	Value                uint64   `protobuf:"varint,1,opt,name=value,proto3" json:"value,omitempty" pg:"value"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *UInt64Value) Reset()      { *m = UInt64Value{} }
@@ -252,9 +252,9 @@ func (*UInt64Value) XXX_MessageName() string {
 type Int32Value struct {
 	// The int32 value.
 	Value                int32    `protobuf:"varint,1,opt,name=value,proto3" json:"value,omitempty" pg:"value"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Int32Value) Reset()      { *m = Int32Value{} }
@@ -307,9 +307,9 @@ func (*Int32Value) XXX_MessageName() string {
 type UInt32Value struct {
 	// The uint32 value.
 	Value                uint32   `protobuf:"varint,1,opt,name=value,proto3" json:"value,omitempty" pg:"value"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *UInt32Value) Reset()      { *m = UInt32Value{} }
@@ -362,9 +362,9 @@ func (*UInt32Value) XXX_MessageName() string {
 type BoolValue struct {
 	// The bool value.
 	Value                bool     `protobuf:"varint,1,opt,name=value,proto3" json:"value,omitempty" pg:"value"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *BoolValue) Reset()      { *m = BoolValue{} }
@@ -417,9 +417,9 @@ func (*BoolValue) XXX_MessageName() string {
 type StringValue struct {
 	// The string value.
 	Value                string   `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty" pg:"value"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *StringValue) Reset()      { *m = StringValue{} }
@@ -472,9 +472,9 @@ func (*StringValue) XXX_MessageName() string {
 type BytesValue struct {
 	// The bytes value.
 	Value                []byte   `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty" pg:"value"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *BytesValue) Reset()      { *m = BytesValue{} }

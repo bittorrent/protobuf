@@ -50,9 +50,9 @@ type Castaway struct {
 	MyNullableMap        map[github_com_tron_us_protobuf_test_casttype.MyInt32Type]*Wilson                                                 `protobuf:"bytes,14,rep,name=MyNullableMap,castkey=github.com/tron-us/protobuf/test/casttype.MyInt32Type" json:"MyNullableMap,omitempty" pg:"MyNullableMap" protobuf_key:"varint,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	MyEmbeddedMap        map[github_com_tron_us_protobuf_test_casttype.MyInt32Type]Wilson                                                  `protobuf:"bytes,15,rep,name=MyEmbeddedMap,castkey=github.com/tron-us/protobuf/test/casttype.MyInt32Type" json:"MyEmbeddedMap" pg:"MyEmbeddedMap" protobuf_key:"varint,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	String_              *github_com_tron_us_protobuf_test_casttype.MyStringType                                                           `protobuf:"bytes,16,opt,name=String,casttype=github.com/tron-us/protobuf/test/casttype.MyStringType" json:"String,omitempty" pg:"String"`
-	XXX_NoUnkeyedLiteral struct{}                                                                                                          `json:"-"`
-	XXX_unrecognized     []byte                                                                                                            `json:"-"`
-	XXX_sizecache        int32                                                                                                             `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                                                                                                          `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                                                                                                            `json:"-" pg:"-"`
+	XXX_sizecache        int32                                                                                                             `json:"-" pg:"-"`
 }
 
 func (m *Castaway) Reset()      { *m = Castaway{} }
@@ -80,9 +80,9 @@ var xxx_messageInfo_Castaway proto.InternalMessageInfo
 
 type Wilson struct {
 	Int64                *int64   `protobuf:"varint,1,opt,name=Int64" json:"Int64,omitempty" pg:"Int64"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Wilson) Reset()      { *m = Wilson{} }

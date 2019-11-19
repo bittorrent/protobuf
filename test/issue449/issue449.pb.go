@@ -30,9 +30,9 @@ type CodeGenMsg struct {
 	Int32OptPtr          *int32   `protobuf:"varint,2,opt,name=Int32OptPtr" json:"Int32OptPtr,omitempty" pg:"Int32OptPtr"`
 	Int64Req             int64    `protobuf:"varint,3,req,name=Int64Req" json:"Int64Req" pg:"Int64Req"`
 	Int32Opt             int32    `protobuf:"varint,4,opt,name=Int32Opt" json:"Int32Opt" pg:"Int32Opt"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *CodeGenMsg) Reset()         { *m = CodeGenMsg{} }
@@ -101,9 +101,9 @@ type NonCodeGenMsg struct {
 	Int32OptPtr          *int32   `protobuf:"varint,2,opt,name=Int32OptPtr" json:"Int32OptPtr,omitempty" pg:"Int32OptPtr"`
 	Int64Req             int64    `protobuf:"varint,3,req,name=Int64Req" json:"Int64Req" pg:"Int64Req"`
 	Int32Opt             int32    `protobuf:"varint,4,opt,name=Int32Opt" json:"Int32Opt" pg:"Int32Opt"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *NonCodeGenMsg) Reset()         { *m = NonCodeGenMsg{} }

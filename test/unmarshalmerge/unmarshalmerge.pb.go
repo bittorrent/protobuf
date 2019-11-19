@@ -30,9 +30,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 type Big struct {
 	Sub                  *Sub     `protobuf:"bytes,1,opt,name=Sub" json:"Sub,omitempty" pg:"Sub"`
 	Number               *int64   `protobuf:"varint,2,opt,name=Number" json:"Number,omitempty" pg:"Number"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Big) Reset()      { *m = Big{} }
@@ -75,9 +75,9 @@ func (m *Big) GetNumber() int64 {
 type BigUnsafe struct {
 	Sub                  *Sub     `protobuf:"bytes,1,opt,name=Sub" json:"Sub,omitempty" pg:"Sub"`
 	Number               *int64   `protobuf:"varint,2,opt,name=Number" json:"Number,omitempty" pg:"Number"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *BigUnsafe) Reset()      { *m = BigUnsafe{} }
@@ -119,9 +119,9 @@ func (m *BigUnsafe) GetNumber() int64 {
 
 type Sub struct {
 	SubNumber            *int64   `protobuf:"varint,1,opt,name=SubNumber" json:"SubNumber,omitempty" pg:"SubNumber"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Sub) Reset()      { *m = Sub{} }
@@ -166,9 +166,9 @@ type IntMerge struct {
 	Sfixed32             int32    `protobuf:"fixed32,9,req,name=Sfixed32" json:"Sfixed32" pg:"Sfixed32"`
 	Sfixed64             int64    `protobuf:"fixed64,10,opt,name=Sfixed64" json:"Sfixed64" pg:"Sfixed64"`
 	Bool                 bool     `protobuf:"varint,11,opt,name=Bool" json:"Bool" pg:"Bool"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *IntMerge) Reset()      { *m = IntMerge{} }

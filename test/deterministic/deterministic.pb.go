@@ -26,9 +26,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type OrderedMap struct {
 	StringMap            map[string]string `protobuf:"bytes,1,rep,name=StringMap,proto3" json:"StringMap,omitempty" pg:"StringMap" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
-	XXX_unrecognized     []byte            `json:"-"`
-	XXX_sizecache        int32             `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-" pg:"-"`
+	XXX_unrecognized     []byte            `json:"-" pg:"-"`
+	XXX_sizecache        int32             `json:"-" pg:"-"`
 }
 
 func (m *OrderedMap) Reset()         { *m = OrderedMap{} }
@@ -69,9 +69,9 @@ func (m *OrderedMap) GetStringMap() map[string]string {
 
 type UnorderedMap struct {
 	StringMap            map[string]string `protobuf:"bytes,1,rep,name=StringMap,proto3" json:"StringMap,omitempty" pg:"StringMap" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
-	XXX_unrecognized     []byte            `json:"-"`
-	XXX_sizecache        int32             `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-" pg:"-"`
+	XXX_unrecognized     []byte            `json:"-" pg:"-"`
+	XXX_sizecache        int32             `json:"-" pg:"-"`
 }
 
 func (m *UnorderedMap) Reset()         { *m = UnorderedMap{} }
@@ -116,9 +116,9 @@ func (m *UnorderedMap) GetStringMap() map[string]string {
 
 type MapNoMarshaler struct {
 	StringMap            map[string]string `protobuf:"bytes,1,rep,name=StringMap,proto3" json:"StringMap,omitempty" pg:"StringMap" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
-	XXX_unrecognized     []byte            `json:"-"`
-	XXX_sizecache        int32             `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-" pg:"-"`
+	XXX_unrecognized     []byte            `json:"-" pg:"-"`
+	XXX_sizecache        int32             `json:"-" pg:"-"`
 }
 
 func (m *MapNoMarshaler) Reset()         { *m = MapNoMarshaler{} }
@@ -155,9 +155,9 @@ func (m *MapNoMarshaler) GetStringMap() map[string]string {
 type NestedOrderedMap struct {
 	StringMap            map[string]string `protobuf:"bytes,1,rep,name=StringMap,proto3" json:"StringMap,omitempty" pg:"StringMap" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	NestedMap            *NestedMap1       `protobuf:"bytes,2,opt,name=NestedMap,proto3" json:"NestedMap,omitempty" pg:"NestedMap"`
-	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
-	XXX_unrecognized     []byte            `json:"-"`
-	XXX_sizecache        int32             `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-" pg:"-"`
+	XXX_unrecognized     []byte            `json:"-" pg:"-"`
+	XXX_sizecache        int32             `json:"-" pg:"-"`
 }
 
 func (m *NestedOrderedMap) Reset()         { *m = NestedOrderedMap{} }
@@ -205,9 +205,9 @@ func (m *NestedOrderedMap) GetNestedMap() *NestedMap1 {
 
 type NestedMap1 struct {
 	NestedStringMap      map[string]string `protobuf:"bytes,1,rep,name=NestedStringMap,proto3" json:"NestedStringMap,omitempty" pg:"NestedStringMap" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
-	XXX_unrecognized     []byte            `json:"-"`
-	XXX_sizecache        int32             `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-" pg:"-"`
+	XXX_unrecognized     []byte            `json:"-" pg:"-"`
+	XXX_sizecache        int32             `json:"-" pg:"-"`
 }
 
 func (m *NestedMap1) Reset()         { *m = NestedMap1{} }
@@ -249,9 +249,9 @@ func (m *NestedMap1) GetNestedStringMap() map[string]string {
 type NestedUnorderedMap struct {
 	StringMap            map[string]string `protobuf:"bytes,1,rep,name=StringMap,proto3" json:"StringMap,omitempty" pg:"StringMap" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	NestedMap            *NestedMap2       `protobuf:"bytes,2,opt,name=NestedMap,proto3" json:"NestedMap,omitempty" pg:"NestedMap"`
-	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
-	XXX_unrecognized     []byte            `json:"-"`
-	XXX_sizecache        int32             `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-" pg:"-"`
+	XXX_unrecognized     []byte            `json:"-" pg:"-"`
+	XXX_sizecache        int32             `json:"-" pg:"-"`
 }
 
 func (m *NestedUnorderedMap) Reset()         { *m = NestedUnorderedMap{} }
@@ -303,9 +303,9 @@ func (m *NestedUnorderedMap) GetNestedMap() *NestedMap2 {
 
 type NestedMap2 struct {
 	NestedStringMap      map[string]string `protobuf:"bytes,1,rep,name=NestedStringMap,proto3" json:"NestedStringMap,omitempty" pg:"NestedStringMap" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
-	XXX_unrecognized     []byte            `json:"-"`
-	XXX_sizecache        int32             `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-" pg:"-"`
+	XXX_unrecognized     []byte            `json:"-" pg:"-"`
+	XXX_sizecache        int32             `json:"-" pg:"-"`
 }
 
 func (m *NestedMap2) Reset()         { *m = NestedMap2{} }

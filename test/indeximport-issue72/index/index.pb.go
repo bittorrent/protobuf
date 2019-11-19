@@ -27,9 +27,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 type IndexQuery struct {
 	Key                  *string  `protobuf:"bytes,1,opt,name=Key" json:"Key,omitempty" pg:"Key"`
 	Value                *string  `protobuf:"bytes,2,opt,name=Value" json:"Value,omitempty" pg:"Value"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *IndexQuery) Reset()         { *m = IndexQuery{} }

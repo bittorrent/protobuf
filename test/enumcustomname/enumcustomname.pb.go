@@ -161,9 +161,9 @@ type OnlyEnums struct {
 	YetYetAnotherTestEnum          *test.YetYetAnotherTestEnum `protobuf:"varint,10,opt,name=yet_yet_another_test_enum,json=yetYetAnotherTestEnum,enum=test.YetYetAnotherTestEnum" json:"yet_yet_another_test_enum,omitempty" pg:"yet_yet_another_test_enum"`
 	YetYetAnotherTestEnumDefaultCc *test.YetYetAnotherTestEnum `protobuf:"varint,11,opt,name=yet_yet_another_test_enum_default_cc,json=yetYetAnotherTestEnumDefaultCc,enum=test.YetYetAnotherTestEnum,def=0" json:"yet_yet_another_test_enum_default_cc,omitempty" pg:"yet_yet_another_test_enum_default_cc"`
 	YetYetAnotherTestEnumDefaultDd *test.YetYetAnotherTestEnum `protobuf:"varint,12,opt,name=yet_yet_another_test_enum_default_dd,json=yetYetAnotherTestEnumDefaultDd,enum=test.YetYetAnotherTestEnum,def=1" json:"yet_yet_another_test_enum_default_dd,omitempty" pg:"yet_yet_another_test_enum_default_dd"`
-	XXX_NoUnkeyedLiteral           struct{}                    `json:"-"`
-	XXX_unrecognized               []byte                      `json:"-"`
-	XXX_sizecache                  int32                       `json:"-"`
+	XXX_NoUnkeyedLiteral           struct{}                    `json:"-" pg:"-"`
+	XXX_unrecognized               []byte                      `json:"-" pg:"-"`
+	XXX_sizecache                  int32                       `json:"-" pg:"-"`
 }
 
 func (m *OnlyEnums) Reset()         { *m = OnlyEnums{} }

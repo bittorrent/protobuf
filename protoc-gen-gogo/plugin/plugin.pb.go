@@ -29,9 +29,9 @@ type Version struct {
 	// A suffix for alpha, beta or rc release, e.g., "alpha-1", "rc2". It should
 	// be empty for mainline stable releases.
 	Suffix               *string  `protobuf:"bytes,4,opt,name=suffix" json:"suffix,omitempty" pg:"suffix"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Version) Reset()         { *m = Version{} }
@@ -111,9 +111,9 @@ type CodeGeneratorRequest struct {
 	ProtoFile []*descriptor.FileDescriptorProto `protobuf:"bytes,15,rep,name=proto_file,json=protoFile" json:"proto_file,omitempty" pg:"proto_file"`
 	// The version number of protocol compiler.
 	CompilerVersion      *Version `protobuf:"bytes,3,opt,name=compiler_version,json=compilerVersion" json:"compiler_version,omitempty" pg:"compiler_version"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *CodeGeneratorRequest) Reset()         { *m = CodeGeneratorRequest{} }
@@ -180,9 +180,9 @@ type CodeGeneratorResponse struct {
 	// exiting with a non-zero status code.
 	Error                *string                       `protobuf:"bytes,1,opt,name=error" json:"error,omitempty" pg:"error"`
 	File                 []*CodeGeneratorResponse_File `protobuf:"bytes,15,rep,name=file" json:"file,omitempty" pg:"file"`
-	XXX_NoUnkeyedLiteral struct{}                      `json:"-"`
-	XXX_unrecognized     []byte                        `json:"-"`
-	XXX_sizecache        int32                         `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                      `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                        `json:"-" pg:"-"`
+	XXX_sizecache        int32                         `json:"-" pg:"-"`
 }
 
 func (m *CodeGeneratorResponse) Reset()         { *m = CodeGeneratorResponse{} }
@@ -277,9 +277,9 @@ type CodeGeneratorResponse_File struct {
 	InsertionPoint *string `protobuf:"bytes,2,opt,name=insertion_point,json=insertionPoint" json:"insertion_point,omitempty" pg:"insertion_point"`
 	// The file contents.
 	Content              *string  `protobuf:"bytes,15,opt,name=content" json:"content,omitempty" pg:"content"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *CodeGeneratorResponse_File) Reset()         { *m = CodeGeneratorResponse_File{} }

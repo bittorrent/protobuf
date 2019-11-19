@@ -25,9 +25,9 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type MoreDefaultsB struct {
 	Field1               *string  `protobuf:"bytes,1,opt,name=Field1" json:"Field1,omitempty" pg:"Field1"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *MoreDefaultsB) Reset()         { *m = MoreDefaultsB{} }
@@ -68,9 +68,9 @@ type MoreDefaultsA struct {
 	B2                   MoreDefaultsB  `protobuf:"bytes,4,opt,name=B2" json:"B2" pg:"B2"`
 	A1                   *example.A     `protobuf:"bytes,5,opt,name=A1" json:"A1,omitempty" pg:"A1"`
 	A2                   example.A      `protobuf:"bytes,6,opt,name=A2" json:"A2" pg:"A2"`
-	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
-	XXX_unrecognized     []byte         `json:"-"`
-	XXX_sizecache        int32          `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-" pg:"-"`
+	XXX_unrecognized     []byte         `json:"-" pg:"-"`
+	XXX_sizecache        int32          `json:"-" pg:"-"`
 }
 
 func (m *MoreDefaultsA) Reset()         { *m = MoreDefaultsA{} }

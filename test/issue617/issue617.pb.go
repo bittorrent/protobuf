@@ -27,9 +27,9 @@ type Foo struct {
 	// Types that are valid to be assigned to Details:
 	//	*Foo_Bar_
 	Details              isFoo_Details `protobuf_oneof:"details"`
-	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
-	XXX_unrecognized     []byte        `json:"-"`
-	XXX_sizecache        int32         `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-" pg:"-"`
+	XXX_unrecognized     []byte        `json:"-" pg:"-"`
+	XXX_sizecache        int32         `json:"-" pg:"-"`
 }
 
 func (m *Foo) Reset()         { *m = Foo{} }
@@ -99,9 +99,9 @@ func (*Foo) XXX_OneofWrappers() []interface{} {
 }
 
 type Foo_Bar struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" pg:"-"`
+	XXX_unrecognized     []byte   `json:"-" pg:"-"`
+	XXX_sizecache        int32    `json:"-" pg:"-"`
 }
 
 func (m *Foo_Bar) Reset()         { *m = Foo_Bar{} }

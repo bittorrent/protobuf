@@ -53,9 +53,9 @@ type StdTypes struct {
 	NonnullString        string         `protobuf:"bytes,20,opt,name=nonnullString,proto3,wktptr" json:"nonnullString" pg:"nonnullString"`
 	NullableBytes        *[]byte        `protobuf:"bytes,21,opt,name=nullableBytes,proto3,wktptr" json:"nullableBytes,omitempty" pg:"nullableBytes"`
 	NonnullBytes         []byte         `protobuf:"bytes,22,opt,name=nonnullBytes,proto3,wktptr" json:"nonnullBytes" pg:"nonnullBytes"`
-	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
-	XXX_unrecognized     []byte         `json:"-"`
-	XXX_sizecache        int32          `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-" pg:"-"`
+	XXX_unrecognized     []byte         `json:"-" pg:"-"`
+	XXX_sizecache        int32          `json:"-" pg:"-"`
 }
 
 func (m *StdTypes) Reset()         { *m = StdTypes{} }
@@ -259,9 +259,9 @@ type RepStdTypes struct {
 	NonnullString        []string         `protobuf:"bytes,20,rep,name=nonnullString,proto3,wktptr" json:"nonnullString" pg:"nonnullString"`
 	NullableBytes        []*[]byte        `protobuf:"bytes,21,rep,name=nullableBytes,proto3,wktptr" json:"nullableBytes,omitempty" pg:"nullableBytes"`
 	NonnullBytes         [][]byte         `protobuf:"bytes,22,rep,name=nonnullBytes,proto3,wktptr" json:"nonnullBytes" pg:"nonnullBytes"`
-	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
-	XXX_unrecognized     []byte           `json:"-"`
-	XXX_sizecache        int32            `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}         `json:"-" pg:"-"`
+	XXX_unrecognized     []byte           `json:"-" pg:"-"`
+	XXX_sizecache        int32            `json:"-" pg:"-"`
 }
 
 func (m *RepStdTypes) Reset()         { *m = RepStdTypes{} }
@@ -465,9 +465,9 @@ type MapStdTypes struct {
 	NonnullString        map[int32]string         `protobuf:"bytes,20,rep,name=nonnullString,proto3,wktptr" json:"nonnullString" pg:"nonnullString" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	NullableBytes        map[int32]*[]byte        `protobuf:"bytes,21,rep,name=nullableBytes,proto3,wktptr" json:"nullableBytes,omitempty" pg:"nullableBytes" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	NonnullBytes         map[int32][]byte         `protobuf:"bytes,22,rep,name=nonnullBytes,proto3,wktptr" json:"nonnullBytes" pg:"nonnullBytes" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}                 `json:"-"`
-	XXX_unrecognized     []byte                   `json:"-"`
-	XXX_sizecache        int32                    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                 `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                   `json:"-" pg:"-"`
+	XXX_sizecache        int32                    `json:"-" pg:"-"`
 }
 
 func (m *MapStdTypes) Reset()         { *m = MapStdTypes{} }
@@ -662,9 +662,9 @@ type OneofStdTypes struct {
 	//	*OneofStdTypes_RepString
 	//	*OneofStdTypes_RepBytes
 	OneOfStdTimes        isOneofStdTypes_OneOfStdTimes `protobuf_oneof:"OneOfStdTimes"`
-	XXX_NoUnkeyedLiteral struct{}                      `json:"-"`
-	XXX_unrecognized     []byte                        `json:"-"`
-	XXX_sizecache        int32                         `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                      `json:"-" pg:"-"`
+	XXX_unrecognized     []byte                        `json:"-" pg:"-"`
+	XXX_sizecache        int32                         `json:"-" pg:"-"`
 }
 
 func (m *OneofStdTypes) Reset()         { *m = OneofStdTypes{} }
