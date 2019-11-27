@@ -27,7 +27,7 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 GO_VERSION:=$(shell go version)
-BENCHLIST?=all
+BENCHLIST?=all-without-tests
 
 # Skip known issues from purego tests
 # https://github.com/gogo/protobuf/issues/447
@@ -36,6 +36,7 @@ SKIPISSUE:="/jsonpb|/test/casttype/|/test/oneof/combos/"
 
 .PHONY: nuke regenerate tests clean install gofmt vet contributors
 
+all-without-tests: clean install regenerate install
 all: clean install regenerate install tests errcheck vet
 
 buildserverall: clean install regenerate install tests vet js purego
