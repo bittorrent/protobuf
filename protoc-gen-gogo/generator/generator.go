@@ -2834,7 +2834,11 @@ func (g *Generator) generateMessage(message *Descriptor) {
 		typename, wiretype := g.GoType(message, field)
 		jsonName := *field.Name
 		// json tag
-		jsonTag := jsonName + ",omitempty"
+		// ,omitempty is skipped if json_no_omit_empty* option is enabled
+		jsonTag := jsonName
+		if !gogoproto.DisableJsonOmitEmpty(message.file.FileDescriptorProto, message.DescriptorProto) {
+			jsonTag += ",omitempty"
+		}
 		repeatedNativeType := (!field.IsMessage() && !gogoproto.IsCustomType(field) && field.IsRepeated())
 		if !gogoproto.IsNullable(field) && !repeatedNativeType {
 			jsonTag = jsonName
