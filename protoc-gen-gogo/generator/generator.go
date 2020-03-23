@@ -2855,6 +2855,10 @@ func (g *Generator) generateMessage(message *Descriptor) {
 		if gogoJsonTag != nil {
 			pgTag = *gogoJsonTag
 		}
+		gogoPgTag := gogoproto.GetPgTag(field)
+		if gogoPgTag != nil {
+			pgTag = *gogoPgTag
+		}
 		// more tags
 		gogoMoreTags := gogoproto.GetMoreTags(field)
 		moreTags := ""
