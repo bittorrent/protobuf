@@ -28,7 +28,7 @@
 
 regenerate:
 	go install github.com/tron-us/protobuf/protoc-gen-gogo
-	protoc --gogo_out=Mgoogle/protobuf/descriptor.proto=github.com/gogo/protobuf/protoc-gen-gogo/descriptor:../../../../ --proto_path=../../../../:../protobuf/:. *.proto
+	protoc --gogo_out=Mgoogle/protobuf/descriptor.proto=github.com/tron-us/protobuf/protoc-gen-gogo/descriptor:../../../../ --proto_path=../../../../:../protobuf/:. *.proto
 	protoc --js_out=import_style=commonjs,binary:. --proto_path=../../../../:../protobuf/:. *.proto
 
 restore:
