@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-import "github.com/tron-us/protobuf/gogoproto/gogo.proto";
+import "github.com/bittorrent/protobuf/gogoproto/gogo.proto";
 import "google/protobuf/timestamp.proto";
 
 package timefail;

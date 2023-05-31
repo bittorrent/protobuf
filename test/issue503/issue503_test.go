@@ -30,7 +30,7 @@ package issue503
 
 import (
 	"fmt"
-	"github.com/tron-us/protobuf/proto"
+	"github.com/bittorrent/protobuf/proto"
 	"math/rand"
 	"testing"
 )

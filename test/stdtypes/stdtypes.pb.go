@@ -6,11 +6,11 @@ package stdtypes
 import (
 	bytes "bytes"
 	fmt "fmt"
+	_ "github.com/bittorrent/protobuf/gogoproto"
+	proto "github.com/bittorrent/protobuf/proto"
+	github_com_bittorrent_protobuf_sortkeys "github.com/bittorrent/protobuf/sortkeys"
+	github_com_bittorrent_protobuf_types "github.com/bittorrent/protobuf/types"
 	_ "github.com/gogo/protobuf/types"
-	_ "github.com/tron-us/protobuf/gogoproto"
-	proto "github.com/tron-us/protobuf/proto"
-	github_com_tron_us_protobuf_sortkeys "github.com/tron-us/protobuf/sortkeys"
-	github_com_tron_us_protobuf_types "github.com/tron-us/protobuf/types"
 	math "math"
 	math_bits "math/bits"
 	reflect "reflect"
@@ -877,93 +877,94 @@ func init() {
 func init() { proto.RegisterFile("stdtypes.proto", fileDescriptor_fa784ced32c4280a) }
 
 var fileDescriptor_fa784ced32c4280a = []byte{
-	// 1376 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xb4, 0x99, 0x4f, 0x6f, 0x1b, 0x45,
-	0x18, 0x87, 0xbd, 0x1d, 0x27, 0x75, 0xc6, 0x76, 0x9a, 0x4c, 0x69, 0xb5, 0x18, 0xb4, 0xa9, 0x02,
-	0xa2, 0x41, 0x14, 0xa7, 0xec, 0x22, 0x84, 0x10, 0xa8, 0x60, 0x85, 0x92, 0x40, 0xff, 0x80, 0x6b,
-	0x37, 0x16, 0x50, 0xa8, 0x4d, 0xb6, 0x26, 0xc2, 0xf1, 0x5a, 0xeb, 0x35, 0x28, 0x37, 0x3e, 0x02,
-	0x47, 0x8e, 0x1c, 0xb9, 0x73, 0xe1, 0xc8, 0xb1, 0x47, 0x3e, 0x01, 0x34, 0xe6, 0x0b, 0x20, 0xb8,
-	0xf4, 0x82, 0x84, 0x76, 0x66, 0x76, 0x77, 0x76, 0xf7, 0x9d, 0xdd, 0x95, 0x35, 0xbe, 0x25, 0x99,
-	0x79, 0x1f, 0xff, 0xf6, 0xf5, 0x28, 0x8f, 0x5f, 0x0f, 0x5e, 0x9f, 0x7a, 0x47, 0xde, 0xe9, 0xc4,
-	0x9e, 0x36, 0x27, 0xae, 0xe3, 0x39, 0xa4, 0x12, 0xfc, 0xde, 0xb8, 0x3e, 0x3c, 0xf6, 0xbe, 0x9e,
-	0x0d, 0x9a, 0x5f, 0x39, 0x27, 0xbb, 0x9e, 0xeb, 0x8c, 0x5f, 0x9d, 0x4d, 0x77, 0xe9, 0x9e, 0xc1,
-	0xec, 0xd1, 0xee, 0xd0, 0x19, 0x3a, 0xf4, 0x17, 0xfa, 0x13, 0xab, 0x6d, 0x18, 0x43, 0xc7, 0x19,
-	0x8e, 0xec, 0x68, 0xd7, 0xd1, 0xcc, 0xed, 0x7b, 0xc7, 0xce, 0x98, 0xaf, 0x6f, 0x25, 0xd7, 0xbd,
-	0xe3, 0x13, 0x7b, 0xea, 0xf5, 0x4f, 0x26, 0x32, 0xc0, 0x77, 0x6e, 0x7f, 0x32, 0xb1, 0x5d, 0x1e,
-	0x6e, 0xfb, 0x9f, 0x1a, 0xae, 0xdc, 0xf3, 0x8e, 0x3a, 0x7e, 0x3e, 0x72, 0x07, 0x6f, 0x8e, 0x67,
-	0xa3, 0x51, 0x7f, 0x30, 0xb2, 0x3b, 0x01, 0x47, 0xd7, 0xae, 0x68, 0x3b, 0x55, 0xb3, 0xd1, 0x64,
-	0xa0, 0x66, 0x00, 0x6a, 0x86, 0x3b, 0x5a, 0xe5, 0x1f, 0xfe, 0xdc, 0xd2, 0xda, 0xe9, 0x52, 0xf2,
-	0x11, 0xde, 0x08, 0xfe, 0xb8, 0xc7, 0x73, 0xeb, 0xe7, 0x28, 0xee, 0xd9, 0x14, 0x2e, 0xd8, 0xd0,
-	0x2a, 0xff, 0xe8, 0xd3, 0x52, 0x85, 0xa4, 0x85, 0xd7, 0xc2, 0x87, 0xd3, 0x51, 0x6e, 0xa8, 0xca,
-	0xe3, 0x3f, 0xb6, 0x4a, 0x34, 0x58, 0x54, 0x46, 0x6e, 0xe0, 0x4a, 0xd0, 0x40, 0xbd, 0x9c, 0x17,
-	0x84, 0x12, 0x68, 0x98, 0xb0, 0x88, 0x7c, 0x88, 0xd7, 0xc3, 0x60, 0xce, 0x6c, 0x30, 0xb2, 0xf5,
-	0x15, 0x8a, 0x79, 0x3e, 0x8d, 0xa1, 0xcb, 0xf7, 0xfb, 0xa3, 0x99, 0xdd, 0x2a, 0xff, 0xe4, 0x53,
-	0x12, 0x95, 0xe4, 0x16, 0xae, 0x8f, 0x9d, 0xb1, 0xff, 0x47, 0x8e, 0x5a, 0x2d, 0x80, 0xa2, 0xa1,
-	0x28, 0x2e, 0x5e, 0x4c, 0x3e, 0xc0, 0xf5, 0x80, 0x7f, 0x73, 0xe4, 0xf4, 0x3d, 0xfd, 0x3c, 0xa5,
-	0x3d, 0x97, 0xa2, 0xd1, 0x55, 0x31, 0x57, 0xbc, 0x8e, 0x1c, 0xe0, 0x1a, 0x27, 0x33, 0x4e, 0x25,
-	0x9f, 0x13, 0x85, 0x8a, 0x95, 0x8a, 0x99, 0x0e, 0xc6, 0xde, 0x1b, 0xaf, 0xeb, 0x6b, 0x12, 0x16,
-	0x5d, 0x05, 0x33, 0xd1, 0x15, 0x21, 0x13, 0xe3, 0xe0, 0x7c, 0x4e, 0x3a, 0x13, 0x43, 0x09, 0xef,
-	0x60, 0x97, 0xc1, 0xaa, 0x92, 0xb6, 0x77, 0x53, 0xa9, 0x12, 0x95, 0xc2, 0x3b, 0xc8, 0x51, 0xb5,
-	0x02, 0xa8, 0xf4, 0x3b, 0xc8, 0x69, 0xf1, 0x6e, 0x59, 0xa6, 0x5e, 0x97, 0x3f, 0xa5, 0x65, 0xca,
-	0xba, 0x65, 0x99, 0xf1, 0x6e, 0x59, 0xa6, 0xbe, 0x9e, 0xcf, 0x01, 0xbb, 0x65, 0x99, 0xc9, 0x6e,
-	0x59, 0xa6, 0x7e, 0x21, 0xe3, 0x11, 0xe3, 0xa9, 0x12, 0x95, 0x89, 0x6e, 0x59, 0xa6, 0xbe, 0x51,
-	0x00, 0x05, 0x77, 0xcb, 0x32, 0xc9, 0x1e, 0xae, 0x05, 0xfc, 0x96, 0xe3, 0x8c, 0xf4, 0x4d, 0xc9,
-	0x7f, 0x04, 0x7f, 0x51, 0x4c, 0x15, 0xab, 0x22, 0x37, 0x71, 0x95, 0x63, 0x29, 0x84, 0xe4, 0x42,
-	0xa2, 0x3c, 0x62, 0xa1, 0xd8, 0xa7, 0x7b, 0x9e, 0x7b, 0x3c, 0x1e, 0xea, 0x17, 0x25, 0x0f, 0xc7,
-	0x96, 0xc1, 0x3e, 0xb1, 0x25, 0xa1, 0x4f, 0x1c, 0xf5, 0x4c, 0x01, 0x54, 0xba, 0x4f, 0x9c, 0x26,
-	0x9c, 0xaa, 0xd6, 0xa9, 0x67, 0x4f, 0xf5, 0x4b, 0x92, 0xd3, 0x40, 0x57, 0xc1, 0x53, 0x45, 0x57,
-	0x84, 0x53, 0xc5, 0x38, 0x97, 0xf3, 0x39, 0xe9, 0x53, 0x45, 0x17, 0xb7, 0xff, 0xab, 0xe1, 0x6a,
-	0xdb, 0x9e, 0x84, 0xde, 0xf9, 0x18, 0x93, 0x94, 0x3c, 0xa6, 0xba, 0x76, 0x05, 0x15, 0x12, 0x0f,
-	0x50, 0x4b, 0x6e, 0x47, 0x26, 0x0b, 0xfe, 0x9f, 0x4f, 0xf5, 0x73, 0x14, 0x98, 0xab, 0x9e, 0x74,
-	0x25, 0xd9, 0xc3, 0xd8, 0x8b, 0x82, 0xa1, 0xdc, 0x60, 0x91, 0x7c, 0x84, 0x3a, 0xf2, 0x1e, 0x5e,
-	0x3b, 0x0a, 0xc3, 0x94, 0xf3, 0xc2, 0x44, 0xfa, 0x89, 0xaa, 0x40, 0xff, 0x20, 0x75, 0xfe, 0x41,
-	0x4a, 0xfd, 0x83, 0x14, 0xf9, 0x07, 0x29, 0xf4, 0x0f, 0x52, 0xe4, 0x1f, 0xa4, 0xd2, 0x3f, 0x48,
-	0x9d, 0x7f, 0x90, 0x52, 0xff, 0x20, 0x45, 0xfe, 0x41, 0x2a, 0xfd, 0x83, 0xd4, 0xf9, 0x07, 0xa9,
-	0xf4, 0x0f, 0x52, 0xe1, 0x1f, 0xa4, 0xce, 0x3f, 0x48, 0x9d, 0x7f, 0x90, 0x52, 0xff, 0x20, 0x45,
-	0xfe, 0x41, 0x8b, 0xfa, 0xe7, 0x97, 0x2d, 0x5c, 0xbd, 0xdd, 0x8f, 0xfc, 0xf3, 0x10, 0x9e, 0x7b,
-	0x7c, 0xfe, 0xb5, 0x66, 0x38, 0xcd, 0x09, 0x15, 0xcd, 0x3b, 0xc9, 0xed, 0xef, 0x8f, 0x3d, 0xf7,
-	0x54, 0x3e, 0x09, 0xdd, 0x12, 0x87, 0x17, 0xe6, 0xa1, 0x17, 0x61, 0x72, 0x82, 0x08, 0x8e, 0x31,
-	0x0f, 0x80, 0xb9, 0x8a, 0x49, 0xe9, 0x95, 0xec, 0xb8, 0xc1, 0x6e, 0x9e, 0x56, 0x32, 0x69, 0x1d,
-	0xc4, 0xa6, 0x24, 0x1f, 0xfb, 0x02, 0x8c, 0x8d, 0xe3, 0xa0, 0x79, 0xe9, 0x50, 0xe2, 0xab, 0x97,
-	0x73, 0x72, 0xd2, 0xbd, 0x3c, 0x25, 0x28, 0xaf, 0x1e, 0x2c, 0xaf, 0x1d, 0x09, 0x57, 0xdc, 0x2a,
-	0xa4, 0x85, 0x44, 0xd6, 0x81, 0x45, 0xb6, 0x93, 0x9d, 0x98, 0x6e, 0x15, 0x03, 0x27, 0xac, 0xd6,
-	0x05, 0xad, 0x76, 0x35, 0x33, 0xae, 0xc0, 0x94, 0x19, 0xae, 0x03, 0x1b, 0x2e, 0x27, 0x2c, 0xdd,
-	0x0a, 0x86, 0x65, 0x26, 0xe8, 0x82, 0xba, 0xcb, 0x0e, 0x2b, 0x30, 0x65, 0xea, 0x3b, 0x94, 0xa8,
-	0x2f, 0xe7, 0x30, 0x74, 0x53, 0x71, 0x93, 0x1e, 0xec, 0xc1, 0x1e, 0xcc, 0x3e, 0x0c, 0x5d, 0x30,
-	0x71, 0xc2, 0x89, 0x1d, 0xd8, 0x89, 0xf9, 0xfd, 0xb5, 0x4c, 0x59, 0x7f, 0x2d, 0x33, 0xde, 0xdf,
-	0x50, 0x90, 0xb9, 0xfd, 0x0d, 0x98, 0x32, 0x59, 0x1e, 0x4a, 0x64, 0x59, 0xa0, 0xbf, 0xf1, 0xb8,
-	0x49, 0x73, 0xf6, 0x60, 0x73, 0xe6, 0xf7, 0x37, 0x9d, 0x38, 0x61, 0xd1, 0x4f, 0x40, 0x8b, 0x5e,
-	0xcd, 0x0e, 0xec, 0xef, 0x14, 0xe3, 0xc6, 0x95, 0xda, 0x86, 0x94, 0xfa, 0x52, 0x66, 0xd4, 0x08,
-	0x28, 0xd1, 0xeb, 0xa1, 0x44, 0xaf, 0x39, 0x9d, 0x65, 0x7b, 0xc1, 0xce, 0x72, 0x3b, 0xf6, 0x60,
-	0xd7, 0x66, 0x77, 0x56, 0xc4, 0x4a, 0xbd, 0xdb, 0x81, 0xbd, 0x9b, 0x73, 0x72, 0xe9, 0x56, 0xf0,
-	0xe4, 0x32, 0x09, 0x77, 0x41, 0x09, 0x67, 0x9f, 0x5c, 0x81, 0x29, 0x11, 0x72, 0xe3, 0x21, 0xbe,
-	0x0c, 0x1b, 0x95, 0x6c, 0x60, 0xf4, 0x8d, 0x7d, 0x4a, 0xbf, 0x84, 0x5c, 0x69, 0xfb, 0x3f, 0x92,
-	0xeb, 0x78, 0xe5, 0x5b, 0xdf, 0xee, 0xfc, 0x9b, 0xc4, 0x8c, 0x31, 0xac, 0xcd, 0x36, 0xbe, 0x75,
-	0xee, 0x4d, 0xad, 0xd1, 0xc3, 0xeb, 0x4b, 0x22, 0x7f, 0x81, 0x2f, 0x81, 0x7a, 0x05, 0x5e, 0x60,
-	0x37, 0xfe, 0x02, 0xf2, 0xe1, 0x4f, 0xe4, 0xdf, 0xc7, 0xf5, 0xa5, 0x70, 0xbf, 0xc4, 0x17, 0x01,
-	0xdd, 0x02, 0x74, 0x33, 0x4e, 0xcf, 0x9c, 0x0f, 0xe3, 0x8d, 0x21, 0x69, 0xef, 0x2a, 0xe4, 0x3f,
-	0xc0, 0x24, 0x6d, 0x5f, 0x80, 0xff, 0x5a, 0x9c, 0x9f, 0x35, 0x49, 0x8a, 0xf8, 0xcf, 0xf1, 0x66,
-	0xca, 0xc3, 0xea, 0xe8, 0x42, 0xf8, 0xc8, 0x43, 0x8b, 0xe0, 0xa3, 0xc9, 0x0e, 0x0e, 0xbf, 0x0c,
-	0xba, 0x70, 0x74, 0xba, 0x99, 0xfc, 0xdc, 0xb7, 0xb6, 0x0b, 0xbf, 0x40, 0x74, 0x74, 0x96, 0xc3,
-	0x8f, 0x77, 0x9f, 0x5b, 0x6a, 0xc1, 0xfe, 0xf0, 0x49, 0x51, 0xda, 0x7d, 0xe5, 0xf4, 0x44, 0xf7,
-	0xe5, 0xfc, 0x42, 0xdd, 0x01, 0x5e, 0x20, 0xde, 0x7d, 0xf5, 0xfc, 0xcf, 0xf0, 0x66, 0x4a, 0xe5,
-	0x8b, 0xfc, 0x3b, 0x0e, 0xa7, 0x62, 0x11, 0xfe, 0x29, 0xde, 0x48, 0x5a, 0x5d, 0x19, 0x5b, 0xe8,
-	0xbc, 0xe0, 0xe0, 0x45, 0x3a, 0x23, 0x8c, 0xce, 0x70, 0xe7, 0x97, 0xc3, 0x17, 0xce, 0x7d, 0x64,
-	0xe5, 0x45, 0x4e, 0x66, 0x34, 0x64, 0xc3, 0xe7, 0x7e, 0x09, 0xf4, 0xed, 0x7f, 0x57, 0x70, 0xfd,
-	0xee, 0xd8, 0x76, 0x1e, 0x85, 0x73, 0xfb, 0xbb, 0xe2, 0x54, 0x5d, 0xf0, 0x9e, 0x72, 0xbf, 0x24,
-	0x4e, 0xd2, 0xef, 0x08, 0xa3, 0x6e, 0xb1, 0x9b, 0xc9, 0xfd, 0x92, 0x30, 0xde, 0xb6, 0xf0, 0x9a,
-	0x6b, 0x4f, 0xf8, 0x04, 0x8a, 0x8a, 0xde, 0x04, 0xfa, 0x11, 0xc2, 0x32, 0x72, 0x03, 0x57, 0x5c,
-	0x7b, 0xc2, 0xa6, 0xc2, 0x72, 0xc1, 0x3b, 0x3b, 0x3f, 0x44, 0x50, 0xc4, 0x01, 0x6c, 0xf0, 0x59,
-	0x29, 0x78, 0xc1, 0xc6, 0x01, 0x6c, 0xc8, 0x61, 0x4f, 0xc1, 0x47, 0xa7, 0xd5, 0xa2, 0xb7, 0x61,
-	0xfc, 0x29, 0xf8, 0xa0, 0x14, 0x86, 0xb0, 0x4c, 0xe9, 0xcd, 0x63, 0xf2, 0x1b, 0xba, 0x28, 0x84,
-	0x65, 0x0a, 0x21, 0x2c, 0x93, 0xdf, 0x39, 0x16, 0xf8, 0x92, 0x4f, 0x08, 0x61, 0x99, 0xe4, 0x6d,
-	0x7c, 0xde, 0xb5, 0x27, 0xf4, 0x63, 0xff, 0x5a, 0xb1, 0xeb, 0xa0, 0xfd, 0x52, 0x3b, 0x28, 0xe1,
-	0x09, 0xf8, 0xe7, 0x70, 0x5c, 0xf4, 0xfa, 0x86, 0x27, 0xe0, 0x9f, 0xba, 0x59, 0x1b, 0xd8, 0x67,
-	0xe3, 0x6a, 0xc1, 0x8b, 0x16, 0xde, 0x06, 0xfa, 0xe7, 0xd6, 0x05, 0x7a, 0xc6, 0xef, 0xd2, 0x33,
-	0xee, 0x9f, 0xd2, 0xd6, 0xb5, 0x27, 0x67, 0x86, 0xf6, 0xf7, 0x99, 0xa1, 0x3d, 0x3d, 0x33, 0xb4,
-	0x9f, 0xe7, 0x86, 0xf6, 0xeb, 0xdc, 0xd0, 0x7e, 0x9b, 0x1b, 0xda, 0xe3, 0xb9, 0x51, 0xfa, 0x7d,
-	0x6e, 0x94, 0x9e, 0xcc, 0x0d, 0xed, 0xe9, 0xdc, 0x28, 0x7d, 0xff, 0x97, 0x51, 0x1a, 0xac, 0xd2,
-	0x57, 0xb1, 0xfe, 0x0f, 0x00, 0x00, 0xff, 0xff, 0x52, 0xc8, 0xcb, 0x29, 0x84, 0x20, 0x00, 0x00,
+	// 1377 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xb4, 0x99, 0x4f, 0x6f, 0xe3, 0x44,
+	0x18, 0x87, 0xe3, 0x4e, 0xda, 0x4d, 0x27, 0x4d, 0xb7, 0x9d, 0x65, 0x57, 0x26, 0x20, 0x77, 0x55,
+	0x10, 0x5b, 0xc4, 0x2a, 0x05, 0x1b, 0x21, 0x84, 0x40, 0x0b, 0x51, 0x59, 0x5a, 0xd8, 0x3f, 0x90,
+	0x4d, 0xb6, 0x11, 0xb0, 0xb0, 0x09, 0xf5, 0x86, 0x88, 0x34, 0x8e, 0x1c, 0x07, 0xd4, 0x1b, 0x1f,
+	0x81, 0x23, 0x47, 0x8e, 0xdc, 0xb9, 0x70, 0xe4, 0xb8, 0x47, 0x3e, 0x01, 0x6c, 0xc3, 0x17, 0x40,
+	0x70, 0xd9, 0x0b, 0x12, 0xf2, 0xcc, 0xd8, 0x1e, 0xdb, 0xef, 0xd8, 0x56, 0x34, 0xb9, 0xb5, 0x9d,
+	0x79, 0x9f, 0xfc, 0xfc, 0x66, 0xd4, 0x27, 0x6f, 0x06, 0x6f, 0x4e, 0xbd, 0x13, 0xef, 0x6c, 0x62,
+	0x4f, 0x1b, 0x13, 0xd7, 0xf1, 0x1c, 0x52, 0x09, 0x7e, 0xaf, 0x5b, 0x83, 0xa1, 0xf7, 0xf5, 0xac,
+	0xdf, 0xf8, 0xca, 0x39, 0xdd, 0xef, 0x0f, 0x3d, 0xcf, 0x71, 0x5d, 0x7b, 0xec, 0xed, 0xd3, 0x6d,
+	0xfd, 0xd9, 0xa3, 0xfd, 0x81, 0x33, 0x70, 0xe8, 0x2f, 0xf4, 0x27, 0x56, 0x5e, 0x37, 0x06, 0x8e,
+	0x33, 0x18, 0xd9, 0xd1, 0xae, 0x93, 0x99, 0xdb, 0xf3, 0x86, 0xce, 0x98, 0xaf, 0xef, 0x24, 0xd7,
+	0xbd, 0xe1, 0xa9, 0x3d, 0xf5, 0x7a, 0xa7, 0x13, 0x19, 0xe0, 0x3b, 0xb7, 0x37, 0x99, 0xd8, 0x2e,
+	0xcf, 0xb7, 0xfb, 0xcf, 0x06, 0xae, 0xdc, 0xf3, 0x4e, 0xda, 0x7e, 0x44, 0x72, 0x07, 0x6f, 0x8f,
+	0x67, 0xa3, 0x51, 0xaf, 0x3f, 0xb2, 0xdb, 0x01, 0x47, 0xd7, 0xae, 0x6a, 0x7b, 0x55, 0xb3, 0xde,
+	0x60, 0xa0, 0x46, 0x00, 0x6a, 0x84, 0x3b, 0x9a, 0xe5, 0x1f, 0xfe, 0xdc, 0xd1, 0x5a, 0xe9, 0x52,
+	0xf2, 0x11, 0xde, 0x0a, 0xfe, 0x78, 0xc0, 0x73, 0xeb, 0x2b, 0x14, 0xf7, 0x6c, 0x0a, 0x17, 0x6c,
+	0x68, 0x96, 0x7f, 0xf4, 0x69, 0xa9, 0x42, 0xd2, 0xc4, 0xeb, 0xe1, 0xc3, 0xe9, 0x28, 0x37, 0x54,
+	0xe5, 0xf1, 0x1f, 0x3b, 0x25, 0x1a, 0x2c, 0x2a, 0x23, 0x37, 0x70, 0x25, 0x68, 0xa0, 0x5e, 0xce,
+	0x0b, 0x42, 0x09, 0x34, 0x4c, 0x58, 0x44, 0x3e, 0xc4, 0x9b, 0x61, 0x30, 0x67, 0xd6, 0x1f, 0xd9,
+	0xfa, 0x2a, 0xc5, 0x3c, 0x9f, 0xc6, 0xd0, 0xe5, 0xfb, 0xbd, 0xd1, 0xcc, 0x6e, 0x96, 0x7f, 0xf2,
+	0x29, 0x89, 0x4a, 0x72, 0x0b, 0xd7, 0xc6, 0xce, 0xd8, 0xff, 0x23, 0x47, 0xad, 0x15, 0x40, 0xd1,
+	0x50, 0x14, 0x17, 0x2f, 0x26, 0x1f, 0xe0, 0x5a, 0xc0, 0xbf, 0x39, 0x72, 0x7a, 0x9e, 0x7e, 0x81,
+	0xd2, 0x9e, 0x4b, 0xd1, 0xe8, 0xaa, 0x98, 0x2b, 0x5e, 0x47, 0x8e, 0xf0, 0x06, 0x27, 0x33, 0x4e,
+	0x25, 0x9f, 0x13, 0x85, 0x8a, 0x95, 0x8a, 0x99, 0x8e, 0xc6, 0xde, 0x1b, 0xaf, 0xeb, 0xeb, 0x12,
+	0x16, 0x5d, 0x05, 0x33, 0xd1, 0x15, 0x21, 0x13, 0xe3, 0xe0, 0x7c, 0x4e, 0x3a, 0x13, 0x43, 0x09,
+	0xef, 0x60, 0x87, 0xc1, 0xaa, 0x92, 0xb6, 0x77, 0x52, 0xa9, 0x12, 0x95, 0xc2, 0x3b, 0xc8, 0x51,
+	0x1b, 0x05, 0x50, 0xe9, 0x77, 0x90, 0xd3, 0xe2, 0xdd, 0xb2, 0x4c, 0xbd, 0x26, 0x7f, 0x4a, 0xcb,
+	0x94, 0x75, 0xcb, 0x32, 0xe3, 0xdd, 0xb2, 0x4c, 0x7d, 0x33, 0x9f, 0x03, 0x76, 0xcb, 0x32, 0x93,
+	0xdd, 0xb2, 0x4c, 0xfd, 0x62, 0xc6, 0x23, 0xc6, 0x53, 0x25, 0x2a, 0x13, 0xdd, 0xb2, 0x4c, 0x7d,
+	0xab, 0x00, 0x0a, 0xee, 0x96, 0x65, 0x92, 0x03, 0xbc, 0x11, 0xf0, 0x9b, 0x8e, 0x33, 0xd2, 0xb7,
+	0x25, 0xff, 0x11, 0xfc, 0x45, 0x31, 0x55, 0xac, 0x8a, 0xdc, 0xc4, 0x55, 0x8e, 0xa5, 0x10, 0x92,
+	0x0b, 0x89, 0xf2, 0x88, 0x85, 0x62, 0x9f, 0xee, 0x79, 0xee, 0x70, 0x3c, 0xd0, 0x2f, 0x49, 0x1e,
+	0x8e, 0x2d, 0x83, 0x7d, 0x62, 0x4b, 0x42, 0x9f, 0x38, 0xea, 0x99, 0x02, 0xa8, 0x74, 0x9f, 0x38,
+	0x4d, 0x38, 0x55, 0xcd, 0x33, 0xcf, 0x9e, 0xea, 0x97, 0x25, 0xa7, 0x81, 0xae, 0x82, 0xa7, 0x8a,
+	0xae, 0x08, 0xa7, 0x8a, 0x71, 0xae, 0xe4, 0x73, 0xd2, 0xa7, 0x8a, 0x2e, 0xee, 0xfe, 0xb7, 0x81,
+	0xab, 0x2d, 0x7b, 0x12, 0x7a, 0xe7, 0x63, 0x4c, 0x52, 0xf2, 0x98, 0xea, 0xda, 0x55, 0x54, 0x48,
+	0x3c, 0x40, 0x2d, 0xb9, 0x1d, 0x99, 0x2c, 0xf8, 0x7f, 0x3e, 0xd5, 0x57, 0x28, 0x30, 0x57, 0x3d,
+	0xe9, 0x4a, 0x72, 0x80, 0xb1, 0x17, 0x05, 0x43, 0xb9, 0xc1, 0x22, 0xf9, 0x08, 0x75, 0xe4, 0x3d,
+	0xbc, 0x7e, 0x12, 0x86, 0x29, 0xe7, 0x85, 0x89, 0xf4, 0x13, 0x55, 0x81, 0xfe, 0x41, 0xea, 0xfc,
+	0x83, 0x94, 0xfa, 0x07, 0x29, 0xf2, 0x0f, 0x52, 0xe8, 0x1f, 0xa4, 0xc8, 0x3f, 0x48, 0xa5, 0x7f,
+	0x90, 0x3a, 0xff, 0x20, 0xa5, 0xfe, 0x41, 0x8a, 0xfc, 0x83, 0x54, 0xfa, 0x07, 0xa9, 0xf3, 0x0f,
+	0x52, 0xe9, 0x1f, 0xa4, 0xc2, 0x3f, 0x48, 0x9d, 0x7f, 0x90, 0x3a, 0xff, 0x20, 0xa5, 0xfe, 0x41,
+	0x8a, 0xfc, 0x83, 0x16, 0xf5, 0xcf, 0x2f, 0x3b, 0xb8, 0x7a, 0xbb, 0x17, 0xf9, 0xe7, 0x21, 0x3c,
+	0xf7, 0xf8, 0xfc, 0xeb, 0x8d, 0x70, 0xa0, 0x13, 0x2a, 0x1a, 0x77, 0x92, 0xdb, 0xdf, 0x1f, 0x7b,
+	0xee, 0x99, 0x7c, 0x12, 0xba, 0x25, 0x0e, 0x2f, 0xcc, 0x43, 0x2f, 0xc2, 0xe4, 0x04, 0x11, 0x1c,
+	0x63, 0x1e, 0x00, 0x73, 0x15, 0x93, 0xd2, 0x2b, 0xd9, 0x71, 0x83, 0xdd, 0x3c, 0xad, 0x64, 0xd2,
+	0x3a, 0x8a, 0x4d, 0x49, 0x3e, 0xf6, 0x05, 0x18, 0x1b, 0xc7, 0x41, 0xf3, 0xd2, 0xb1, 0xc4, 0x57,
+	0x2f, 0xe7, 0xe4, 0xa4, 0x7b, 0x79, 0x4a, 0x50, 0x5e, 0x5d, 0x58, 0x5e, 0x7b, 0x12, 0xae, 0xb8,
+	0x55, 0x48, 0x0b, 0x89, 0xac, 0x0d, 0x8b, 0x6c, 0x2f, 0x3b, 0x31, 0xdd, 0x2a, 0x06, 0x4e, 0x58,
+	0xad, 0x03, 0x5a, 0xed, 0x5a, 0x66, 0x5c, 0x81, 0x29, 0x33, 0x5c, 0x1b, 0x36, 0x5c, 0x4e, 0x58,
+	0xba, 0x15, 0x0c, 0xcb, 0x4c, 0xd0, 0x01, 0x75, 0x97, 0x1d, 0x56, 0x60, 0xca, 0xd4, 0x77, 0x2c,
+	0x51, 0x5f, 0xce, 0x61, 0xe8, 0xa4, 0xe2, 0x26, 0x3d, 0xd8, 0x85, 0x3d, 0x98, 0x7d, 0x18, 0x3a,
+	0x60, 0xe2, 0x84, 0x13, 0xdb, 0xb0, 0x13, 0xf3, 0xfb, 0x6b, 0x99, 0xb2, 0xfe, 0x5a, 0x66, 0xbc,
+	0xbf, 0xa1, 0x20, 0x73, 0xfb, 0x1b, 0x30, 0x65, 0xb2, 0x3c, 0x96, 0xc8, 0xb2, 0x40, 0x7f, 0xe3,
+	0x71, 0x93, 0xe6, 0xec, 0xc2, 0xe6, 0xcc, 0xef, 0x6f, 0x3a, 0x71, 0xc2, 0xa2, 0x9f, 0x80, 0x16,
+	0xbd, 0x96, 0x1d, 0xd8, 0xdf, 0x29, 0xc6, 0x8d, 0x2b, 0xb5, 0x05, 0x29, 0xf5, 0xa5, 0xcc, 0xa8,
+	0x11, 0x50, 0xa2, 0xd7, 0x63, 0x89, 0x5e, 0x73, 0x3a, 0xcb, 0xf6, 0x82, 0x9d, 0xe5, 0x76, 0xec,
+	0xc2, 0xae, 0xcd, 0xee, 0xac, 0x88, 0x95, 0x7a, 0xb7, 0x0d, 0x7b, 0x37, 0xe7, 0xe4, 0xd2, 0xad,
+	0xe0, 0xc9, 0x65, 0x12, 0xee, 0x80, 0x12, 0xce, 0x3e, 0xb9, 0x02, 0x53, 0x22, 0xe4, 0xfa, 0x43,
+	0x7c, 0x05, 0x36, 0x2a, 0xd9, 0xc2, 0xe8, 0x1b, 0xfb, 0x8c, 0x7e, 0x09, 0xb9, 0xda, 0xf2, 0x7f,
+	0x24, 0xaf, 0xe2, 0xd5, 0x6f, 0x7d, 0xbb, 0xf3, 0x6f, 0x12, 0x33, 0xc6, 0xb0, 0x16, 0xdb, 0xf8,
+	0xd6, 0xca, 0x9b, 0x5a, 0xbd, 0x8b, 0x37, 0x97, 0x44, 0xfe, 0x02, 0x5f, 0x06, 0xf5, 0x0a, 0xbc,
+	0xc0, 0x7e, 0xfc, 0x05, 0xe4, 0xc3, 0x9f, 0xc8, 0xbf, 0x8f, 0x6b, 0x4b, 0xe1, 0x7e, 0x89, 0x2f,
+	0x01, 0xba, 0x05, 0xe8, 0x66, 0x9c, 0x9e, 0x39, 0x1f, 0xc6, 0x1b, 0x43, 0xd2, 0xde, 0x55, 0xc8,
+	0x7f, 0x80, 0x49, 0xda, 0xbe, 0x00, 0xff, 0xb5, 0x38, 0x3f, 0x6b, 0x92, 0x14, 0xf1, 0x9f, 0xe3,
+	0xed, 0x94, 0x87, 0xd5, 0xd1, 0x85, 0xf0, 0x91, 0x87, 0x16, 0xc1, 0x47, 0x93, 0x1d, 0x1c, 0x7e,
+	0x19, 0x74, 0xe1, 0xe8, 0x74, 0x32, 0xf9, 0xb9, 0x6f, 0x6d, 0x07, 0x7e, 0x81, 0xe8, 0xe8, 0x2c,
+	0x87, 0x1f, 0xef, 0x3e, 0xb7, 0xd4, 0x82, 0xfd, 0xe1, 0x93, 0xa2, 0xb4, 0xfb, 0xca, 0xe9, 0x89,
+	0xee, 0xcb, 0xf9, 0x85, 0xba, 0x03, 0xbc, 0x40, 0xbc, 0xfb, 0xea, 0xf9, 0x9f, 0xe1, 0xed, 0x94,
+	0xca, 0x17, 0xf9, 0x77, 0x1c, 0x4e, 0xc5, 0x22, 0xfc, 0x53, 0xbc, 0x95, 0xb4, 0xba, 0x32, 0xb6,
+	0xd0, 0x79, 0xc1, 0xc1, 0x8b, 0x74, 0x46, 0x18, 0x9d, 0xe1, 0xce, 0x2f, 0x87, 0x2f, 0x9c, 0xfb,
+	0xc8, 0xca, 0x8b, 0x9c, 0xcc, 0x68, 0xc8, 0x86, 0xcf, 0xfd, 0x12, 0xe8, 0xbb, 0xff, 0xae, 0xe2,
+	0xda, 0xdd, 0xb1, 0xed, 0x3c, 0x0a, 0xe7, 0xf6, 0x77, 0xc5, 0xa9, 0xba, 0xe0, 0x3d, 0xe5, 0x61,
+	0x49, 0x9c, 0xa4, 0xdf, 0x11, 0x46, 0xdd, 0x62, 0x37, 0x93, 0x87, 0x25, 0x61, 0xbc, 0x6d, 0xe2,
+	0x75, 0xd7, 0x9e, 0xf0, 0x09, 0x14, 0x15, 0xbd, 0x09, 0xf4, 0x23, 0x84, 0x65, 0xe4, 0x06, 0xae,
+	0xb8, 0xf6, 0x84, 0x4d, 0x85, 0xe5, 0x82, 0x77, 0x76, 0x7e, 0x88, 0xa0, 0x88, 0x03, 0xd8, 0xe0,
+	0xb3, 0x5a, 0xf0, 0x82, 0x8d, 0x03, 0xd8, 0x90, 0xc3, 0x9e, 0x82, 0x8f, 0x4e, 0x6b, 0x45, 0x6f,
+	0xc3, 0xf8, 0x53, 0xf0, 0x41, 0x29, 0x0c, 0x61, 0x99, 0xd2, 0x9b, 0xc7, 0xe4, 0x37, 0x74, 0x51,
+	0x08, 0xcb, 0x14, 0x42, 0x58, 0x26, 0xbf, 0x73, 0x2c, 0xf0, 0x25, 0x9f, 0x10, 0xc2, 0x32, 0xc9,
+	0xdb, 0xf8, 0x82, 0x6b, 0x4f, 0xe8, 0xc7, 0xfe, 0xf5, 0x62, 0xd7, 0x41, 0x87, 0xa5, 0x56, 0x50,
+	0xc2, 0x13, 0xf0, 0xcf, 0xe1, 0xb8, 0xe8, 0xf5, 0x0d, 0x4f, 0xc0, 0x3f, 0x75, 0xb3, 0x36, 0xb0,
+	0xcf, 0xc6, 0xd5, 0x82, 0x17, 0x2d, 0xbc, 0x0d, 0xf4, 0xcf, 0xcd, 0x8b, 0xf4, 0x8c, 0xdf, 0xa5,
+	0x67, 0xdc, 0x3f, 0xa5, 0xcd, 0xeb, 0x4f, 0xce, 0x0d, 0xed, 0xef, 0x73, 0x43, 0x7b, 0x7a, 0x6e,
+	0x68, 0x3f, 0xcf, 0x0d, 0xed, 0xd7, 0xb9, 0xa1, 0xfd, 0x36, 0x37, 0xb4, 0xc7, 0x73, 0xa3, 0xf4,
+	0xfb, 0xdc, 0x28, 0x3d, 0x99, 0x1b, 0xda, 0xd3, 0xb9, 0x51, 0xfa, 0xfe, 0x2f, 0xa3, 0xd4, 0x5f,
+	0xa3, 0xaf, 0x62, 0xfd, 0x1f, 0x00, 0x00, 0xff, 0xff, 0x2c, 0x38, 0x67, 0xe3, 0x87, 0x20, 0x00,
+	0x00,
 }
 
 func (this *StdTypes) VerboseEqual(that interface{}) error {
@@ -3028,7 +3029,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NullableTimestamp {
 		keysForNullableTimestamp = append(keysForNullableTimestamp, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNullableTimestamp)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNullableTimestamp)
 	mapStringForNullableTimestamp := "map[int32]*time.Time{"
 	for _, k := range keysForNullableTimestamp {
 		mapStringForNullableTimestamp += fmt.Sprintf("%#v: %#v,", k, this.NullableTimestamp[k])
@@ -3041,7 +3042,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.Timestamp {
 		keysForTimestamp = append(keysForTimestamp, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForTimestamp)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForTimestamp)
 	mapStringForTimestamp := "map[int32]time.Time{"
 	for _, k := range keysForTimestamp {
 		mapStringForTimestamp += fmt.Sprintf("%#v: %#v,", k, this.Timestamp[k])
@@ -3054,7 +3055,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NullableDuration {
 		keysForNullableDuration = append(keysForNullableDuration, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNullableDuration)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNullableDuration)
 	mapStringForNullableDuration := "map[int32]*time.Duration{"
 	for _, k := range keysForNullableDuration {
 		mapStringForNullableDuration += fmt.Sprintf("%#v: %#v,", k, this.NullableDuration[k])
@@ -3067,7 +3068,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.Duration {
 		keysForDuration = append(keysForDuration, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForDuration)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForDuration)
 	mapStringForDuration := "map[int32]time.Duration{"
 	for _, k := range keysForDuration {
 		mapStringForDuration += fmt.Sprintf("%#v: %#v,", k, this.Duration[k])
@@ -3080,7 +3081,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NullableDouble {
 		keysForNullableDouble = append(keysForNullableDouble, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNullableDouble)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNullableDouble)
 	mapStringForNullableDouble := "map[int32]*float64{"
 	for _, k := range keysForNullableDouble {
 		mapStringForNullableDouble += fmt.Sprintf("%#v: %#v,", k, this.NullableDouble[k])
@@ -3093,7 +3094,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NonnullDouble {
 		keysForNonnullDouble = append(keysForNonnullDouble, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNonnullDouble)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNonnullDouble)
 	mapStringForNonnullDouble := "map[int32]float64{"
 	for _, k := range keysForNonnullDouble {
 		mapStringForNonnullDouble += fmt.Sprintf("%#v: %#v,", k, this.NonnullDouble[k])
@@ -3106,7 +3107,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NullableFloat {
 		keysForNullableFloat = append(keysForNullableFloat, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNullableFloat)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNullableFloat)
 	mapStringForNullableFloat := "map[int32]*float32{"
 	for _, k := range keysForNullableFloat {
 		mapStringForNullableFloat += fmt.Sprintf("%#v: %#v,", k, this.NullableFloat[k])
@@ -3119,7 +3120,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NonnullFloat {
 		keysForNonnullFloat = append(keysForNonnullFloat, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNonnullFloat)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNonnullFloat)
 	mapStringForNonnullFloat := "map[int32]float32{"
 	for _, k := range keysForNonnullFloat {
 		mapStringForNonnullFloat += fmt.Sprintf("%#v: %#v,", k, this.NonnullFloat[k])
@@ -3132,7 +3133,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NullableInt64 {
 		keysForNullableInt64 = append(keysForNullableInt64, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNullableInt64)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNullableInt64)
 	mapStringForNullableInt64 := "map[int32]*int64{"
 	for _, k := range keysForNullableInt64 {
 		mapStringForNullableInt64 += fmt.Sprintf("%#v: %#v,", k, this.NullableInt64[k])
@@ -3145,7 +3146,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NonnullInt64 {
 		keysForNonnullInt64 = append(keysForNonnullInt64, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNonnullInt64)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNonnullInt64)
 	mapStringForNonnullInt64 := "map[int32]int64{"
 	for _, k := range keysForNonnullInt64 {
 		mapStringForNonnullInt64 += fmt.Sprintf("%#v: %#v,", k, this.NonnullInt64[k])
@@ -3158,7 +3159,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NullableUInt64 {
 		keysForNullableUInt64 = append(keysForNullableUInt64, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNullableUInt64)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNullableUInt64)
 	mapStringForNullableUInt64 := "map[int32]*uint64{"
 	for _, k := range keysForNullableUInt64 {
 		mapStringForNullableUInt64 += fmt.Sprintf("%#v: %#v,", k, this.NullableUInt64[k])
@@ -3171,7 +3172,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NonnullUInt64 {
 		keysForNonnullUInt64 = append(keysForNonnullUInt64, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNonnullUInt64)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNonnullUInt64)
 	mapStringForNonnullUInt64 := "map[int32]uint64{"
 	for _, k := range keysForNonnullUInt64 {
 		mapStringForNonnullUInt64 += fmt.Sprintf("%#v: %#v,", k, this.NonnullUInt64[k])
@@ -3184,7 +3185,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NullableInt32 {
 		keysForNullableInt32 = append(keysForNullableInt32, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNullableInt32)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNullableInt32)
 	mapStringForNullableInt32 := "map[int32]*int32{"
 	for _, k := range keysForNullableInt32 {
 		mapStringForNullableInt32 += fmt.Sprintf("%#v: %#v,", k, this.NullableInt32[k])
@@ -3197,7 +3198,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NonnullInt32 {
 		keysForNonnullInt32 = append(keysForNonnullInt32, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNonnullInt32)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNonnullInt32)
 	mapStringForNonnullInt32 := "map[int32]int32{"
 	for _, k := range keysForNonnullInt32 {
 		mapStringForNonnullInt32 += fmt.Sprintf("%#v: %#v,", k, this.NonnullInt32[k])
@@ -3210,7 +3211,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NullableUInt32 {
 		keysForNullableUInt32 = append(keysForNullableUInt32, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNullableUInt32)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNullableUInt32)
 	mapStringForNullableUInt32 := "map[int32]*uint32{"
 	for _, k := range keysForNullableUInt32 {
 		mapStringForNullableUInt32 += fmt.Sprintf("%#v: %#v,", k, this.NullableUInt32[k])
@@ -3223,7 +3224,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NonnullUInt32 {
 		keysForNonnullUInt32 = append(keysForNonnullUInt32, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNonnullUInt32)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNonnullUInt32)
 	mapStringForNonnullUInt32 := "map[int32]uint32{"
 	for _, k := range keysForNonnullUInt32 {
 		mapStringForNonnullUInt32 += fmt.Sprintf("%#v: %#v,", k, this.NonnullUInt32[k])
@@ -3236,7 +3237,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NullableBool {
 		keysForNullableBool = append(keysForNullableBool, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNullableBool)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNullableBool)
 	mapStringForNullableBool := "map[int32]*bool{"
 	for _, k := range keysForNullableBool {
 		mapStringForNullableBool += fmt.Sprintf("%#v: %#v,", k, this.NullableBool[k])
@@ -3249,7 +3250,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NonnullBool {
 		keysForNonnullBool = append(keysForNonnullBool, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNonnullBool)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNonnullBool)
 	mapStringForNonnullBool := "map[int32]bool{"
 	for _, k := range keysForNonnullBool {
 		mapStringForNonnullBool += fmt.Sprintf("%#v: %#v,", k, this.NonnullBool[k])
@@ -3262,7 +3263,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NullableString {
 		keysForNullableString = append(keysForNullableString, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNullableString)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNullableString)
 	mapStringForNullableString := "map[int32]*string{"
 	for _, k := range keysForNullableString {
 		mapStringForNullableString += fmt.Sprintf("%#v: %#v,", k, this.NullableString[k])
@@ -3275,7 +3276,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NonnullString {
 		keysForNonnullString = append(keysForNonnullString, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNonnullString)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNonnullString)
 	mapStringForNonnullString := "map[int32]string{"
 	for _, k := range keysForNonnullString {
 		mapStringForNonnullString += fmt.Sprintf("%#v: %#v,", k, this.NonnullString[k])
@@ -3288,7 +3289,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NullableBytes {
 		keysForNullableBytes = append(keysForNullableBytes, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNullableBytes)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNullableBytes)
 	mapStringForNullableBytes := "map[int32]*[]byte{"
 	for _, k := range keysForNullableBytes {
 		mapStringForNullableBytes += fmt.Sprintf("%#v: %#v,", k, this.NullableBytes[k])
@@ -3301,7 +3302,7 @@ func (this *MapStdTypes) GoString() string {
 	for k := range this.NonnullBytes {
 		keysForNonnullBytes = append(keysForNonnullBytes, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Int32s(keysForNonnullBytes)
+	github_com_bittorrent_protobuf_sortkeys.Int32s(keysForNonnullBytes)
 	mapStringForNonnullBytes := "map[int32][]byte{"
 	for _, k := range keysForNonnullBytes {
 		mapStringForNonnullBytes += fmt.Sprintf("%#v: %#v,", k, this.NonnullBytes[k])
@@ -3430,59 +3431,59 @@ func valueToGoStringStdtypes(v interface{}, typ string) string {
 func NewPopulatedStdTypes(r randyStdtypes, easy bool) *StdTypes {
 	this := &StdTypes{}
 	if r.Intn(5) != 0 {
-		this.NullableTimestamp = github_com_tron_us_protobuf_types.NewPopulatedStdTime(r, easy)
+		this.NullableTimestamp = github_com_bittorrent_protobuf_types.NewPopulatedStdTime(r, easy)
 	}
 	if r.Intn(5) != 0 {
-		this.NullableDuration = github_com_tron_us_protobuf_types.NewPopulatedStdDuration(r, easy)
+		this.NullableDuration = github_com_bittorrent_protobuf_types.NewPopulatedStdDuration(r, easy)
 	}
-	v1 := github_com_tron_us_protobuf_types.NewPopulatedStdTime(r, easy)
+	v1 := github_com_bittorrent_protobuf_types.NewPopulatedStdTime(r, easy)
 	this.Timestamp = *v1
-	v2 := github_com_tron_us_protobuf_types.NewPopulatedStdDuration(r, easy)
+	v2 := github_com_bittorrent_protobuf_types.NewPopulatedStdDuration(r, easy)
 	this.Duration = *v2
 	if r.Intn(5) != 0 {
-		this.NullableDouble = github_com_tron_us_protobuf_types.NewPopulatedStdDouble(r, easy)
+		this.NullableDouble = github_com_bittorrent_protobuf_types.NewPopulatedStdDouble(r, easy)
 	}
-	v3 := github_com_tron_us_protobuf_types.NewPopulatedStdDouble(r, easy)
+	v3 := github_com_bittorrent_protobuf_types.NewPopulatedStdDouble(r, easy)
 	this.NonnullDouble = *v3
 	if r.Intn(5) != 0 {
-		this.NullableFloat = github_com_tron_us_protobuf_types.NewPopulatedStdFloat(r, easy)
+		this.NullableFloat = github_com_bittorrent_protobuf_types.NewPopulatedStdFloat(r, easy)
 	}
-	v4 := github_com_tron_us_protobuf_types.NewPopulatedStdFloat(r, easy)
+	v4 := github_com_bittorrent_protobuf_types.NewPopulatedStdFloat(r, easy)
 	this.NonnullFloat = *v4
 	if r.Intn(5) != 0 {
-		this.NullableInt64 = github_com_tron_us_protobuf_types.NewPopulatedStdInt64(r, easy)
+		this.NullableInt64 = github_com_bittorrent_protobuf_types.NewPopulatedStdInt64(r, easy)
 	}
-	v5 := github_com_tron_us_protobuf_types.NewPopulatedStdInt64(r, easy)
+	v5 := github_com_bittorrent_protobuf_types.NewPopulatedStdInt64(r, easy)
 	this.NonnullInt64 = *v5
 	if r.Intn(5) != 0 {
-		this.NullableUInt64 = github_com_tron_us_protobuf_types.NewPopulatedStdUInt64(r, easy)
+		this.NullableUInt64 = github_com_bittorrent_protobuf_types.NewPopulatedStdUInt64(r, easy)
 	}
-	v6 := github_com_tron_us_protobuf_types.NewPopulatedStdUInt64(r, easy)
+	v6 := github_com_bittorrent_protobuf_types.NewPopulatedStdUInt64(r, easy)
 	this.NonnullUInt64 = *v6
 	if r.Intn(5) != 0 {
-		this.NullableInt32 = github_com_tron_us_protobuf_types.NewPopulatedStdInt32(r, easy)
+		this.NullableInt32 = github_com_bittorrent_protobuf_types.NewPopulatedStdInt32(r, easy)
 	}
-	v7 := github_com_tron_us_protobuf_types.NewPopulatedStdInt32(r, easy)
+	v7 := github_com_bittorrent_protobuf_types.NewPopulatedStdInt32(r, easy)
 	this.NonnullInt32 = *v7
 	if r.Intn(5) != 0 {
-		this.NullableUInt32 = github_com_tron_us_protobuf_types.NewPopulatedStdUInt32(r, easy)
+		this.NullableUInt32 = github_com_bittorrent_protobuf_types.NewPopulatedStdUInt32(r, easy)
 	}
-	v8 := github_com_tron_us_protobuf_types.NewPopulatedStdUInt32(r, easy)
+	v8 := github_com_bittorrent_protobuf_types.NewPopulatedStdUInt32(r, easy)
 	this.NonnullUInt32 = *v8
 	if r.Intn(5) != 0 {
-		this.NullableBool = github_com_tron_us_protobuf_types.NewPopulatedStdBool(r, easy)
+		this.NullableBool = github_com_bittorrent_protobuf_types.NewPopulatedStdBool(r, easy)
 	}
-	v9 := github_com_tron_us_protobuf_types.NewPopulatedStdBool(r, easy)
+	v9 := github_com_bittorrent_protobuf_types.NewPopulatedStdBool(r, easy)
 	this.NonnullBool = *v9
 	if r.Intn(5) != 0 {
-		this.NullableString = github_com_tron_us_protobuf_types.NewPopulatedStdString(r, easy)
+		this.NullableString = github_com_bittorrent_protobuf_types.NewPopulatedStdString(r, easy)
 	}
-	v10 := github_com_tron_us_protobuf_types.NewPopulatedStdString(r, easy)
+	v10 := github_com_bittorrent_protobuf_types.NewPopulatedStdString(r, easy)
 	this.NonnullString = *v10
 	if r.Intn(5) != 0 {
-		this.NullableBytes = github_com_tron_us_protobuf_types.NewPopulatedStdBytes(r, easy)
+		this.NullableBytes = github_com_bittorrent_protobuf_types.NewPopulatedStdBytes(r, easy)
 	}
-	v11 := github_com_tron_us_protobuf_types.NewPopulatedStdBytes(r, easy)
+	v11 := github_com_bittorrent_protobuf_types.NewPopulatedStdBytes(r, easy)
 	this.NonnullBytes = *v11
 	if !easy && r.Intn(10) != 0 {
 		this.XXX_unrecognized = randUnrecognizedStdtypes(r, 23)
@@ -3496,21 +3497,21 @@ func NewPopulatedRepStdTypes(r randyStdtypes, easy bool) *RepStdTypes {
 		v12 := r.Intn(5)
 		this.NullableTimestamps = make([]*time.Time, v12)
 		for i := 0; i < v12; i++ {
-			this.NullableTimestamps[i] = github_com_tron_us_protobuf_types.NewPopulatedStdTime(r, easy)
+			this.NullableTimestamps[i] = github_com_bittorrent_protobuf_types.NewPopulatedStdTime(r, easy)
 		}
 	}
 	if r.Intn(5) != 0 {
 		v13 := r.Intn(5)
 		this.NullableDurations = make([]*time.Duration, v13)
 		for i := 0; i < v13; i++ {
-			this.NullableDurations[i] = github_com_tron_us_protobuf_types.NewPopulatedStdDuration(r, easy)
+			this.NullableDurations[i] = github_com_bittorrent_protobuf_types.NewPopulatedStdDuration(r, easy)
 		}
 	}
 	if r.Intn(5) != 0 {
 		v14 := r.Intn(5)
 		this.Timestamps = make([]time.Time, v14)
 		for i := 0; i < v14; i++ {
-			v15 := github_com_tron_us_protobuf_types.NewPopulatedStdTime(r, easy)
+			v15 := github_com_bittorrent_protobuf_types.NewPopulatedStdTime(r, easy)
 			this.Timestamps[i] = *v15
 		}
 	}
@@ -3518,7 +3519,7 @@ func NewPopulatedRepStdTypes(r randyStdtypes, easy bool) *RepStdTypes {
 		v16 := r.Intn(5)
 		this.Durations = make([]time.Duration, v16)
 		for i := 0; i < v16; i++ {
-			v17 := github_com_tron_us_protobuf_types.NewPopulatedStdDuration(r, easy)
+			v17 := github_com_bittorrent_protobuf_types.NewPopulatedStdDuration(r, easy)
 			this.Durations[i] = *v17
 		}
 	}
@@ -3526,14 +3527,14 @@ func NewPopulatedRepStdTypes(r randyStdtypes, easy bool) *RepStdTypes {
 		v18 := r.Intn(5)
 		this.NullableDouble = make([]*float64, v18)
 		for i := 0; i < v18; i++ {
-			this.NullableDouble[i] = github_com_tron_us_protobuf_types.NewPopulatedStdDouble(r, easy)
+			this.NullableDouble[i] = github_com_bittorrent_protobuf_types.NewPopulatedStdDouble(r, easy)
 		}
 	}
 	if r.Intn(5) != 0 {
 		v19 := r.Intn(5)
 		this.NonnullDouble = make([]float64, v19)
 		for i := 0; i < v19; i++ {
-			v20 := github_com_tron_us_protobuf_types.NewPopulatedStdDouble(r, easy)
+			v20 := github_com_bittorrent_protobuf_types.NewPopulatedStdDouble(r, easy)
 			this.NonnullDouble[i] = *v20
 		}
 	}
@@ -3541,14 +3542,14 @@ func NewPopulatedRepStdTypes(r randyStdtypes, easy bool) *RepStdTypes {
 		v21 := r.Intn(5)
 		this.NullableFloat = make([]*float32, v21)
 		for i := 0; i < v21; i++ {
-			this.NullableFloat[i] = github_com_tron_us_protobuf_types.NewPopulatedStdFloat(r, easy)
+			this.NullableFloat[i] = github_com_bittorrent_protobuf_types.NewPopulatedStdFloat(r, easy)
 		}
 	}
 	if r.Intn(5) != 0 {
 		v22 := r.Intn(5)
 		this.NonnullFloat = make([]float32, v22)
 		for i := 0; i < v22; i++ {
-			v23 := github_com_tron_us_protobuf_types.NewPopulatedStdFloat(r, easy)
+			v23 := github_com_bittorrent_protobuf_types.NewPopulatedStdFloat(r, easy)
 			this.NonnullFloat[i] = *v23
 		}
 	}
@@ -3556,14 +3557,14 @@ func NewPopulatedRepStdTypes(r randyStdtypes, easy bool) *RepStdTypes {
 		v24 := r.Intn(5)
 		this.NullableInt64 = make([]*int64, v24)
 		for i := 0; i < v24; i++ {
-			this.NullableInt64[i] = github_com_tron_us_protobuf_types.NewPopulatedStdInt64(r, easy)
+			this.NullableInt64[i] = github_com_bittorrent_protobuf_types.NewPopulatedStdInt64(r, easy)
 		}
 	}
 	if r.Intn(5) != 0 {
 		v25 := r.Intn(5)
 		this.NonnullInt64 = make([]int64, v25)
 		for i := 0; i < v25; i++ {
-			v26 := github_com_tron_us_protobuf_types.NewPopulatedStdInt64(r, easy)
+			v26 := github_com_bittorrent_protobuf_types.NewPopulatedStdInt64(r, easy)
 			this.NonnullInt64[i] = *v26
 		}
 	}
@@ -3571,14 +3572,14 @@ func NewPopulatedRepStdTypes(r randyStdtypes, easy bool) *RepStdTypes {
 		v27 := r.Intn(5)
 		this.NullableUInt64 = make([]*uint64, v27)
 		for i := 0; i < v27; i++ {
-			this.NullableUInt64[i] = github_com_tron_us_protobuf_types.NewPopulatedStdUInt64(r, easy)
+			this.NullableUInt64[i] = github_com_bittorrent_protobuf_types.NewPopulatedStdUInt64(r, easy)
 		}
 	}
 	if r.Intn(5) != 0 {
 		v28 := r.Intn(5)
 		this.NonnullUInt64 = make([]uint64, v28)
 		for i := 0; i < v28; i++ {
-			v29 := github_com_tron_us_protobuf_types.NewPopulatedStdUInt64(r, easy)
+			v29 := github_com_bittorrent_protobuf_types.NewPopulatedStdUInt64(r, easy)
 			this.NonnullUInt64[i] = *v29
 		}
 	}
@@ -3586,14 +3587,14 @@ func NewPopulatedRepStdTypes(r randyStdtypes, easy bool) *RepStdTypes {
 		v30 := r.Intn(5)
 		this.NullableInt32 = make([]*int32, v30)
 		for i := 0; i < v30; i++ {
-			this.NullableInt32[i] = github_com_tron_us_protobuf_types.NewPopulatedStdInt32(r, easy)
+			this.NullableInt32[i] = github_com_bittorrent_protobuf_types.NewPopulatedStdInt32(r, easy)
 		}
 	}
 	if r.Intn(5) != 0 {
 		v31 := r.Intn(5)
 		this.NonnullInt32 = make([]int32, v31)
 		for i := 0; i < v31; i++ {
-			v32 := github_com_tron_us_protobuf_types.NewPopulatedStdInt32(r, easy)
+			v32 := github_com_bittorrent_protobuf_types.NewPopulatedStdInt32(r, easy)
 			this.NonnullInt32[i] = *v32
 		}
 	}
@@ -3601,14 +3602,14 @@ func NewPopulatedRepStdTypes(r randyStdtypes, easy bool) *RepStdTypes {
 		v33 := r.Intn(5)
 		this.NullableUInt32 = make([]*uint32, v33)
 		for i := 0; i < v33; i++ {
-			this.NullableUInt32[i] = github_com_tron_us_protobuf_types.NewPopulatedStdUInt32(r, easy)
+			this.NullableUInt32[i] = github_com_bittorrent_protobuf_types.NewPopulatedStdUInt32(r, easy)
 		}
 	}
 	if r.Intn(5) != 0 {
 		v34 := r.Intn(5)
 		this.NonnullUInt32 = make([]uint32, v34)
 		for i := 0; i < v34; i++ {
-			v35 := github_com_tron_us_protobuf_types.NewPopulatedStdUInt32(r, easy)
+			v35 := github_com_bittorrent_protobuf_types.NewPopulatedStdUInt32(r, easy)
 			this.NonnullUInt32[i] = *v35
 		}
 	}
@@ -3616,14 +3617,14 @@ func NewPopulatedRepStdTypes(r randyStdtypes, easy bool) *RepStdTypes {
 		v36 := r.Intn(5)
 		this.NullableBool = make([]*bool, v36)
 		for i := 0; i < v36; i++ {
-			this.NullableBool[i] = github_com_tron_us_protobuf_types.NewPopulatedStdBool(r, easy)
+			this.NullableBool[i] = github_com_bittorrent_protobuf_types.NewPopulatedStdBool(r, easy)
 		}
 	}
 	if r.Intn(5) != 0 {
 		v37 := r.Intn(5)
 		this.NonnullBool = make([]bool, v37)
 		for i := 0; i < v37; i++ {
-			v38 := github_com_tron_us_protobuf_types.NewPopulatedStdBool(r, easy)
+			v38 := github_com_bittorrent_protobuf_types.NewPopulatedStdBool(r, easy)
 			this.NonnullBool[i] = *v38
 		}
 	}
@@ -3631,14 +3632,14 @@ func NewPopulatedRepStdTypes(r randyStdtypes, easy bool) *RepStdTypes {
 		v39 := r.Intn(5)
 		this.NullableString = make([]*string, v39)
 		for i := 0; i < v39; i++ {
-			this.NullableString[i] = github_com_tron_us_protobuf_types.NewPopulatedStdString(r, easy)
+			this.NullableString[i] = github_com_bittorrent_protobuf_types.NewPopulatedStdString(r, easy)
 		}
 	}
 	if r.Intn(5) != 0 {
 		v40 := r.Intn(5)
 		this.NonnullString = make([]string, v40)
 		for i := 0; i < v40; i++ {
-			v41 := github_com_tron_us_protobuf_types.NewPopulatedStdString(r, easy)
+			v41 := github_com_bittorrent_protobuf_types.NewPopulatedStdString(r, easy)
 			this.NonnullString[i] = *v41
 		}
 	}
@@ -3646,14 +3647,14 @@ func NewPopulatedRepStdTypes(r randyStdtypes, easy bool) *RepStdTypes {
 		v42 := r.Intn(5)
 		this.NullableBytes = make([]*[]byte, v42)
 		for i := 0; i < v42; i++ {
-			this.NullableBytes[i] = github_com_tron_us_protobuf_types.NewPopulatedStdBytes(r, easy)
+			this.NullableBytes[i] = github_com_bittorrent_protobuf_types.NewPopulatedStdBytes(r, easy)
 		}
 	}
 	if r.Intn(5) != 0 {
 		v43 := r.Intn(5)
 		this.NonnullBytes = make([][]byte, v43)
 		for i := 0; i < v43; i++ {
-			v44 := github_com_tron_us_protobuf_types.NewPopulatedStdBytes(r, easy)
+			v44 := github_com_bittorrent_protobuf_types.NewPopulatedStdBytes(r, easy)
 			this.NonnullBytes[i] = *v44
 		}
 	}
@@ -3669,154 +3670,154 @@ func NewPopulatedMapStdTypes(r randyStdtypes, easy bool) *MapStdTypes {
 		v45 := r.Intn(10)
 		this.NullableTimestamp = make(map[int32]*time.Time)
 		for i := 0; i < v45; i++ {
-			this.NullableTimestamp[int32(r.Int31())] = github_com_tron_us_protobuf_types.NewPopulatedStdTime(r, easy)
+			this.NullableTimestamp[int32(r.Int31())] = github_com_bittorrent_protobuf_types.NewPopulatedStdTime(r, easy)
 		}
 	}
 	if r.Intn(5) != 0 {
 		v46 := r.Intn(10)
 		this.Timestamp = make(map[int32]time.Time)
 		for i := 0; i < v46; i++ {
-			this.Timestamp[int32(r.Int31())] = *github_com_tron_us_protobuf_types.NewPopulatedStdTime(r, easy)
+			this.Timestamp[int32(r.Int31())] = *github_com_bittorrent_protobuf_types.NewPopulatedStdTime(r, easy)
 		}
 	}
 	if r.Intn(5) != 0 {
 		v47 := r.Intn(10)
 		this.NullableDuration = make(map[int32]*time.Duration)
 		for i := 0; i < v47; i++ {
-			this.NullableDuration[int32(r.Int31())] = github_com_tron_us_protobuf_types.NewPopulatedStdDuration(r, easy)
+			this.NullableDuration[int32(r.Int31())] = github_com_bittorrent_protobuf_types.NewPopulatedStdDuration(r, easy)
 		}
 	}
 	if r.Intn(5) != 0 {
 		v48 := r.Intn(10)
 		this.Duration = make(map[int32]time.Duration)
 		for i := 0; i < v48; i++ {
-			this.Duration[int32(r.Int31())] = *github_com_tron_us_protobuf_types.NewPopulatedStdDuration(r, easy)
+			this.Duration[int32(r.Int31())] = *github_com_bittorrent_protobuf_types.NewPopulatedStdDuration(r, easy)
 		}
 	}
 	if r.Intn(5) != 0 {
 		v49 := r.Intn(10)
 		this.NullableDouble = make(map[int32]*float64)
 		for i := 0; i < v49; i++ {
-			this.NullableDouble[int32(r.Int31())] = (*float64)(github_com_tron_us_protobuf_types.NewPopulatedStdDouble(r, easy))
+			this.NullableDouble[int32(r.Int31())] = (*float64)(github_com_bittorrent_protobuf_types.NewPopulatedStdDouble(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v50 := r.Intn(10)
 		this.NonnullDouble = make(map[int32]float64)
 		for i := 0; i < v50; i++ {
-			this.NonnullDouble[int32(r.Int31())] = (float64)(*github_com_tron_us_protobuf_types.NewPopulatedStdDouble(r, easy))
+			this.NonnullDouble[int32(r.Int31())] = (float64)(*github_com_bittorrent_protobuf_types.NewPopulatedStdDouble(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v51 := r.Intn(10)
 		this.NullableFloat = make(map[int32]*float32)
 		for i := 0; i < v51; i++ {
-			this.NullableFloat[int32(r.Int31())] = (*float32)(github_com_tron_us_protobuf_types.NewPopulatedStdFloat(r, easy))
+			this.NullableFloat[int32(r.Int31())] = (*float32)(github_com_bittorrent_protobuf_types.NewPopulatedStdFloat(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v52 := r.Intn(10)
 		this.NonnullFloat = make(map[int32]float32)
 		for i := 0; i < v52; i++ {
-			this.NonnullFloat[int32(r.Int31())] = (float32)(*github_com_tron_us_protobuf_types.NewPopulatedStdFloat(r, easy))
+			this.NonnullFloat[int32(r.Int31())] = (float32)(*github_com_bittorrent_protobuf_types.NewPopulatedStdFloat(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v53 := r.Intn(10)
 		this.NullableInt64 = make(map[int32]*int64)
 		for i := 0; i < v53; i++ {
-			this.NullableInt64[int32(r.Int31())] = (*int64)(github_com_tron_us_protobuf_types.NewPopulatedStdInt64(r, easy))
+			this.NullableInt64[int32(r.Int31())] = (*int64)(github_com_bittorrent_protobuf_types.NewPopulatedStdInt64(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v54 := r.Intn(10)
 		this.NonnullInt64 = make(map[int32]int64)
 		for i := 0; i < v54; i++ {
-			this.NonnullInt64[int32(r.Int31())] = (int64)(*github_com_tron_us_protobuf_types.NewPopulatedStdInt64(r, easy))
+			this.NonnullInt64[int32(r.Int31())] = (int64)(*github_com_bittorrent_protobuf_types.NewPopulatedStdInt64(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v55 := r.Intn(10)
 		this.NullableUInt64 = make(map[int32]*uint64)
 		for i := 0; i < v55; i++ {
-			this.NullableUInt64[int32(r.Int31())] = (*uint64)(github_com_tron_us_protobuf_types.NewPopulatedStdUInt64(r, easy))
+			this.NullableUInt64[int32(r.Int31())] = (*uint64)(github_com_bittorrent_protobuf_types.NewPopulatedStdUInt64(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v56 := r.Intn(10)
 		this.NonnullUInt64 = make(map[int32]uint64)
 		for i := 0; i < v56; i++ {
-			this.NonnullUInt64[int32(r.Int31())] = (uint64)(*github_com_tron_us_protobuf_types.NewPopulatedStdUInt64(r, easy))
+			this.NonnullUInt64[int32(r.Int31())] = (uint64)(*github_com_bittorrent_protobuf_types.NewPopulatedStdUInt64(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v57 := r.Intn(10)
 		this.NullableInt32 = make(map[int32]*int32)
 		for i := 0; i < v57; i++ {
-			this.NullableInt32[int32(r.Int31())] = (*int32)(github_com_tron_us_protobuf_types.NewPopulatedStdInt32(r, easy))
+			this.NullableInt32[int32(r.Int31())] = (*int32)(github_com_bittorrent_protobuf_types.NewPopulatedStdInt32(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v58 := r.Intn(10)
 		this.NonnullInt32 = make(map[int32]int32)
 		for i := 0; i < v58; i++ {
-			this.NonnullInt32[int32(r.Int31())] = (int32)(*github_com_tron_us_protobuf_types.NewPopulatedStdInt32(r, easy))
+			this.NonnullInt32[int32(r.Int31())] = (int32)(*github_com_bittorrent_protobuf_types.NewPopulatedStdInt32(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v59 := r.Intn(10)
 		this.NullableUInt32 = make(map[int32]*uint32)
 		for i := 0; i < v59; i++ {
-			this.NullableUInt32[int32(r.Int31())] = (*uint32)(github_com_tron_us_protobuf_types.NewPopulatedStdUInt32(r, easy))
+			this.NullableUInt32[int32(r.Int31())] = (*uint32)(github_com_bittorrent_protobuf_types.NewPopulatedStdUInt32(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v60 := r.Intn(10)
 		this.NonnullUInt32 = make(map[int32]uint32)
 		for i := 0; i < v60; i++ {
-			this.NonnullUInt32[int32(r.Int31())] = (uint32)(*github_com_tron_us_protobuf_types.NewPopulatedStdUInt32(r, easy))
+			this.NonnullUInt32[int32(r.Int31())] = (uint32)(*github_com_bittorrent_protobuf_types.NewPopulatedStdUInt32(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v61 := r.Intn(10)
 		this.NullableBool = make(map[int32]*bool)
 		for i := 0; i < v61; i++ {
-			this.NullableBool[int32(r.Int31())] = (*bool)(github_com_tron_us_protobuf_types.NewPopulatedStdBool(r, easy))
+			this.NullableBool[int32(r.Int31())] = (*bool)(github_com_bittorrent_protobuf_types.NewPopulatedStdBool(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v62 := r.Intn(10)
 		this.NonnullBool = make(map[int32]bool)
 		for i := 0; i < v62; i++ {
-			this.NonnullBool[int32(r.Int31())] = (bool)(*github_com_tron_us_protobuf_types.NewPopulatedStdBool(r, easy))
+			this.NonnullBool[int32(r.Int31())] = (bool)(*github_com_bittorrent_protobuf_types.NewPopulatedStdBool(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v63 := r.Intn(10)
 		this.NullableString = make(map[int32]*string)
 		for i := 0; i < v63; i++ {
-			this.NullableString[int32(r.Int31())] = (*string)(github_com_tron_us_protobuf_types.NewPopulatedStdString(r, easy))
+			this.NullableString[int32(r.Int31())] = (*string)(github_com_bittorrent_protobuf_types.NewPopulatedStdString(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v64 := r.Intn(10)
 		this.NonnullString = make(map[int32]string)
 		for i := 0; i < v64; i++ {
-			this.NonnullString[int32(r.Int31())] = (string)(*github_com_tron_us_protobuf_types.NewPopulatedStdString(r, easy))
+			this.NonnullString[int32(r.Int31())] = (string)(*github_com_bittorrent_protobuf_types.NewPopulatedStdString(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v65 := r.Intn(10)
 		this.NullableBytes = make(map[int32]*[]byte)
 		for i := 0; i < v65; i++ {
-			this.NullableBytes[int32(r.Int31())] = (*[]byte)(github_com_tron_us_protobuf_types.NewPopulatedStdBytes(r, easy))
+			this.NullableBytes[int32(r.Int31())] = (*[]byte)(github_com_bittorrent_protobuf_types.NewPopulatedStdBytes(r, easy))
 		}
 	}
 	if r.Intn(5) != 0 {
 		v66 := r.Intn(10)
 		this.NonnullBytes = make(map[int32][]byte)
 		for i := 0; i < v66; i++ {
-			this.NonnullBytes[int32(r.Int31())] = ([]byte)(*github_com_tron_us_protobuf_types.NewPopulatedStdBytes(r, easy))
+			this.NonnullBytes[int32(r.Int31())] = ([]byte)(*github_com_bittorrent_protobuf_types.NewPopulatedStdBytes(r, easy))
 		}
 	}
 	if !easy && r.Intn(10) != 0 {
@@ -3860,57 +3861,57 @@ func NewPopulatedOneofStdTypes(r randyStdtypes, easy bool) *OneofStdTypes {
 
 func NewPopulatedOneofStdTypes_Timestamp(r randyStdtypes, easy bool) *OneofStdTypes_Timestamp {
 	this := &OneofStdTypes_Timestamp{}
-	this.Timestamp = github_com_tron_us_protobuf_types.NewPopulatedStdTime(r, easy)
+	this.Timestamp = github_com_bittorrent_protobuf_types.NewPopulatedStdTime(r, easy)
 	return this
 }
 func NewPopulatedOneofStdTypes_Duration(r randyStdtypes, easy bool) *OneofStdTypes_Duration {
 	this := &OneofStdTypes_Duration{}
-	this.Duration = github_com_tron_us_protobuf_types.NewPopulatedStdDuration(r, easy)
+	this.Duration = github_com_bittorrent_protobuf_types.NewPopulatedStdDuration(r, easy)
 	return this
 }
 func NewPopulatedOneofStdTypes_RepDouble(r randyStdtypes, easy bool) *OneofStdTypes_RepDouble {
 	this := &OneofStdTypes_RepDouble{}
-	this.RepDouble = github_com_tron_us_protobuf_types.NewPopulatedStdDouble(r, easy)
+	this.RepDouble = github_com_bittorrent_protobuf_types.NewPopulatedStdDouble(r, easy)
 	return this
 }
 func NewPopulatedOneofStdTypes_RepFloat(r randyStdtypes, easy bool) *OneofStdTypes_RepFloat {
 	this := &OneofStdTypes_RepFloat{}
-	this.RepFloat = github_com_tron_us_protobuf_types.NewPopulatedStdFloat(r, easy)
+	this.RepFloat = github_com_bittorrent_protobuf_types.NewPopulatedStdFloat(r, easy)
 	return this
 }
 func NewPopulatedOneofStdTypes_RepInt64(r randyStdtypes, easy bool) *OneofStdTypes_RepInt64 {
 	this := &OneofStdTypes_RepInt64{}
-	this.RepInt64 = github_com_tron_us_protobuf_types.NewPopulatedStdInt64(r, easy)
+	this.RepInt64 = github_com_bittorrent_protobuf_types.NewPopulatedStdInt64(r, easy)
 	return this
 }
 func NewPopulatedOneofStdTypes_RepUInt64(r randyStdtypes, easy bool) *OneofStdTypes_RepUInt64 {
 	this := &OneofStdTypes_RepUInt64{}
-	this.RepUInt64 = github_com_tron_us_protobuf_types.NewPopulatedStdUInt64(r, easy)
+	this.RepUInt64 = github_com_bittorrent_protobuf_types.NewPopulatedStdUInt64(r, easy)
 	return this
 }
 func NewPopulatedOneofStdTypes_RepInt32(r randyStdtypes, easy bool) *OneofStdTypes_RepInt32 {
 	this := &OneofStdTypes_RepInt32{}
-	this.RepInt32 = github_com_tron_us_protobuf_types.NewPopulatedStdInt32(r, easy)
+	this.RepInt32 = github_com_bittorrent_protobuf_types.NewPopulatedStdInt32(r, easy)
 	return this
 }
 func NewPopulatedOneofStdTypes_RepUInt32(r randyStdtypes, easy bool) *OneofStdTypes_RepUInt32 {
 	this := &OneofStdTypes_RepUInt32{}
-	this.RepUInt32 = github_com_tron_us_protobuf_types.NewPopulatedStdUInt32(r, easy)
+	this.RepUInt32 = github_com_bittorrent_protobuf_types.NewPopulatedStdUInt32(r, easy)
 	return this
 }
 func NewPopulatedOneofStdTypes_RepBool(r randyStdtypes, easy bool) *OneofStdTypes_RepBool {
 	this := &OneofStdTypes_RepBool{}
-	this.RepBool = github_com_tron_us_protobuf_types.NewPopulatedStdBool(r, easy)
+	this.RepBool = github_com_bittorrent_protobuf_types.NewPopulatedStdBool(r, easy)
 	return this
 }
 func NewPopulatedOneofStdTypes_RepString(r randyStdtypes, easy bool) *OneofStdTypes_RepString {
 	this := &OneofStdTypes_RepString{}
-	this.RepString = github_com_tron_us_protobuf_types.NewPopulatedStdString(r, easy)
+	this.RepString = github_com_bittorrent_protobuf_types.NewPopulatedStdString(r, easy)
 	return this
 }
 func NewPopulatedOneofStdTypes_RepBytes(r randyStdtypes, easy bool) *OneofStdTypes_RepBytes {
 	this := &OneofStdTypes_RepBytes{}
-	this.RepBytes = github_com_tron_us_protobuf_types.NewPopulatedStdBytes(r, easy)
+	this.RepBytes = github_com_bittorrent_protobuf_types.NewPopulatedStdBytes(r, easy)
 	return this
 }
 
@@ -3993,70 +3994,70 @@ func (m *StdTypes) Size() (n int) {
 	var l int
 	_ = l
 	if m.NullableTimestamp != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdTime(*m.NullableTimestamp)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdTime(*m.NullableTimestamp)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
 	if m.NullableDuration != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdDuration(*m.NullableDuration)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdDuration(*m.NullableDuration)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
-	l = github_com_tron_us_protobuf_types.SizeOfStdTime(m.Timestamp)
+	l = github_com_bittorrent_protobuf_types.SizeOfStdTime(m.Timestamp)
 	n += 1 + l + sovStdtypes(uint64(l))
-	l = github_com_tron_us_protobuf_types.SizeOfStdDuration(m.Duration)
+	l = github_com_bittorrent_protobuf_types.SizeOfStdDuration(m.Duration)
 	n += 1 + l + sovStdtypes(uint64(l))
 	if m.NullableDouble != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdDouble(*m.NullableDouble)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdDouble(*m.NullableDouble)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
-	l = github_com_tron_us_protobuf_types.SizeOfStdDouble(m.NonnullDouble)
+	l = github_com_bittorrent_protobuf_types.SizeOfStdDouble(m.NonnullDouble)
 	n += 1 + l + sovStdtypes(uint64(l))
 	if m.NullableFloat != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdFloat(*m.NullableFloat)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdFloat(*m.NullableFloat)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
-	l = github_com_tron_us_protobuf_types.SizeOfStdFloat(m.NonnullFloat)
+	l = github_com_bittorrent_protobuf_types.SizeOfStdFloat(m.NonnullFloat)
 	n += 1 + l + sovStdtypes(uint64(l))
 	if m.NullableInt64 != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdInt64(*m.NullableInt64)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdInt64(*m.NullableInt64)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
-	l = github_com_tron_us_protobuf_types.SizeOfStdInt64(m.NonnullInt64)
+	l = github_com_bittorrent_protobuf_types.SizeOfStdInt64(m.NonnullInt64)
 	n += 1 + l + sovStdtypes(uint64(l))
 	if m.NullableUInt64 != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdUInt64(*m.NullableUInt64)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdUInt64(*m.NullableUInt64)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
-	l = github_com_tron_us_protobuf_types.SizeOfStdUInt64(m.NonnullUInt64)
+	l = github_com_bittorrent_protobuf_types.SizeOfStdUInt64(m.NonnullUInt64)
 	n += 1 + l + sovStdtypes(uint64(l))
 	if m.NullableInt32 != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdInt32(*m.NullableInt32)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdInt32(*m.NullableInt32)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
-	l = github_com_tron_us_protobuf_types.SizeOfStdInt32(m.NonnullInt32)
+	l = github_com_bittorrent_protobuf_types.SizeOfStdInt32(m.NonnullInt32)
 	n += 1 + l + sovStdtypes(uint64(l))
 	if m.NullableUInt32 != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdUInt32(*m.NullableUInt32)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdUInt32(*m.NullableUInt32)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
-	l = github_com_tron_us_protobuf_types.SizeOfStdUInt32(m.NonnullUInt32)
+	l = github_com_bittorrent_protobuf_types.SizeOfStdUInt32(m.NonnullUInt32)
 	n += 2 + l + sovStdtypes(uint64(l))
 	if m.NullableBool != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdBool(*m.NullableBool)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdBool(*m.NullableBool)
 		n += 2 + l + sovStdtypes(uint64(l))
 	}
-	l = github_com_tron_us_protobuf_types.SizeOfStdBool(m.NonnullBool)
+	l = github_com_bittorrent_protobuf_types.SizeOfStdBool(m.NonnullBool)
 	n += 2 + l + sovStdtypes(uint64(l))
 	if m.NullableString != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdString(*m.NullableString)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdString(*m.NullableString)
 		n += 2 + l + sovStdtypes(uint64(l))
 	}
-	l = github_com_tron_us_protobuf_types.SizeOfStdString(m.NonnullString)
+	l = github_com_bittorrent_protobuf_types.SizeOfStdString(m.NonnullString)
 	n += 2 + l + sovStdtypes(uint64(l))
 	if m.NullableBytes != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdBytes(*m.NullableBytes)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdBytes(*m.NullableBytes)
 		n += 2 + l + sovStdtypes(uint64(l))
 	}
-	l = github_com_tron_us_protobuf_types.SizeOfStdBytes(m.NonnullBytes)
+	l = github_com_bittorrent_protobuf_types.SizeOfStdBytes(m.NonnullBytes)
 	n += 2 + l + sovStdtypes(uint64(l))
 	if m.XXX_unrecognized != nil {
 		n += len(m.XXX_unrecognized)
@@ -4072,133 +4073,133 @@ func (m *RepStdTypes) Size() (n int) {
 	_ = l
 	if len(m.NullableTimestamps) > 0 {
 		for _, e := range m.NullableTimestamps {
-			l = github_com_tron_us_protobuf_types.SizeOfStdTime(*e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdTime(*e)
 			n += 1 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NullableDurations) > 0 {
 		for _, e := range m.NullableDurations {
-			l = github_com_tron_us_protobuf_types.SizeOfStdDuration(*e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdDuration(*e)
 			n += 1 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.Timestamps) > 0 {
 		for _, e := range m.Timestamps {
-			l = github_com_tron_us_protobuf_types.SizeOfStdTime(e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdTime(e)
 			n += 1 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.Durations) > 0 {
 		for _, e := range m.Durations {
-			l = github_com_tron_us_protobuf_types.SizeOfStdDuration(e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdDuration(e)
 			n += 1 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NullableDouble) > 0 {
 		for _, e := range m.NullableDouble {
-			l = github_com_tron_us_protobuf_types.SizeOfStdDouble(*e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdDouble(*e)
 			n += 1 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NonnullDouble) > 0 {
 		for _, e := range m.NonnullDouble {
-			l = github_com_tron_us_protobuf_types.SizeOfStdDouble(e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdDouble(e)
 			n += 1 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NullableFloat) > 0 {
 		for _, e := range m.NullableFloat {
-			l = github_com_tron_us_protobuf_types.SizeOfStdFloat(*e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdFloat(*e)
 			n += 1 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NonnullFloat) > 0 {
 		for _, e := range m.NonnullFloat {
-			l = github_com_tron_us_protobuf_types.SizeOfStdFloat(e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdFloat(e)
 			n += 1 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NullableInt64) > 0 {
 		for _, e := range m.NullableInt64 {
-			l = github_com_tron_us_protobuf_types.SizeOfStdInt64(*e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdInt64(*e)
 			n += 1 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NonnullInt64) > 0 {
 		for _, e := range m.NonnullInt64 {
-			l = github_com_tron_us_protobuf_types.SizeOfStdInt64(e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdInt64(e)
 			n += 1 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NullableUInt64) > 0 {
 		for _, e := range m.NullableUInt64 {
-			l = github_com_tron_us_protobuf_types.SizeOfStdUInt64(*e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdUInt64(*e)
 			n += 1 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NonnullUInt64) > 0 {
 		for _, e := range m.NonnullUInt64 {
-			l = github_com_tron_us_protobuf_types.SizeOfStdUInt64(e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdUInt64(e)
 			n += 1 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NullableInt32) > 0 {
 		for _, e := range m.NullableInt32 {
-			l = github_com_tron_us_protobuf_types.SizeOfStdInt32(*e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdInt32(*e)
 			n += 1 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NonnullInt32) > 0 {
 		for _, e := range m.NonnullInt32 {
-			l = github_com_tron_us_protobuf_types.SizeOfStdInt32(e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdInt32(e)
 			n += 1 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NullableUInt32) > 0 {
 		for _, e := range m.NullableUInt32 {
-			l = github_com_tron_us_protobuf_types.SizeOfStdUInt32(*e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdUInt32(*e)
 			n += 1 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NonnullUInt32) > 0 {
 		for _, e := range m.NonnullUInt32 {
-			l = github_com_tron_us_protobuf_types.SizeOfStdUInt32(e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdUInt32(e)
 			n += 2 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NullableBool) > 0 {
 		for _, e := range m.NullableBool {
-			l = github_com_tron_us_protobuf_types.SizeOfStdBool(*e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdBool(*e)
 			n += 2 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NonnullBool) > 0 {
 		for _, e := range m.NonnullBool {
-			l = github_com_tron_us_protobuf_types.SizeOfStdBool(e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdBool(e)
 			n += 2 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NullableString) > 0 {
 		for _, e := range m.NullableString {
-			l = github_com_tron_us_protobuf_types.SizeOfStdString(*e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdString(*e)
 			n += 2 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NonnullString) > 0 {
 		for _, e := range m.NonnullString {
-			l = github_com_tron_us_protobuf_types.SizeOfStdString(e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdString(e)
 			n += 2 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NullableBytes) > 0 {
 		for _, e := range m.NullableBytes {
-			l = github_com_tron_us_protobuf_types.SizeOfStdBytes(*e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdBytes(*e)
 			n += 2 + l + sovStdtypes(uint64(l))
 		}
 	}
 	if len(m.NonnullBytes) > 0 {
 		for _, e := range m.NonnullBytes {
-			l = github_com_tron_us_protobuf_types.SizeOfStdBytes(e)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdBytes(e)
 			n += 2 + l + sovStdtypes(uint64(l))
 		}
 	}
@@ -4220,7 +4221,7 @@ func (m *MapStdTypes) Size() (n int) {
 			_ = v
 			l = 0
 			if v != nil {
-				l = github_com_tron_us_protobuf_types.SizeOfStdTime(*v)
+				l = github_com_bittorrent_protobuf_types.SizeOfStdTime(*v)
 				l += 1 + sovStdtypes(uint64(l))
 			}
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + l
@@ -4231,7 +4232,7 @@ func (m *MapStdTypes) Size() (n int) {
 		for k, v := range m.Timestamp {
 			_ = k
 			_ = v
-			l = github_com_tron_us_protobuf_types.SizeOfStdTime(v)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdTime(v)
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + 1 + l + sovStdtypes(uint64(l))
 			n += mapEntrySize + 1 + sovStdtypes(uint64(mapEntrySize))
 		}
@@ -4242,7 +4243,7 @@ func (m *MapStdTypes) Size() (n int) {
 			_ = v
 			l = 0
 			if v != nil {
-				l = github_com_tron_us_protobuf_types.SizeOfStdDuration(*v)
+				l = github_com_bittorrent_protobuf_types.SizeOfStdDuration(*v)
 				l += 1 + sovStdtypes(uint64(l))
 			}
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + l
@@ -4253,7 +4254,7 @@ func (m *MapStdTypes) Size() (n int) {
 		for k, v := range m.Duration {
 			_ = k
 			_ = v
-			l = github_com_tron_us_protobuf_types.SizeOfStdDuration(v)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdDuration(v)
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + 1 + l + sovStdtypes(uint64(l))
 			n += mapEntrySize + 1 + sovStdtypes(uint64(mapEntrySize))
 		}
@@ -4264,7 +4265,7 @@ func (m *MapStdTypes) Size() (n int) {
 			_ = v
 			l = 0
 			if v != nil {
-				l = github_com_tron_us_protobuf_types.SizeOfStdDouble(*v)
+				l = github_com_bittorrent_protobuf_types.SizeOfStdDouble(*v)
 				l += 1 + sovStdtypes(uint64(l))
 			}
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + l
@@ -4275,7 +4276,7 @@ func (m *MapStdTypes) Size() (n int) {
 		for k, v := range m.NonnullDouble {
 			_ = k
 			_ = v
-			l = github_com_tron_us_protobuf_types.SizeOfStdDouble(v)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdDouble(v)
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + 1 + l + sovStdtypes(uint64(l))
 			n += mapEntrySize + 1 + sovStdtypes(uint64(mapEntrySize))
 		}
@@ -4286,7 +4287,7 @@ func (m *MapStdTypes) Size() (n int) {
 			_ = v
 			l = 0
 			if v != nil {
-				l = github_com_tron_us_protobuf_types.SizeOfStdFloat(*v)
+				l = github_com_bittorrent_protobuf_types.SizeOfStdFloat(*v)
 				l += 1 + sovStdtypes(uint64(l))
 			}
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + l
@@ -4297,7 +4298,7 @@ func (m *MapStdTypes) Size() (n int) {
 		for k, v := range m.NonnullFloat {
 			_ = k
 			_ = v
-			l = github_com_tron_us_protobuf_types.SizeOfStdFloat(v)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdFloat(v)
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + 1 + l + sovStdtypes(uint64(l))
 			n += mapEntrySize + 1 + sovStdtypes(uint64(mapEntrySize))
 		}
@@ -4308,7 +4309,7 @@ func (m *MapStdTypes) Size() (n int) {
 			_ = v
 			l = 0
 			if v != nil {
-				l = github_com_tron_us_protobuf_types.SizeOfStdInt64(*v)
+				l = github_com_bittorrent_protobuf_types.SizeOfStdInt64(*v)
 				l += 1 + sovStdtypes(uint64(l))
 			}
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + l
@@ -4319,7 +4320,7 @@ func (m *MapStdTypes) Size() (n int) {
 		for k, v := range m.NonnullInt64 {
 			_ = k
 			_ = v
-			l = github_com_tron_us_protobuf_types.SizeOfStdInt64(v)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdInt64(v)
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + 1 + l + sovStdtypes(uint64(l))
 			n += mapEntrySize + 1 + sovStdtypes(uint64(mapEntrySize))
 		}
@@ -4330,7 +4331,7 @@ func (m *MapStdTypes) Size() (n int) {
 			_ = v
 			l = 0
 			if v != nil {
-				l = github_com_tron_us_protobuf_types.SizeOfStdUInt64(*v)
+				l = github_com_bittorrent_protobuf_types.SizeOfStdUInt64(*v)
 				l += 1 + sovStdtypes(uint64(l))
 			}
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + l
@@ -4341,7 +4342,7 @@ func (m *MapStdTypes) Size() (n int) {
 		for k, v := range m.NonnullUInt64 {
 			_ = k
 			_ = v
-			l = github_com_tron_us_protobuf_types.SizeOfStdUInt64(v)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdUInt64(v)
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + 1 + l + sovStdtypes(uint64(l))
 			n += mapEntrySize + 1 + sovStdtypes(uint64(mapEntrySize))
 		}
@@ -4352,7 +4353,7 @@ func (m *MapStdTypes) Size() (n int) {
 			_ = v
 			l = 0
 			if v != nil {
-				l = github_com_tron_us_protobuf_types.SizeOfStdInt32(*v)
+				l = github_com_bittorrent_protobuf_types.SizeOfStdInt32(*v)
 				l += 1 + sovStdtypes(uint64(l))
 			}
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + l
@@ -4363,7 +4364,7 @@ func (m *MapStdTypes) Size() (n int) {
 		for k, v := range m.NonnullInt32 {
 			_ = k
 			_ = v
-			l = github_com_tron_us_protobuf_types.SizeOfStdInt32(v)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdInt32(v)
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + 1 + l + sovStdtypes(uint64(l))
 			n += mapEntrySize + 1 + sovStdtypes(uint64(mapEntrySize))
 		}
@@ -4374,7 +4375,7 @@ func (m *MapStdTypes) Size() (n int) {
 			_ = v
 			l = 0
 			if v != nil {
-				l = github_com_tron_us_protobuf_types.SizeOfStdUInt32(*v)
+				l = github_com_bittorrent_protobuf_types.SizeOfStdUInt32(*v)
 				l += 1 + sovStdtypes(uint64(l))
 			}
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + l
@@ -4385,7 +4386,7 @@ func (m *MapStdTypes) Size() (n int) {
 		for k, v := range m.NonnullUInt32 {
 			_ = k
 			_ = v
-			l = github_com_tron_us_protobuf_types.SizeOfStdUInt32(v)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdUInt32(v)
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + 1 + l + sovStdtypes(uint64(l))
 			n += mapEntrySize + 2 + sovStdtypes(uint64(mapEntrySize))
 		}
@@ -4396,7 +4397,7 @@ func (m *MapStdTypes) Size() (n int) {
 			_ = v
 			l = 0
 			if v != nil {
-				l = github_com_tron_us_protobuf_types.SizeOfStdBool(*v)
+				l = github_com_bittorrent_protobuf_types.SizeOfStdBool(*v)
 				l += 1 + sovStdtypes(uint64(l))
 			}
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + l
@@ -4407,7 +4408,7 @@ func (m *MapStdTypes) Size() (n int) {
 		for k, v := range m.NonnullBool {
 			_ = k
 			_ = v
-			l = github_com_tron_us_protobuf_types.SizeOfStdBool(v)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdBool(v)
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + 1 + l + sovStdtypes(uint64(l))
 			n += mapEntrySize + 2 + sovStdtypes(uint64(mapEntrySize))
 		}
@@ -4418,7 +4419,7 @@ func (m *MapStdTypes) Size() (n int) {
 			_ = v
 			l = 0
 			if v != nil {
-				l = github_com_tron_us_protobuf_types.SizeOfStdString(*v)
+				l = github_com_bittorrent_protobuf_types.SizeOfStdString(*v)
 				l += 1 + sovStdtypes(uint64(l))
 			}
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + l
@@ -4429,7 +4430,7 @@ func (m *MapStdTypes) Size() (n int) {
 		for k, v := range m.NonnullString {
 			_ = k
 			_ = v
-			l = github_com_tron_us_protobuf_types.SizeOfStdString(v)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdString(v)
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + 1 + l + sovStdtypes(uint64(l))
 			n += mapEntrySize + 2 + sovStdtypes(uint64(mapEntrySize))
 		}
@@ -4440,7 +4441,7 @@ func (m *MapStdTypes) Size() (n int) {
 			_ = v
 			l = 0
 			if v != nil {
-				l = github_com_tron_us_protobuf_types.SizeOfStdBytes(*v)
+				l = github_com_bittorrent_protobuf_types.SizeOfStdBytes(*v)
 				l += 1 + sovStdtypes(uint64(l))
 			}
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + l
@@ -4451,7 +4452,7 @@ func (m *MapStdTypes) Size() (n int) {
 		for k, v := range m.NonnullBytes {
 			_ = k
 			_ = v
-			l = github_com_tron_us_protobuf_types.SizeOfStdBytes(v)
+			l = github_com_bittorrent_protobuf_types.SizeOfStdBytes(v)
 			mapEntrySize := 1 + sovStdtypes(uint64(k)) + 1 + l + sovStdtypes(uint64(l))
 			n += mapEntrySize + 2 + sovStdtypes(uint64(mapEntrySize))
 		}
@@ -4484,7 +4485,7 @@ func (m *OneofStdTypes_Timestamp) Size() (n int) {
 	var l int
 	_ = l
 	if m.Timestamp != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdTime(*m.Timestamp)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdTime(*m.Timestamp)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
 	return n
@@ -4496,7 +4497,7 @@ func (m *OneofStdTypes_Duration) Size() (n int) {
 	var l int
 	_ = l
 	if m.Duration != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdDuration(*m.Duration)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdDuration(*m.Duration)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
 	return n
@@ -4508,7 +4509,7 @@ func (m *OneofStdTypes_RepDouble) Size() (n int) {
 	var l int
 	_ = l
 	if m.RepDouble != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdDouble(*m.RepDouble)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdDouble(*m.RepDouble)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
 	return n
@@ -4520,7 +4521,7 @@ func (m *OneofStdTypes_RepFloat) Size() (n int) {
 	var l int
 	_ = l
 	if m.RepFloat != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdFloat(*m.RepFloat)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdFloat(*m.RepFloat)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
 	return n
@@ -4532,7 +4533,7 @@ func (m *OneofStdTypes_RepInt64) Size() (n int) {
 	var l int
 	_ = l
 	if m.RepInt64 != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdInt64(*m.RepInt64)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdInt64(*m.RepInt64)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
 	return n
@@ -4544,7 +4545,7 @@ func (m *OneofStdTypes_RepUInt64) Size() (n int) {
 	var l int
 	_ = l
 	if m.RepUInt64 != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdUInt64(*m.RepUInt64)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdUInt64(*m.RepUInt64)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
 	return n
@@ -4556,7 +4557,7 @@ func (m *OneofStdTypes_RepInt32) Size() (n int) {
 	var l int
 	_ = l
 	if m.RepInt32 != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdInt32(*m.RepInt32)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdInt32(*m.RepInt32)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
 	return n
@@ -4568,7 +4569,7 @@ func (m *OneofStdTypes_RepUInt32) Size() (n int) {
 	var l int
 	_ = l
 	if m.RepUInt32 != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdUInt32(*m.RepUInt32)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdUInt32(*m.RepUInt32)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
 	return n
@@ -4580,7 +4581,7 @@ func (m *OneofStdTypes_RepBool) Size() (n int) {
 	var l int
 	_ = l
 	if m.RepBool != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdBool(*m.RepBool)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdBool(*m.RepBool)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
 	return n
@@ -4592,7 +4593,7 @@ func (m *OneofStdTypes_RepString) Size() (n int) {
 	var l int
 	_ = l
 	if m.RepString != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdString(*m.RepString)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdString(*m.RepString)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
 	return n
@@ -4604,7 +4605,7 @@ func (m *OneofStdTypes_RepBytes) Size() (n int) {
 	var l int
 	_ = l
 	if m.RepBytes != nil {
-		l = github_com_tron_us_protobuf_types.SizeOfStdBytes(*m.RepBytes)
+		l = github_com_bittorrent_protobuf_types.SizeOfStdBytes(*m.RepBytes)
 		n += 1 + l + sovStdtypes(uint64(l))
 	}
 	return n

@@ -28,5 +28,5 @@
 
 regenerate:
 	go install github.com/gogo/protobuf/protoc-gen-combo
-	go install github.com/tron-us/protobuf/protoc-gen-gogo
+	go install github.com/bittorrent/protobuf/protoc-gen-gogo
 	protoc-gen-combo --version="2.6.0" --gogo_out=. --proto_path=../../protobuf/:../../../../../:. one.proto

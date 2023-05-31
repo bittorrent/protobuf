@@ -29,7 +29,7 @@
 syntax = "proto2";
 package defaultcheck;
 
-import "github.com/tron-us/protobuf/gogoproto/gogo.proto";
+import "github.com/bittorrent/protobuf/gogoproto/gogo.proto";
 
 option (gogoproto.face_all) = true;
 option (gogoproto.goproto_getters_all) = false;

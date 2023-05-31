@@ -30,7 +30,7 @@ package deterministic
 
 import (
 	"bytes"
-	"github.com/tron-us/protobuf/proto"
+	"github.com/bittorrent/protobuf/proto"
 	"testing"
 )
 

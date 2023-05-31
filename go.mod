@@ -1,4 +1,4 @@
-module github.com/tron-us/protobuf
+module github.com/bittorrent/protobuf
 
 go 1.13
 

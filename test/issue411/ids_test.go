@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/tron-us/protobuf/jsonpb"
-	"github.com/tron-us/protobuf/proto"
-	"github.com/tron-us/protobuf/test/issue411"
+	"github.com/bittorrent/protobuf/jsonpb"
+	"github.com/bittorrent/protobuf/proto"
+	"github.com/bittorrent/protobuf/test/issue411"
 )
 
 // Thanks to @yurishkuro for reporting this issue (#411) and providing this test case

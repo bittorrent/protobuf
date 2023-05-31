@@ -27,5 +27,5 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 regenerate:
-	go install github.com/tron-us/protobuf/protoc-gen-gogo
+	go install github.com/bittorrent/protobuf/protoc-gen-gogo
 	protoc --gogo_out=. --proto_path=../../../../../:../../protobuf/:. *.proto

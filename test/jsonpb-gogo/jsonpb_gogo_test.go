@@ -3,7 +3,7 @@ package jsonpb_gogo
 import (
 	"testing"
 
-	"github.com/tron-us/protobuf/jsonpb"
+	"github.com/bittorrent/protobuf/jsonpb"
 )
 
 // customFieldMessage implements protobuf.Message but is not a normal generated message type.

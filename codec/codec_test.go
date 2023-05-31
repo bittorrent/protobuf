@@ -29,7 +29,7 @@
 package codec
 
 import (
-	"github.com/tron-us/protobuf/test"
+	"github.com/bittorrent/protobuf/test"
 	"math/rand"
 	"testing"
 	"time"

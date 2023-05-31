@@ -35,9 +35,9 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/tron-us/protobuf/proto"
-	pb "github.com/tron-us/protobuf/proto/proto3_proto"
-	tpb "github.com/tron-us/protobuf/proto/test_proto"
+	"github.com/bittorrent/protobuf/proto"
+	pb "github.com/bittorrent/protobuf/proto/proto3_proto"
+	tpb "github.com/bittorrent/protobuf/proto/test_proto"
 )
 
 func TestProto3ZeroValues(t *testing.T) {

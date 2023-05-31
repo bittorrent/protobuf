@@ -28,7 +28,7 @@
 
 regenerate:
 	go install github.com/gogo/protobuf/protoc-min-version
-	go install github.com/tron-us/protobuf/protoc-gen-gogo
+	go install github.com/bittorrent/protobuf/protoc-gen-gogo
 	protoc-min-version --version="3.0.0" --gogo_out=:. \
 	--proto_path=../../../../../:../../protobuf/:. importduplicate.proto
 	protoc-min-version --version="3.0.0" --gogo_out=:. \

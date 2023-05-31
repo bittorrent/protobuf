@@ -27,8 +27,8 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 regenerate:
-	go install github.com/tron-us/protobuf/protoc-gen-gogo
-	protoc --gogo_out=Mgoogle/protobuf/descriptor.proto=github.com/tron-us/protobuf/protoc-gen-gogo/descriptor:../../../../ --proto_path=../../../../:../protobuf/:. *.proto
+	go install github.com/bittorrent/protobuf/protoc-gen-gogo
+	protoc --gogo_out=Mgoogle/protobuf/descriptor.proto=github.com/bittorrent/protobuf/protoc-gen-gogo/descriptor:../../../../ --proto_path=../../../../:../protobuf/:. *.proto
 	protoc --js_out=import_style=commonjs,binary:. --proto_path=. *.proto
 
 restore:

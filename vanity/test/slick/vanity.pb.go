@@ -5,8 +5,8 @@ package vanity
 
 import (
 	fmt "fmt"
-	github_com_tron_us_protobuf_proto "github.com/tron-us/protobuf/proto"
-	proto "github.com/tron-us/protobuf/proto"
+	github_com_bittorrent_protobuf_proto "github.com/bittorrent/protobuf/proto"
+	proto "github.com/bittorrent/protobuf/proto"
 	io "io"
 	math "math"
 	math_bits "math/bits"
@@ -322,7 +322,7 @@ func (m *A) Unmarshal(dAtA []byte) error {
 		}
 	}
 	if hasFields[0]&uint64(0x00000001) == 0 {
-		return github_com_tron_us_protobuf_proto.NewRequiredNotSetError("Int")
+		return github_com_bittorrent_protobuf_proto.NewRequiredNotSetError("Int")
 	}
 
 	if iNdEx > l {

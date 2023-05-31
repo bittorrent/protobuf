@@ -39,7 +39,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/tron-us/protobuf/proto"
+	"github.com/bittorrent/protobuf/proto"
 )
 
 const googleApis = "type.googleapis.com/"

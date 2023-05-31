@@ -34,10 +34,10 @@ package proto_test
 import (
 	"testing"
 
-	"github.com/tron-us/protobuf/proto"
+	"github.com/bittorrent/protobuf/proto"
 
-	proto3pb "github.com/tron-us/protobuf/proto/proto3_proto"
-	pb "github.com/tron-us/protobuf/proto/test_proto"
+	proto3pb "github.com/bittorrent/protobuf/proto/proto3_proto"
+	pb "github.com/bittorrent/protobuf/proto/test_proto"
 )
 
 var cloneTestMessage = &pb.MyMessage{

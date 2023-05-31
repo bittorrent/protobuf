@@ -29,7 +29,7 @@
 package unrecognizedgroup
 
 import (
-	"github.com/tron-us/protobuf/proto"
+	"github.com/bittorrent/protobuf/proto"
 	math_rand "math/rand"
 	"testing"
 	time "time"

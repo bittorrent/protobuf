@@ -32,7 +32,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/tron-us/protobuf/proto"
+	"github.com/bittorrent/protobuf/proto"
 )
 
 func TestEncodeShort(t *testing.T) {

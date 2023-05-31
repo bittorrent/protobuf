@@ -32,7 +32,7 @@ import (
 	"encoding/binary"
 	"io"
 
-	"github.com/tron-us/protobuf/proto"
+	"github.com/bittorrent/protobuf/proto"
 )
 
 const uint32BinaryLen = 4

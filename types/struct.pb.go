@@ -7,8 +7,8 @@ import (
 	bytes "bytes"
 	encoding_binary "encoding/binary"
 	fmt "fmt"
-	proto "github.com/tron-us/protobuf/proto"
-	github_com_tron_us_protobuf_sortkeys "github.com/tron-us/protobuf/sortkeys"
+	proto "github.com/bittorrent/protobuf/proto"
+	github_com_bittorrent_protobuf_sortkeys "github.com/bittorrent/protobuf/sortkeys"
 	io "io"
 	math "math"
 	math_bits "math/bits"
@@ -976,7 +976,7 @@ func (this *Struct) GoString() string {
 	for k := range this.Fields {
 		keysForFields = append(keysForFields, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Strings(keysForFields)
+	github_com_bittorrent_protobuf_sortkeys.Strings(keysForFields)
 	mapStringForFields := "map[string]*Value{"
 	for _, k := range keysForFields {
 		mapStringForFields += fmt.Sprintf("%#v: %#v,", k, this.Fields[k])
@@ -1607,7 +1607,7 @@ func (this *Struct) String() string {
 	for k := range this.Fields {
 		keysForFields = append(keysForFields, k)
 	}
-	github_com_tron_us_protobuf_sortkeys.Strings(keysForFields)
+	github_com_bittorrent_protobuf_sortkeys.Strings(keysForFields)
 	mapStringForFields := "map[string]*Value{"
 	for _, k := range keysForFields {
 		mapStringForFields += fmt.Sprintf("%v: %v,", k, this.Fields[k])

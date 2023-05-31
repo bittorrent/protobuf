@@ -62,11 +62,11 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/tron-us/protobuf/gogoproto"
-	"github.com/tron-us/protobuf/proto"
-	descriptor "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
-	"github.com/tron-us/protobuf/protoc-gen-gogo/generator/internal/remap"
-	plugin "github.com/tron-us/protobuf/protoc-gen-gogo/plugin"
+	"github.com/bittorrent/protobuf/gogoproto"
+	"github.com/bittorrent/protobuf/proto"
+	descriptor "github.com/bittorrent/protobuf/protoc-gen-gogo/descriptor"
+	"github.com/bittorrent/protobuf/protoc-gen-gogo/generator/internal/remap"
+	plugin "github.com/bittorrent/protobuf/protoc-gen-gogo/plugin"
 )
 
 // generatedCodeVersion indicates a version of the generated code.
@@ -1406,7 +1406,7 @@ func (g *Generator) generateImports() {
 	g.PrintImport(GoPackageName(g.Pkg["fmt"]), "fmt")
 	g.PrintImport(GoPackageName(g.Pkg["math"]), "math")
 	if gogoproto.ImportsGoGoProto(g.file.FileDescriptorProto) {
-		g.PrintImport(GoPackageName(g.Pkg["proto"]), GoImportPath(g.ImportPrefix)+GoImportPath("github.com/tron-us/protobuf/proto"))
+		g.PrintImport(GoPackageName(g.Pkg["proto"]), GoImportPath(g.ImportPrefix)+GoImportPath("github.com/bittorrent/protobuf/proto"))
 		if gogoproto.RegistersGolangProto(g.file.FileDescriptorProto) {
 			g.PrintImport(GoPackageName(g.Pkg["golang_proto"]), GoImportPath(g.ImportPrefix)+GoImportPath("github.com/golang/protobuf/proto"))
 		}

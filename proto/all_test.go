@@ -45,11 +45,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tron-us/protobuf/jsonpb"
-	. "github.com/tron-us/protobuf/proto"
-	pb3 "github.com/tron-us/protobuf/proto/proto3_proto"
-	. "github.com/tron-us/protobuf/proto/test_proto"
-	descriptorpb "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
+	"github.com/bittorrent/protobuf/jsonpb"
+	pb3 "github.com/bittorrent/protobuf/proto/proto3_proto"
+	descriptorpb "github.com/bittorrent/protobuf/protoc-gen-gogo/descriptor"
 )
 
 var globalO *Buffer

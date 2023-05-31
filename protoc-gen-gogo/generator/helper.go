@@ -36,10 +36,10 @@ import (
 	"path"
 	"strings"
 
-	"github.com/tron-us/protobuf/gogoproto"
-	"github.com/tron-us/protobuf/proto"
-	descriptor "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
-	plugin "github.com/tron-us/protobuf/protoc-gen-gogo/plugin"
+	"github.com/bittorrent/protobuf/gogoproto"
+	"github.com/bittorrent/protobuf/proto"
+	descriptor "github.com/bittorrent/protobuf/protoc-gen-gogo/descriptor"
+	plugin "github.com/bittorrent/protobuf/protoc-gen-gogo/plugin"
 )
 
 func (d *FileDescriptor) Messages() []*Descriptor {
@@ -451,8 +451,8 @@ func (d *Descriptor) Path() string {
 }
 
 func (g *Generator) useTypes() string {
-	pkg := strings.Map(badToUnderscore, "github.com/tron-us/protobuf/types")
-	g.customImports = append(g.customImports, "github.com/tron-us/protobuf/types")
+	pkg := strings.Map(badToUnderscore, "github.com/bittorrent/protobuf/types")
+	g.customImports = append(g.customImports, "github.com/bittorrent/protobuf/types")
 	return pkg
 }
 
