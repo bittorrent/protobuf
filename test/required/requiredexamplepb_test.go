@@ -29,8 +29,8 @@
 package required
 
 import (
-	"github.com/tron-us/protobuf/proto"
-	"github.com/tron-us/protobuf/test"
+	"github.com/bittorrent/protobuf/proto"
+	"github.com/bittorrent/protobuf/test"
 	"math/rand"
 	"reflect"
 	"strconv"

@@ -30,7 +30,7 @@ syntax = "proto2";
 
 package proto;
 
-import "github.com/tron-us/protobuf/gogoproto/gogo.proto";
+import "github.com/bittorrent/protobuf/gogoproto/gogo.proto";
 
 option (gogoproto.unmarshaler_all) = true;
 option (gogoproto.testgen_all) = true;

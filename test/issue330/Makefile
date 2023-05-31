@@ -1,3 +1,3 @@
 regenerate:
-	go install github.com/tron-us/protobuf/protoc-gen-gogo
-	protoc-min-version --version="3.0.0" --gogo_out=Mgoogle/protobuf/descriptor.proto=github.com/tron-us/protobuf/protoc-gen-gogo/descriptor:. --proto_path=../../../../../:../../protobuf/:. *.proto
+	go install github.com/bittorrent/protobuf/protoc-gen-gogo
+	protoc-min-version --version="3.0.0" --gogo_out=Mgoogle/protobuf/descriptor.proto=github.com/bittorrent/protobuf/protoc-gen-gogo/descriptor:. --proto_path=../../../../../:../../protobuf/:. *.proto

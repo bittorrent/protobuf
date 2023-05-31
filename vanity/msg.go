@@ -29,9 +29,9 @@
 package vanity
 
 import (
-	"github.com/tron-us/protobuf/gogoproto"
-	"github.com/tron-us/protobuf/proto"
-	descriptor "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
+	"github.com/bittorrent/protobuf/gogoproto"
+	"github.com/bittorrent/protobuf/proto"
+	descriptor "github.com/bittorrent/protobuf/protoc-gen-gogo/descriptor"
 )
 
 func MessageHasBoolExtension(msg *descriptor.DescriptorProto, extension *proto.ExtensionDesc) bool {

@@ -32,7 +32,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/tron-us/protobuf/proto"
+	"github.com/bittorrent/protobuf/proto"
 )
 
 func TestNilMaps(t *testing.T) {

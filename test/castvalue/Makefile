@@ -29,7 +29,7 @@
 regenerate:
 	rm -rf combos
 	go install github.com/gogo/protobuf/protoc-gen-combo
-	go install github.com/tron-us/protobuf/protoc-gen-gogo
+	go install github.com/bittorrent/protobuf/protoc-gen-gogo
 	protoc-min-version --version="3.0.0" --gogo_out=. --proto_path=../../protobuf/:../../../../../:. castvalue.proto
 	protoc-gen-combo --default=false --version="3.0.0" --gogo_out=. --proto_path=../../protobuf/:../../../../../:. castvalue.proto
 	cp mytypes.go ./combos/both/ || true

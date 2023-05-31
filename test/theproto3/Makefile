@@ -28,7 +28,7 @@
 
 regenerate:
 	go install github.com/gogo/protobuf/protoc-gen-combo
-	go install github.com/tron-us/protobuf/protoc-gen-gogo
+	go install github.com/bittorrent/protobuf/protoc-gen-gogo
 	cp header.proto theproto3.proto
 	cat maps.proto >> theproto3.proto
 	cat footer.proto >> theproto3.proto

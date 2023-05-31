@@ -30,7 +30,7 @@ syntax = "proto3";
 
 package issue503;
 
-import "github.com/tron-us/protobuf/gogoproto/gogo.proto";
+import "github.com/bittorrent/protobuf/gogoproto/gogo.proto";
 
 option (gogoproto.equal_all) = true;
 option (gogoproto.verbose_equal_all) = true;

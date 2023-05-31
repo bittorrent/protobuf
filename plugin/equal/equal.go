@@ -63,7 +63,7 @@ The following message:
 
   message B {
 	optional A A = 1 [(gogoproto.nullable) = false, (gogoproto.embed) = true];
-	repeated bytes G = 2 [(gogoproto.customtype) = "github.com/tron-us/protobuf/test/custom.Uint128", (gogoproto.nullable) = false];
+	repeated bytes G = 2 [(gogoproto.customtype) = "github.com/bittorrent/protobuf/test/custom.Uint128", (gogoproto.nullable) = false];
   }
 
 given to the equal plugin, will generate the following code:
@@ -157,11 +157,11 @@ and the following test code:
 package equal
 
 import (
-	"github.com/tron-us/protobuf/gogoproto"
-	"github.com/tron-us/protobuf/proto"
-	descriptor "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
-	"github.com/tron-us/protobuf/protoc-gen-gogo/generator"
-	"github.com/tron-us/protobuf/vanity"
+	"github.com/bittorrent/protobuf/gogoproto"
+	"github.com/bittorrent/protobuf/proto"
+	descriptor "github.com/bittorrent/protobuf/protoc-gen-gogo/descriptor"
+	"github.com/bittorrent/protobuf/protoc-gen-gogo/generator"
+	"github.com/bittorrent/protobuf/vanity"
 )
 
 type plugin struct {
@@ -188,7 +188,7 @@ func (p *plugin) Generate(file *generator.FileDescriptor) {
 	p.PluginImports = generator.NewPluginImports(p.Generator)
 	p.fmtPkg = p.NewImport("fmt")
 	p.bytesPkg = p.NewImport("bytes")
-	p.protoPkg = p.NewImport("github.com/tron-us/protobuf/proto")
+	p.protoPkg = p.NewImport("github.com/bittorrent/protobuf/proto")
 
 	for _, msg := range file.Messages() {
 		if msg.DescriptorProto.GetOptions().GetMapEntry() {

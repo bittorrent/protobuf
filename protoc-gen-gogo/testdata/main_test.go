@@ -36,9 +36,9 @@ package testdata
 import (
 	"testing"
 
-	importspb "github.com/tron-us/protobuf/protoc-gen-gogo/testdata/imports"
-	multipb "github.com/tron-us/protobuf/protoc-gen-gogo/testdata/multi"
-	mytestpb "github.com/tron-us/protobuf/protoc-gen-gogo/testdata/my_test"
+	importspb "github.com/bittorrent/protobuf/protoc-gen-gogo/testdata/imports"
+	multipb "github.com/bittorrent/protobuf/protoc-gen-gogo/testdata/multi"
+	mytestpb "github.com/bittorrent/protobuf/protoc-gen-gogo/testdata/my_test"
 )
 
 func TestLink(t *testing.T) {

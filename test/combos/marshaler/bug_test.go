@@ -35,7 +35,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tron-us/protobuf/proto"
+	"github.com/bittorrent/protobuf/proto"
 )
 
 //http://code.google.com/p/goprotobuf/issues/detail?id=39

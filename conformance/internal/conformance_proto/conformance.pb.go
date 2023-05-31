@@ -5,8 +5,8 @@ package conformance
 
 import (
 	fmt "fmt"
+	proto "github.com/bittorrent/protobuf/proto"
 	types "github.com/gogo/protobuf/types"
-	proto "github.com/tron-us/protobuf/proto"
 	math "math"
 )
 

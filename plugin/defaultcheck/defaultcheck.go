@@ -53,8 +53,8 @@ package defaultcheck
 
 import (
 	"fmt"
-	"github.com/tron-us/protobuf/gogoproto"
-	"github.com/tron-us/protobuf/protoc-gen-gogo/generator"
+	"github.com/bittorrent/protobuf/gogoproto"
+	"github.com/bittorrent/protobuf/protoc-gen-gogo/generator"
 	"os"
 )
 

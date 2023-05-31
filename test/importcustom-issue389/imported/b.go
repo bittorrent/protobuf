@@ -3,7 +3,7 @@ package imported
 import (
 	"encoding/json"
 
-	"github.com/tron-us/protobuf/proto"
+	"github.com/bittorrent/protobuf/proto"
 )
 
 type B struct {

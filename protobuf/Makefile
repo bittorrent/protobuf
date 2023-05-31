@@ -2,7 +2,7 @@ VERSION=3.9.1
 URL="https://raw.githubusercontent.com/protocolbuffers/protobuf/v${VERSION}/src/google/protobuf"
 
 regenerate:
-	go install github.com/tron-us/protobuf/protoc-gen-gogotypes
+	go install github.com/bittorrent/protobuf/protoc-gen-gogotypes
 	go install github.com/gogo/protobuf/protoc-min-version
 
 	protoc-min-version \

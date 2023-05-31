@@ -49,7 +49,7 @@ The following message:
 
   message B {
 	optional A A = 1 [(gogoproto.nullable) = false, (gogoproto.embed) = true];
-	repeated bytes G = 2 [(gogoproto.customtype) = "github.com/tron-us/protobuf/test/custom.Uint128", (gogoproto.nullable) = false];
+	repeated bytes G = 2 [(gogoproto.customtype) = "github.com/bittorrent/protobuf/test/custom.Uint128", (gogoproto.nullable) = false];
   }
 
 given to the populate plugin, will generate code the following code:
@@ -89,11 +89,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/tron-us/protobuf/gogoproto"
-	"github.com/tron-us/protobuf/proto"
-	descriptor "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
-	"github.com/tron-us/protobuf/protoc-gen-gogo/generator"
-	"github.com/tron-us/protobuf/vanity"
+	"github.com/bittorrent/protobuf/gogoproto"
+	"github.com/bittorrent/protobuf/proto"
+	descriptor "github.com/bittorrent/protobuf/protoc-gen-gogo/descriptor"
+	"github.com/bittorrent/protobuf/protoc-gen-gogo/generator"
+	"github.com/bittorrent/protobuf/vanity"
 )
 
 type VarGen interface {
@@ -523,9 +523,9 @@ func (p *plugin) Generate(file *generator.FileDescriptor) {
 	p.PluginImports = generator.NewPluginImports(p.Generator)
 	p.varGen = NewVarGen()
 	proto3 := gogoproto.IsProto3(file.FileDescriptorProto)
-	p.typesPkg = p.NewImport("github.com/tron-us/protobuf/types")
+	p.typesPkg = p.NewImport("github.com/bittorrent/protobuf/types")
 	p.localName = generator.FileName(file)
-	protoPkg := p.NewImport("github.com/tron-us/protobuf/proto")
+	protoPkg := p.NewImport("github.com/bittorrent/protobuf/proto")
 	if !gogoproto.ImportsGoGoProto(file.FileDescriptorProto) {
 		protoPkg = p.NewImport("github.com/golang/protobuf/proto")
 	}

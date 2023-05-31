@@ -153,7 +153,7 @@ Install protoc-gen-gogo:
 
     go get github.com/gogo/protobuf/proto
     go get github.com/gogo/protobuf/jsonpb
-    go get github.com/tron-us/protobuf/protoc-gen-gogo
+    go get github.com/bittorrent/protobuf/protoc-gen-gogo
     go get github.com/gogo/protobuf/gogoproto
 
 ## GRPC

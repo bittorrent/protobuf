@@ -34,7 +34,7 @@ package generator
 import (
 	"testing"
 
-	"github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
+	"github.com/bittorrent/protobuf/protoc-gen-gogo/descriptor"
 )
 
 func TestCamelCase(t *testing.T) {

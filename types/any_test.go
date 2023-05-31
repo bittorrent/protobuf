@@ -34,8 +34,8 @@ package types
 import (
 	"testing"
 
-	"github.com/tron-us/protobuf/proto"
-	pb "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
+	"github.com/bittorrent/protobuf/proto"
+	pb "github.com/bittorrent/protobuf/protoc-gen-gogo/descriptor"
 )
 
 func TestMarshalUnmarshal(t *testing.T) {

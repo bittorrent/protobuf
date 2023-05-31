@@ -28,7 +28,7 @@
 
 package vanity
 
-import descriptor "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
+import descriptor "github.com/bittorrent/protobuf/protoc-gen-gogo/descriptor"
 
 func ForEachFile(files []*descriptor.FileDescriptorProto, f func(file *descriptor.FileDescriptorProto)) {
 	for _, file := range files {

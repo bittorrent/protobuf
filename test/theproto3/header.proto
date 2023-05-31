@@ -38,9 +38,9 @@ syntax = "proto3";
 
 package theproto3;
 
-import "github.com/tron-us/protobuf/gogoproto/gogo.proto";
+import "github.com/bittorrent/protobuf/gogoproto/gogo.proto";
 
-import "github.com/tron-us/protobuf/test/combos/both/thetest.proto";
+import "github.com/bittorrent/protobuf/test/combos/both/thetest.proto";
 
 option (gogoproto.goproto_stringer_all) = false;
 option (gogoproto.goproto_enum_prefix_all) = false;

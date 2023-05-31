@@ -31,7 +31,7 @@ package registration
 import (
 	"testing"
 
-	gogoproto "github.com/tron-us/protobuf/proto"
+	gogoproto "github.com/bittorrent/protobuf/proto"
 	golangproto "github.com/golang/protobuf/proto"
 )
 

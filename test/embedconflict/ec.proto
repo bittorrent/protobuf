@@ -28,7 +28,7 @@
 
 package embedconflict;
 
-import "github.com/tron-us/protobuf/gogoproto/gogo.proto";
+import "github.com/bittorrent/protobuf/gogoproto/gogo.proto";
 
 message A {
 	optional int64 Field1 = 1;

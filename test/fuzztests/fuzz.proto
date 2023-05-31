@@ -30,7 +30,7 @@
 syntax = "proto2";
 package fuzztests;
 
-import "github.com/tron-us/protobuf/gogoproto/gogo.proto";
+import "github.com/bittorrent/protobuf/gogoproto/gogo.proto";
 
 option (gogoproto.gostring_all) = true;
 

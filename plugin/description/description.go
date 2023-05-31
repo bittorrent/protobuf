@@ -54,7 +54,7 @@ The following message:
   message B {
 	option (gogoproto.description) = true;
 	optional A A = 1 [(gogoproto.nullable) = false, (gogoproto.embed) = true];
-	repeated bytes G = 2 [(gogoproto.customtype) = "github.com/tron-us/protobuf/test/custom.Uint128", (gogoproto.nullable) = false];
+	repeated bytes G = 2 [(gogoproto.customtype) = "github.com/bittorrent/protobuf/test/custom.Uint128", (gogoproto.nullable) = false];
   }
 
 given to the description plugin, will generate the following code:
@@ -79,10 +79,10 @@ import (
 	"bytes"
 	"compress/gzip"
 	"fmt"
-	"github.com/tron-us/protobuf/gogoproto"
-	"github.com/tron-us/protobuf/proto"
-	descriptor "github.com/tron-us/protobuf/protoc-gen-gogo/descriptor"
-	"github.com/tron-us/protobuf/protoc-gen-gogo/generator"
+	"github.com/bittorrent/protobuf/gogoproto"
+	"github.com/bittorrent/protobuf/proto"
+	descriptor "github.com/bittorrent/protobuf/protoc-gen-gogo/descriptor"
+	"github.com/bittorrent/protobuf/protoc-gen-gogo/generator"
 )
 
 type plugin struct {
@@ -107,8 +107,8 @@ func (p *plugin) Generate(file *generator.FileDescriptor) {
 	localName := generator.FileName(file)
 
 	p.PluginImports = generator.NewPluginImports(p.Generator)
-	descriptorPkg := p.NewImport("github.com/tron-us/protobuf/protoc-gen-gogo/descriptor")
-	protoPkg := p.NewImport("github.com/tron-us/protobuf/proto")
+	descriptorPkg := p.NewImport("github.com/bittorrent/protobuf/protoc-gen-gogo/descriptor")
+	protoPkg := p.NewImport("github.com/bittorrent/protobuf/proto")
 	gzipPkg := p.NewImport("compress/gzip")
 	bytesPkg := p.NewImport("bytes")
 	ioutilPkg := p.NewImport("io/ioutil")

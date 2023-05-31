@@ -182,7 +182,7 @@ contributors:
 js:
 ifeq (go1.12, $(findstring go1.12, $(GO_VERSION)))
 	go get -u github.com/gopherjs/gopherjs
-	gopherjs build github.com/tron-us/protobuf/protoc-gen-gogo
+	gopherjs build github.com/bittorrent/protobuf/protoc-gen-gogo
 endif
 
 purego:

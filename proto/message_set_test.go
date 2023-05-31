@@ -36,8 +36,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/tron-us/protobuf/proto"
-	. "github.com/tron-us/protobuf/proto/test_proto"
+	"github.com/bittorrent/protobuf/proto"
 )
 
 func TestUnmarshalMessageSetWithDuplicate(t *testing.T) {
